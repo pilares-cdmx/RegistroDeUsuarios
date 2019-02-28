@@ -1,11 +1,12 @@
 <?php
-    
+    /*
     include "db.php";
     $db =  connect();
     $query=$db->query("select * from alcaldia");
     $countries = array();
     while($r=$query->fetch_object()){ $countries[]=$r; }
-    
+    */
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -63,7 +64,9 @@
       <div class="row">
         <div class="col-lg-12 col-md-12 estilo-forma">
           <label for="curp" class="active ">CURP</label><br>
-          <input   maxlength="18"  id="curp" name="curp" type="text"  class="validate" style="text-transform:uppercase;" maxlength="18" size="30">
+          <input   maxlength="18"  id="curp" name="curp" type="text" class="validate"
+          pattern="([A-Z]{4}([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])[HM](AS|BC|BS|CC|CL|CM|CS|CH|DF|DG|GT|GR|HG|JC|MC|MN|MS|NT|NL|OC|PL|QT|QR|SP|SL|SR|TC|TS|TL|VZ|YN|ZS|NE)[A-Z]{3}[0-9A-Z]\d)"
+          style="text-transform:uppercase;" maxlength="18" size="30">
           <small class="form-text text-muted" tabindex="0">Consulta tu CURP <a href="https://www.gob.mx/curp/" target="popup" onclick="window.open(this.href, this.target, 'width=900px,height=800px'); return false;">aquí</a> </small>
           <div id="curp-error" name="curp-error"></div>
         </div>
@@ -643,7 +646,7 @@ function justNumbers(e)
 			});
 		});
 
-		
+
 	});
 </script>
 

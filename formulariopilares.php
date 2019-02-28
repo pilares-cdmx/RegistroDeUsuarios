@@ -64,11 +64,11 @@
       <div class="row">
         <div class="col-lg-12 col-md-12 estilo-forma">
           <label for="curp" class="active ">CURP</label><br>
-          <input   maxlength="18"  id="curp" name="curp" type="text" class="validate"
-          pattern="([A-Z]{4}([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])[HM](AS|BC|BS|CC|CL|CM|CS|CH|DF|DG|GT|GR|HG|JC|MC|MN|MS|NT|NL|OC|PL|QT|QR|SP|SL|SR|TC|TS|TL|VZ|YN|ZS|NE)[A-Z]{3}[0-9A-Z]\d)"
+          <input   maxlength="18"  id="curp" name="curp" type="text" class="validate" oninput="validarInput(this)"
           style="text-transform:uppercase;" maxlength="18" size="30">
           <small class="form-text text-muted" tabindex="0">Consulta tu CURP <a href="https://www.gob.mx/curp/" target="popup" onclick="window.open(this.href, this.target, 'width=900px,height=800px'); return false;">aquí</a> </small>
           <div id="curp-error" name="curp-error"></div>
+          <pre id="resultado"></pre>
         </div>
       </div>
       <div class="row">
@@ -592,40 +592,29 @@
    </select>
   </div>
 
-
-
 	  <br>
 
 	  <br>
-
 
 	<div class="trans text-center">
 	  <button type="submit" onclick="return message()"  class="btn btn-success btn-lg ">Enviar</button>
 </div>
 </fieldset>
   </div>
-
  </div>
-
-
-
-
-
-
 
 </form>
 <img src="img/form-img/cenefa.png">
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
+<script src="js/curpValidacion.js" charset="utf-8"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script type="text/javascript">
-window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type=='text'){e.preventDefault();return false;}}},true);
+    window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type=='text'){e.preventDefault();return false;}}},true);
 </script>
-
 <script>
-function justNumbers(e)
+  function justNumbers(e)
         {
         var keynum = window.event ? window.event.keyCode : e.which;
         if ((keynum == 8) || (keynum == 46))
@@ -635,8 +624,6 @@ function justNumbers(e)
         }
 
 </script>
-
-
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("#alcaldia_idalcaldia").change(function(){
@@ -649,7 +636,6 @@ function justNumbers(e)
 
 	});
 </script>
-
 
 </body>
 </html>

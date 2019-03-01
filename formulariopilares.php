@@ -1,11 +1,11 @@
 <?php
-    /*
+    
     include "db.php";
     $db =  connect();
-    $query=$db->query("select * from alcaldia");
+    $query=$db->query("select * from country");
     $countries = array();
     while($r=$query->fetch_object()){ $countries[]=$r; }
-    */
+    
 
 ?>
 
@@ -112,7 +112,7 @@
 
 	   <div class="row">
         <div class="col-lg-12 col-md-12 estilo-forma">
-		<form name="guarda" action="pruebaconexion.php" method="post" >
+		<form name="guarda" action="conexionv1.php" method="post" >
 		 <label for="nombre">Alcaldia </label><br>
         <select name="pais" id="pais" ></select>
       </select>
@@ -122,7 +122,7 @@
 
 	<div class="row">
         <div class="col-lg-12 col-md-30 estilo-forma">
-		<form name="guarda" action="pruebaconexion.php" method="post" >
+		<form name="guarda" action="conexionv1.php" method="post" >
 		 <label for="nombre">Colonia </label><br>
         <select name="estados" id="estados"  ></select>
       </select>
@@ -132,7 +132,7 @@
 
 	 <div class="row">
         <div class="col-lg-12 col-md-12 estilo-forma">
-		<form name="guarda" action="pruebaconexion.php" method="post" >
+		<form name="guarda" action="conexionv1.php" method="post" >
 		 <label for="nombre">Codigo Postal </label><br>
        <select name="municipio" id="municipio"  ></select>
       </select>
@@ -582,17 +582,17 @@
 <form method="post" action="add.php?opt=all">
   <div class="form-group">
     <label for="name1">Alcaldia</label>
-    <select idalcaldia="alcaldia_idalcaldia" class="form-control" nombre="alcaldia_idalcaldia" required>
+    <select id="country_id" class="form-control" name="country_id" required>
       <option value="">Selecciona</option>
 <?php foreach($countries as $c):?>
-      <option value="<?php echo $c->idalcaldia; ?>"><?php echo $c->nombre; ?></option>
+      <option value="<?php echo $c->id; ?>"><?php echo $c->name; ?></option>
 <?php endforeach; ?>
     </select>
   </div>
 
   <div class="form-group">
     <label for="name1">PILARES</label>
-    <select idPilares="pilares_idPilares" class="form-control" nombre="pilares_idPilares" >
+     <select id="state_id" class="form-control" name="state_id" required>
       <option value="">Selecciona</option>
    </select>
   </div>
@@ -631,9 +631,10 @@
 </script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		$("#alcaldia_idalcaldia").change(function(){
-			$.get("get_states.php","alcaldia_idalcaldia="+$("#alcaldia_idalcaldia").val(), function(data){
-				$("#pilares_idPilares").html(data);
+		$("#country_id").change(function(){
+			$.get("get_states.php","country_id="+$("#country_id").val(),
+                  function(data){
+				$("#state_id").html(data);
 				console.log(data);
 			});
 		});

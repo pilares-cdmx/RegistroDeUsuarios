@@ -1,13 +1,9 @@
 <?php
-/*
-Autor: Manuel Cortes Crisanto
-Descripcion: Archivo que da lectura el archivo de configuracion para realizar la conexion con el servidor.
 
-*/
 abstract class config {
 	
 	protected $datahost;
-	protected function conectar($archivo = 'config.ini'){
+	protected function conectar($archivo = 'clases/config.ini'){
 		
 		if(!$ajustes = parse_ini_file($archivo, true)) throw new exception ('No se puede abrir el archivo ' . $archivo . '.');
 			$controlador = $ajustes["database"]["driver"]; //controlador (MySQL la mayoría de las veces)

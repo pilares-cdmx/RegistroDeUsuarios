@@ -1,10 +1,5 @@
 <?php
-/*
-Autor: Manuel Cortes Crisanto
-Nota: El codigo se puede realizar la modificacion.
-Web: www.desarrollosphp.com
-email:info@desarrollosphp.com
-*/
+
 require("clases/config.php");
 
 class conectorDB extends config
@@ -47,27 +42,28 @@ class Json
 {
 	private $json;
 	public function ComboPais(){
-		$consulta = "SELECT * FROM Alcaldias  ";
+		$consulta = "SELECT * FROM paises  ";
 		$conexion = new conectorDB;
 		$this->json = $conexion->EjecutarSentencia($consulta);
 		return $this->json;
 	}
 	public function ComboEstados($filtro){
-		$consulta = "SELECT * FROM colonia WHERE Alcaldias_idAlcaldiasZonas='".$filtro."' ORDER BY  idColonia";
+		$consulta = "SELECT * FROM estados WHERE Id_pais='".$filtro."' ORDER BY  clave";
 		$conexion = new conectorDB;
 		$this->json = $conexion->EjecutarSentencia($consulta);
 		return $this->json;
 	}
 	public function ComboMunicipios($filtro){
-		$consulta = "SELECT * FROM codigopostal WHERE Colonia_idColonia='".$filtro."' ORDER BY  idCodigoPostal";
+		$consulta = "SELECT * FROM municipios WHERE estado_id='".$filtro."' ORDER BY  clave";
 		$conexion = new conectorDB;
 		$this->json = $conexion->EjecutarSentencia($consulta);
 		return $this->json;
 	}
-	
-	
-	
-	
-	
+	public function ComboLocalidad($filtro){
+		$consulta = "SELECT * FROM localidades WHERE municipio_id='".$filtro."' ORDER BY  clave";
+		$conexion = new conectorDB;
+		$this->json = $conexion->EjecutarSentencia($consulta);
+		return $this->json;
+	}
 	
 }/// TERMINA CLASE  ///

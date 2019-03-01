@@ -1,11 +1,9 @@
-   
-
-	$(document).ready(function()
+$(document).ready(function()
 	{
 		//
 		$('#estados').append("<option value='0'>Selecciona Colonia...</option>");
-		$('#municipio').append("<option value='0'>Selecciona Codigo...</option>");
-		$('#localidad').append("<option value='0'>Selecciona Localidad...</option>");
+		$('#municipio').append("<option value='0'>Selecciona Codigo Postal...</option>");
+		$('#localidad').append("<option value='0'>Elige Localidad...</option>");
 		$('#estados').prop('disabled', true);
 		$('#municipio').prop('disabled', true);
 		$('#localidad').prop('disabled', true);
@@ -26,13 +24,13 @@
 			var Pais = $("#pais").val();
 			$('#estados').empty();
 			if(Pais==0){
-				$('#estados').append("<option value='0'>Elige Colonia...</option>");
+				$('#estados').append("<option value='0'>Selecciona Colonia...</option>");
 				$('#estados').prop('disabled', true);
 			}else{
-				$("#estados").append("<option value='0'>Cargando Colonias...</option>");
+				$("#estados").append("<option value='0'>Cargado Colonias...</option>");
 				$.getJSON("cargarcombos.php",{bandera:"2", filtro: $("#pais").val()},function(objetosretorna){
 					$("#estados").empty();
-					$("#estados").append("<option value='0'>Elige Colonia...</option>");
+					$("#estados").append("<option value='0'>Selecciona Colonia...</option>");
 					$.each(objetosretorna, function(i,estados){
 						$("#estados").append("<option value='"+estados.clave+"'>" + estados.nombre+"</option>");
 					});
@@ -47,13 +45,13 @@
 			var Estado = $("#estados").val();
 			$('#municipio').empty();
 			if(Estado==0){
-				$('#municipio').append("<option value='0'>Elige Codigo Postal...</option>");
+				$('#municipio').append("<option value='0'>Selecciona Codigo Postal...</option>");
 				$('#municipio').prop('disabled', true);
 			}else{
-				$("#municipio").append("<option value='0'>Cargando Codigo Postal...</option>");
+				$("#municipio").append("<option value='0'>Cargando Cosigo Postal...</option>");
 				$.getJSON("cargarcombos.php",{bandera:"3", filtro: $("#estados").val()},function(objetosretorna){
 					$("#municipio").empty();
-					$("#municipio").append("<option value='0'>Elige Codigo Postal...</option>");
+					$("#municipio").append("<option value='0'>Selecciona Codigo Postal...</option>");
 					$.each(objetosretorna, function(i,municipio){
 						$("#municipio").append("<option value='"+municipio.clave+"'>" + municipio.nombre+"</option>");
 					});

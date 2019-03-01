@@ -1,11 +1,8 @@
 <?php
 /*
-
 Descripcion: Archivo que da lectura el archivo de configuracion para realizar la conexion con el servidor.
-
 */
 abstract class config {
-
 	protected $datahost;
 	protected function conectar($archivo = 'config.ini'){
 
@@ -14,7 +11,6 @@ abstract class config {
 			$servidor 	 = $ajustes["database"]["host"]; //servidor como localhost o 127.0.0.1 usar este ultimo cuando el puerto sea diferente
 			$puerto 	 = $ajustes["database"]["port"]; //Puerto de la BD
 			$basedatos	 = $ajustes["database"]["schema"]; //nombre de la base de datos
-
 		try{
 			return $this->datahost = new PDO (
 										"$controlador:host=$servidor;port=$puerto;dbname=$basedatos",

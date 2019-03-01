@@ -1,10 +1,10 @@
 <?php
 	include('class.consultas.php');
-	$bandera    = $_GET["bandera"];
-	$filtro     = $_GET["filtro"];
-	$Json      = new Json;
+	$bandera = $_GET["bandera"];
+	$filtro = $_GET["filtro"];
+	$Json  = new Json;
 	if($bandera==1){
-		$Pais      = $Json->ComboPais();
+		$Pais   = $Json->ComboPais();
 		echo  json_encode($Pais);
 	}
 	if($bandera==2){
@@ -19,8 +19,4 @@
 		$localidad      = $Json->ComboLocalidad($filtro);
 		echo  json_encode($localidad);
 	}
-	
-	
-	
-	
-?>  
+?>

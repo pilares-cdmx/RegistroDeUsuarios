@@ -1,13 +1,11 @@
-    //Desarrollado por: Manuel Cortes Crisanto
-	//Web: https://www.facebook.com/pages/Programacion-en-PHP/153571761391652
-	//www.desarrollosphp.com
+   
 
 	$(document).ready(function()
 	{
 		//
-		$('#estados').append("<option value='0'>Elige Colonia...</option>");
-		$('#municipio').append("<option value='0'>Elige Codigo...</option>");
-		$('#localidad').append("<option value='0'>Elige Localidad...</option>");
+		$('#estados').append("<option value='0'>Selecciona Colonia...</option>");
+		$('#municipio').append("<option value='0'>Selecciona Codigo...</option>");
+		$('#localidad').append("<option value='0'>Selecciona Localidad...</option>");
 		$('#estados').prop('disabled', true);
 		$('#municipio').prop('disabled', true);
 		$('#localidad').prop('disabled', true);
@@ -16,7 +14,7 @@
 		comboPaises.append("<option value='0'>Cargando Alcaldias...</option>");
 		$.getJSON("cargarcombos.php",{bandera:"1",filtro:""},function(objetosretorna){
 			comboPaises.empty();
-			comboPaises.append("<option value='0'>Elige Alcaldia...</option>");
+			comboPaises.append("<option value='0'>Selecciona Alcaldia...</option>");
 			$.each(objetosretorna, function(i,paises){
 				var nuevaFila = "<option value='"+paises.Id+"'>" + paises.Pais+"</option>";
 				comboPaises.append(nuevaFila);

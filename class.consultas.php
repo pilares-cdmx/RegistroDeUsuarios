@@ -47,25 +47,19 @@ class Json
 {
 	private $json;
 	public function ComboPais(){
-		$consulta = "SELECT * FROM paises  ";
+		$consulta = "SELECT * FROM Alcaldias  ";
 		$conexion = new conectorDB;
 		$this->json = $conexion->EjecutarSentencia($consulta);
 		return $this->json;
 	}
 	public function ComboEstados($filtro){
-		$consulta = "SELECT * FROM estados WHERE Id_pais='".$filtro."' ORDER BY  clave";
+		$consulta = "SELECT * FROM colonia WHERE Alcaldias_idAlcaldiasZonas='".$filtro."' ORDER BY  idColonia";
 		$conexion = new conectorDB;
 		$this->json = $conexion->EjecutarSentencia($consulta);
 		return $this->json;
 	}
 	public function ComboMunicipios($filtro){
-		$consulta = "SELECT * FROM municipios WHERE estado_id='".$filtro."' ORDER BY  clave";
-		$conexion = new conectorDB;
-		$this->json = $conexion->EjecutarSentencia($consulta);
-		return $this->json;
-	}
-	public function ComboLocalidad($filtro){
-		$consulta = "SELECT * FROM localidades WHERE municipio_id='".$filtro."' ORDER BY  clave";
+		$consulta = "SELECT * FROM codigopostal WHERE Colonia_idColonia='".$filtro."' ORDER BY  idCodigoPostal";
 		$conexion = new conectorDB;
 		$this->json = $conexion->EjecutarSentencia($consulta);
 		return $this->json;

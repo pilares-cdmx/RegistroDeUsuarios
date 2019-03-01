@@ -8,12 +8,7 @@ $telce = $_POST['t2'];
 mysql_query("INSERT INTO contacto VALUES
 	('','$correo','$telcasa','$telce')") or die("<h2>Error Guardando los datos</h2>");
 
-
-
-
 //direccion
-
-
 
 
 $calle = $_POST['callenumero'];

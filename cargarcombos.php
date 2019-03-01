@@ -19,4 +19,10 @@
 		$localidad      = $Json->ComboLocalidad($filtro);
 		echo  json_encode($localidad);
 	}
+<<<<<<< HEAD
+	
+	
+?>  
+=======
 ?>
+>>>>>>> 008118508c034224830af3b5c056fea0c22181e6

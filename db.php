@@ -3,5 +3,4 @@
 function connect(){
 	return new mysqli("localhost","root","","pilares");
 }
-
 ?>

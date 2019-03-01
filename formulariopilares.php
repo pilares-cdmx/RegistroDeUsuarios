@@ -8,9 +8,6 @@
     
 
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -42,7 +39,7 @@
     </div>
   </div><br>
  <form action="conexionv1.php" method="POST">
- 
+
     <div class="container">
       <fieldset>
        <legend>DATOS PERSONALES</legend>
@@ -50,8 +47,8 @@
         <div class="col-lg-12 col-md-12 estilo-forma">
           <label for="nombre">Nombre(s)</label><br>
           <input id="nombre" type="text" class="validate" name="nombreuser" style="text-transform:uppercase;" size="30">
-    
-            
+
+
         </div>
       </div>
       <div class="row">

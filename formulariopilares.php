@@ -1,12 +1,9 @@
 <?php
-    
     include "db.php";
     $db =  connect();
     $query=$db->query("select * from country");
     $countries = array();
     while($r=$query->fetch_object()){ $countries[]=$r; }
-    
-
 ?>
 <!DOCTYPE html>
 <html lang="es">

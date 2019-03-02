@@ -44,7 +44,8 @@ $ocupacionActual = $_POST['ocupacionact'];
 
 
 mysql_query("INSERT INTO usuarios  VALUES
-('','$nombres','$apellidoPaterno','$apellidoMaterno','$CURP','$grupoEtnico','$tiempoResidencia','$gradoEstudios','$estudias','$ocupacionActual','','')") or die("<h2>Error Guardando los datos</h2>");
+('','$nombres','$apellidoPaterno','$apellidoMaterno','$CURP','$grupoEtnico',
+	'$tiempoResidencia','$gradoEstudios','$estudias','$ocupacionActual','','')") or die("<h2>Error Guardando los datos</h2>");
 
 
 

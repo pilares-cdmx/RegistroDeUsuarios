@@ -1,0 +1,21 @@
+
+<?php
+
+require 'conexion.php'
+
+$response=$connection->prepare ("INSERT INTO contacto(correo, telefonoCelular,telefonoCasa) values (:correo,:telefonocelular,:telefonocasa)");
+
+$response->bindParam('correo',$_POST["email"], PDO::PARAM_STR);
+
+$response->bindParam('telefonocelular',$_POST["t1"], PDO::PARAM_INT);
+
+$response->bindParam('telefonocasa',$_POST["t2"], PDO::PARAM_INT);
+
+$response->execute();
+
+header("location:formulariopilares.php");
+
+
+
+?>
+

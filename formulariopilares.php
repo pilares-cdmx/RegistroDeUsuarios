@@ -5,6 +5,15 @@
     $countries = array();
     while($r=$query->fetch_object()){ $countries[]=$r; }
 ?>
+
+<?php
+//clases base que heredarán las siguientes clases
+	class Model{
+		function __construct(){
+			$this->db = new Database();
+		}
+	}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -35,7 +44,7 @@
       </div>
     </div>
   </div><br>
- <form action="conexionv1.php" method="POST">
+ <form action="pilaresmodel.php" method="POST">
 
     <div class="container">
       <fieldset>
@@ -106,7 +115,7 @@
 
 	   <div class="row">
         <div class="col-lg-12 col-md-12 estilo-forma">
-		<form name="guarda" action="conexionv1.php" method="post" >
+		<form name="guarda" action="conexionv2.php" method="post" >
 		 <label for="nombre">Alcaldia </label><br>
         <select name="pais" id="pais" ></select>
       </select>
@@ -116,7 +125,7 @@
 
 	<div class="row">
         <div class="col-lg-12 col-md-30 estilo-forma">
-		<form name="guarda" action="conexionv1.php" method="post" >
+		<form name="guarda" action="conexionv2.php" method="post" >
 		 <label for="nombre">Colonia </label><br>
         <select name="estados" id="estados"  ></select>
       </select>

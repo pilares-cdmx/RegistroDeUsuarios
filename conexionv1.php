@@ -6,12 +6,16 @@
 
 
 
+<<<<<<< HEAD
+=======
 $link = mysql_connect("localhost","root","") or die("<h2>No se encuentra el servidor</h2>");
 $db = mysql_select_db("pilaresdb",$link) or die("<h2>Error de Conexion</h2>");
 
+>>>>>>> fe46393663b8dd1dd3ef8c4e0549fe78c014604d
 $correo = $_POST['email'];
 $telcasa = $_POST['t1'];
 $telce = $_POST['t2'];
+
 mysql_query("INSERT INTO contacto VALUES
 	('','$correo','$telcasa','$telce')") or die("<h2>Error Guardando los datos</h2>");
 
@@ -48,10 +52,14 @@ mysql_query("INSERT INTO usuarios  VALUES
 	'$tiempoResidencia','$gradoEstudios','$estudias','$ocupacionActual','','')") or die("<h2>Error Guardando los datos</h2>");
 
 
+<<<<<<< HEAD
+
+=======
 
 /
 
 
+>>>>>>> fe46393663b8dd1dd3ef8c4e0549fe78c014604d
 echo  '
 
 		<script>
@@ -59,9 +67,13 @@ echo  '
 			location.href="avisodeprivacidad.html";
 		</script>
 	'
+<<<<<<< HEAD
+    ?>
+=======
 
 
 
 
 
 ?>
+>>>>>>> fe46393663b8dd1dd3ef8c4e0549fe78c014604d

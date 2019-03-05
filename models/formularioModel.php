@@ -3,7 +3,7 @@ class FormularioModel extends Model{
 	public function __construct(){
 		parent::__construct();
 	}
-	
+
 	public function getAlcaldias(){
 		try{
 			$result=array();
@@ -14,7 +14,7 @@ class FormularioModel extends Model{
 			$e->getMessage();
 			return false;
 		}
-	}
+	 
 	public function getPilaresById($country_id){
 		try{
 			$result=array();

@@ -12,13 +12,14 @@ class App{
 	 if(empty($url[0])){
 	 	$archivoController='controllers/principal.php';
 	 	require_once $archivoController;
+		/*Inicializando el controlador*/
 	 	$controller= new Principal();
 	 	//$controller->loadModel(principal);
 	 	$controller->render();
 	 	return false;
 	 }
 		/*crear instancia del controlador que se le proporione*/
-		$archivoController='controllers/'.$url[0].'.php';	
+		$archivoController='controllers/'.$url[0].'.php';
 		if(file_exists($archivoController)){
 			require_once $archivoController;
 			$controller= new $url[0];
@@ -29,7 +30,7 @@ class App{
 			if ($parametros>1) {
 				if ($parametros>2) {
 					$parametro_array = [];
-					for ($i=2; $i <$parametros ; $i++) { 
+					for ($i=2; $i <$parametros ; $i++) {
 						array_push($parametro_array,$url[$i]);
 					}
 					$controller->{$url[1]}($parametro_array);
@@ -44,7 +45,7 @@ class App{
 			$controller= new Errores();
 			$controller->render();
 		}
-		
+
 
 
 	}

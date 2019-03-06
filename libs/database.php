@@ -26,7 +26,7 @@
 			try{
 				/** @var string [almacena los parametros para establecer la conexion con la base de datos] */
 				$connection = "mysql:host=".$this->host.";dbname=".$this->db.";charset=".$this->charset;
-				/** @var array [Almacena variables globales de la clase PDO. PDO representa la cone] */
+				/** @var array [Almacena variables globales de la clase PDO. PDO representa la conexion de PHP con el servidor de base de datos] */
 				$options =[
 					PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 					PDO::ATTR_EMULATE_PREPARES => false,

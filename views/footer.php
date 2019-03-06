@@ -1,4 +1,4 @@
- 
+
 	<!-- jQuery (Necessary for All JavaScript Plugins) -->
     <script src="<?php echo constant('URL')?>public/js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->

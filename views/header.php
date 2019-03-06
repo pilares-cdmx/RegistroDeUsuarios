@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="<?php echo constant('URL')?>public/css/estilos.css">
     <link rel="stylesheet" href="<?php echo constant('URL')?>public/css/style.css">
 </head>
+<body>
 
 
     <!-- Preloader Start -->
@@ -99,5 +100,5 @@
             </div>
         </div>
     </header>
-    <body>
+
     <!-- ***** Header Area End ***** -->

@@ -12,7 +12,7 @@
     <link rel="icon" href="<?php echo constant('URL')?>public/img/core-img/favicon.ico">
   <!--  <link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.css'>
   -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="<?php echo constant('URL')?>public/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo constant('URL')?>public/css/bootstrap.min.css">
     <!--Material Design for Bootsrap -->
@@ -101,4 +101,3 @@
     </header>
     <body>
     <!-- ***** Header Area End ***** -->
-    

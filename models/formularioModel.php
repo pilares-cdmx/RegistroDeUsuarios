@@ -1,15 +1,18 @@
 <?php
 /**
-* Clase FormualrioModel hereda de Model
-* En esta clase se administran las funciones que obtienen y
-* persisten información en la base de datos
-**/
+ * FormularioModel  hereda de Model
+ * En esta clase se administran las funciones que obtienen y
+ * persisten información en la base de datos
+ */
 class FormularioModel extends Model {
 
 	public function __construct() {
 		parent::__construct();
 	}
-
+	/**
+	 * [getAlcaldias description]
+	 * @return [type] [description]
+	 */
 	public function getAlcaldias() {
 		try{
 			$result=array();

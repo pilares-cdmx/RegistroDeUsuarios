@@ -20,7 +20,7 @@
 		}
 		/**
 		 * [connect description]
-		 * @return [type] [description]
+		 * @return [PDO] [Almacena todos los parámetros necesarios para establecer la conexión]
 		 */
 		public function connect(){
 			try{
@@ -31,6 +31,7 @@
 					PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 					PDO::ATTR_EMULATE_PREPARES => false,
 				];
+				/** @var PDO [instancia de la clase PDO ] */
 				$pdo = new PDO($connection,$this->user,$this->password,$options);
 				return $pdo;
 			}catch (PDOException $e) {

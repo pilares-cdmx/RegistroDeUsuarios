@@ -1,8 +1,10 @@
 <?php
-/*clases base que heredarán las siguientes clases*/
+ /**
+  * [View Clase encargad de la representación visual de las interfaces]
+ */
 	class View{
 		function __construct(){
-			
+
 		}
 		/*la vista que se cargará*/
 		function render($nombre){

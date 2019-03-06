@@ -1,7 +1,7 @@
 <?php
 
 /** @var [type] [description] */
-define('URL', 'http://localhost/webpilares/');
+define('URL', 'http://localhost/webformulario/');
 /**
  * [define description]
  * @var [type]

@@ -82,14 +82,15 @@
           <div class="col-lg-12 col-md-12 estilo-forma">
 
             <label for="nombre">Alcaldia </label><br>
+            <!--id "pais" corresponde a Alcaldias-->
             <select name="pais" id="pais">
               <option value="">Selecciona</option>
-              <?php
-                       foreach ($this->alcaldias as $a)
-                       {
-                       echo '<option value="'.$a->Id.'">'.$a->Pais.'</option>';
-
-                       }?>
+                      <?php
+                         foreach ($this->alcaldias as $a)
+                         {
+                         echo '<option value="'.$a->Id.'">'.$a->Pais.'</option>';
+                         }
+                       ?>
             </select>
           </div>
         </div>
@@ -98,6 +99,7 @@
           <div class="col-lg-12 col-md-30 estilo-forma">
 
             <label for="nombre">Colonia </label><br>
+              <!--id "estados" corresponde a Colonia-->
             <select name="estados" id="estados" required>
               <option value="">Selecciona</option>
             </select>
@@ -108,6 +110,7 @@
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label for="nombre">Codigo Postal </label><br>
+            <!--id "municipio" corresponde a Codigo postal-->
             <select name="municipio" id="municipio" required>
               <option value="">Selecciona</option>
             </select>
@@ -161,9 +164,11 @@
           <div class="col-lg-12 col-md-12">
             <label>¿Estudias actualmente?</label>
             <div class="radio">
-              <input name="estudias1" type="radio" id="4" value="4">
+              <!--Se modifico el name de los radio buttons. ahora tienen
+                el mismo nombre para darles la propiedad "group"-->
+              <input name="estudias" type="radio" id="4" value="4">
               <label for="4" class="rc_sty">Si</label>
-              <input name="estudias2" type="radio" id="5" value="5">
+              <input name="estudias" type="radio" id="5" value="5">
               <label for="5" class="rc_sty">No</label>
             </div>
           </div>
@@ -174,7 +179,7 @@
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label>Último grado de estudios</label><br>
-            <select name="grado">
+            <select name="grado" >
               <option value="0" disabled selected>Selecciona</option>
               <option value="1">Preprimaria</option>
               <option value="2">1º de primaria</option>
@@ -359,15 +364,15 @@
 
                 <input type="checkbox" name="check24" id="dig2" />
                 <label for="dig2" class="rc_sty">Club deCiencias</label>
-                <input type="checkbox" name="check24" id="dig3" />
-                <label for="dig2" class="rc_sty">Club de Codigo</label>
+                <input type="checkbox" name="check25" id="dig3" />
+                <label for="dig3" class="rc_sty">Club de Codigo</label>
                 <p>
                   <input type="checkbox" name="check26" id="dig4" />
-                  <label for="dig2" class="rc_sty">Reparacíon y Mantenimiento</label>
+                  <label for="dig4" class="rc_sty">Reparacíon y Mantenimiento</label>
                   <input type="checkbox" name="check27" id="dig5" />
-                  <label for="dig2" class="rc_sty">Edición y Diseño</label>
+                  <label for="dig5" class="rc_sty">Edición y Diseño</label>
                   <input type="checkbox" name="check28" id="dig6" />
-                  <label for="dig2" class="rc_sty">Club de Codigo</label>
+                  <label for="dig6" class="rc_sty">Club de Codigo</label>
                 </p>
             </div>
           </div>
@@ -401,7 +406,7 @@
                   <label for="emo7" class="rc_sty">Inteligencia emocional</label>
                   <br>
                   <input type="checkbox" name="check36" id="emo8" />
-                  <label for="emo7" class="rc_sty">Arte y Emociones</label>
+                  <label for="emo8" class="rc_sty">Arte y Emociones</label>
                 </div>
                 <br>
               </div>
@@ -597,12 +602,13 @@
       return /\d/.test(String.fromCharCode(keynum));
     }
   </script>
+
   <script type="text/javascript">
     $(document).ready(function() {
       $("#country_id").change(function() {
         var id = document.getElementById("country_id").value;
         $.ajax({
-          url: "http://localhost/webpilares/formulario/getPilares",
+          url: "http://localhost/webformulario/formulario/getPilares",
           type: 'GET',
           dataType: "json",
           data: {
@@ -620,12 +626,13 @@
       });
     });
   </script>
+
   <script type="text/javascript">
     $(document).ready(function() {
       $("#pais").change(function() {
         var id = document.getElementById("pais").value;
         $.ajax({
-          url: "http://localhost/webpilares/formulario/getColonias",
+          url: "http://localhost/webformulario/formulario/getColonias",
           type: 'GET',
           dataType: "json",
           data: {
@@ -649,7 +656,7 @@
       $("#estados").change(function() {
         var id = document.getElementById("estados").value;
         $.ajax({
-          url: "http://localhost/webpilares/formulario/getMunicipios",
+          url: "http://localhost/webformulario/formulario/getMunicipios",
           type: 'GET',
           dataType: "json",
           data: {
@@ -667,7 +674,6 @@
       });
     });
   </script>
-
 </body>
 
 </html>

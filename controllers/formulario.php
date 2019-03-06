@@ -60,12 +60,9 @@ class Formulario extends Controller{
 	 * @return [type] [description]
 	 */
 	function registrarUsuario(){
-		/**
-		 * [var_dump description]
-		 * @var [type]
-		 */
+		/** funcion Desecha los valores de una variable. En otras palabras, limpia el contenido de una variable */
 		var_dump($_POST);
-	
+
 		$nombre=(!is_null($_POST['nombreuser'])) ? $_POST['nombreuser'] : "Sin Datos";
 		$apellidopat=(!is_null($_POST['apellidopat'])) ? $_POST['apellidopat'] : "Sin Datos";
 		$apellidomat=(!is_null($_POST['apellidomat'])) ? $_POST['apellidomat'] : "Sin Datos";
@@ -84,6 +81,13 @@ class Formulario extends Controller{
 		$state_id=(!is_null($_POST['state_id'])) ? $_POST['state_id'] : "Sin Datos";
 			echo $t2;
 
+
+	}
+
+	function registrarServicios() {
+
+	}
+	function registrarPilar() {
 
 	}
 }

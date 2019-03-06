@@ -1,38 +1,71 @@
 <?php
+/**
+* Clase Fromulario que hereda de controlador
+* En esta sección se escribe la logica de las operaciones necesarias
+* para persistir los datos del Registro formulario en una
+* base de datos normalizada
+**/
 class Formulario extends Controller{
 	public function __construct(){
 		parent::__construct();
 	}
+	/**
+	 * [render Representación de las vistas para el ususario]
+	 */
 	function render(){
-		$this->view->alcaldias =$this->listarAlcaldias();
+
+		$this->view->alcaldias = $this->listarAlcaldias();
 		$this->view->render('formulario/index');
 	}
+	/**
+	 * [listarAlcaldias Enlista alcaldías en el elemento s]
+	 * @return [type] [description]
+	 */
 	function listarAlcaldias(){
 		$alcaldias=$this->model->getAlcaldias();
 		return $alcaldias;
 	}
-	
+	/**
+	 * [getPilares description]
+	 * @return [type] [description]
+	 */
 	function getPilares(){
 		$id = $_GET['id'];
 		$country = $this->model->getPilaresById($id);
 		$data=$country;
 		echo json_encode($data);
 	}
+	/**
+	 * [getColonias description]
+	 * @return [type] [description]
+	 */
 	function getColonias(){
 		$id = $_GET['id'];
 		$country = $this->model->getColoniaPorId($id);
 		$data=$country;
 		echo json_encode($data);
 	}
+	/**
+	 * [getMunicipios description]
+	 * @return [type] [description]
+	 */
 	function getMunicipios(){
 		$id = $_GET['id'];
 		$country = $this->model->getMunicipiosPorId($id);
 		$data=$country;
 		echo json_encode($data);
 	}
+	/**
+	 * [registrarUsuario description]
+	 * @return [type] [description]
+	 */
 	function registrarUsuario(){
+		/**
+		 * [var_dump description]
+		 * @var [type]
+		 */
 		var_dump($_POST);
-		
+	
 		$nombre=(!is_null($_POST['nombreuser'])) ? $_POST['nombreuser'] : "Sin Datos";
 		$apellidopat=(!is_null($_POST['apellidopat'])) ? $_POST['apellidopat'] : "Sin Datos";
 		$apellidomat=(!is_null($_POST['apellidomat'])) ? $_POST['apellidomat'] : "Sin Datos";

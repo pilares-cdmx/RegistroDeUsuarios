@@ -6,8 +6,12 @@
 			//se crea una nueva variable
 			$this->view = new View();
 		}
-		
+		/**
+		 * [loadModel description]
+		 * @param  [type] $model [description]
+		 */
 		function loadModel($model){
+			/** @var string [description] */
 			$url = 'models/'.$model.'model.php';
 			if(file_exists($url)){
 				require $url;

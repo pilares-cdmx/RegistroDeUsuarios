@@ -1,19 +1,28 @@
 
 <?php
-/*Se controlan todos los controladores, se hace el mapeo*/
+/**
+* Clase App se enfoca en administrar todos los controladores, se hace el mapeo
+* a partir de la URL
+**/
 require_once 'controllers/errores.php';
-
+/**
+ * [App description]
+ */
 class App{
-
+	/**
+	 * [__construct description]
+	 */
 	function __construct(){
+		/** @var [type] [description] */
 		$url=isset($_GET['url']) ? $_GET['url']: null;
 		$url=rtrim($url,'/');
 		$url=explode('/',$url);
 		/*cuando se ingresa sin definir controlador*/
 	 if(empty($url[0])){
+		 /** @var string [ruta del controlador principal] */
 	 	$archivoController='controllers/principal.php';
 	 	require_once $archivoController;
-		/*Inicializando el controlador*/
+		/**Inicializando el controlador*/
 	 	$controller= new Principal();
 	 	//$controller->loadModel(principal);
 	 	$controller->render();

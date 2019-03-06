@@ -1,10 +1,16 @@
 <?php
-class FormularioModel extends Model{
-	public function __construct(){
+/**
+* Clase FormualrioModel hereda de Model
+* En esta clase se administran las funciones que obtienen y
+* persisten información en la base de datos
+**/
+class FormularioModel extends Model {
+
+	public function __construct() {
 		parent::__construct();
 	}
 
-	public function getAlcaldias(){
+	public function getAlcaldias() {
 		try{
 			$result=array();
 			$consulta=$this->db->connect()->prepare("SELECT Id,Pais FROM paises");
@@ -14,7 +20,7 @@ class FormularioModel extends Model{
 			$e->getMessage();
 			return false;
 		}
-	 
+	}
 	public function getPilaresById($country_id){
 		try{
 			$result=array();
@@ -39,6 +45,11 @@ class FormularioModel extends Model{
 			return false;
 		}
 	}
+	/**
+	 * [getMunicipiosPorId description]
+	 * @param  [type] $id [description]
+	 * @return [type]     [description]
+	 */
 	public function getMunicipiosPorId($id){
 		try{
 			$result=array();

@@ -3,11 +3,20 @@
 /**
 * Clase Control contiene la lógica para la validación de credenciales
 * en los ususarios con acceso al formulario de registro
+* No tiene asociada una vista porque el ingreso de credenciales se hace
+* desde el index de principal
 **/
 class Control extends Controller{
+	/**
+	 * [__construct description]
+	 */
 	public function __construct(){
 		parent::__construct();
 	}
+	/**
+	 * [validar description]
+	 * @return [type] [description]
+	 */
 	public function validar(){
 		if (isset($_POST['login'])) {
 		//VARIABLES DEL USUARIO

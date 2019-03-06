@@ -1,11 +1,31 @@
 <?php
-/*url estática para que no iporte el nivel de navegación en el que se está*/
-define('URL', 'http://localhost/webpilares/');
 
+/** @var [type] [description] */
+define('URL', 'http://localhost/webpilares/');
+/**
+ * [define description]
+ * @var [type]
+ */
 define('HOST', 'localhost');
+/**
+ * [define description]
+ * @var [type]
+ */
 define('DB', 'pilares');
+/**
+ * [define description]
+ * @var [type]
+ */
 define('USER', 'root');
+/**
+ * [define description]
+ * @var [type]
+ */
 define('PASSWORD', "");
+/**
+ * [define description]
+ * @var [type]
+ */
 define('CHARSET', 'utf8mb4');
 
 ?>

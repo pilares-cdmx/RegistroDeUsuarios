@@ -2,6 +2,7 @@
 <?php
 /*Se controlan todos los controladores, se hace el mapeo*/
 require_once 'controllers/errores.php';
+
 class App{
 
 	function __construct(){
@@ -45,9 +46,6 @@ class App{
 			$controller= new Errores();
 			$controller->render();
 		}
-
-
-
 	}
 }
 ?>

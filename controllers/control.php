@@ -1,5 +1,9 @@
 
 <?php
+/**
+* Clase Control contiene la lógica para la validación de credenciales
+* en los ususarios con acceso al formulario de registro
+**/
 class Control extends Controller{
 	public function __construct(){
 		parent::__construct();
@@ -21,7 +25,7 @@ class Control extends Controller{
 				$this->view->render('principal/index');
 			}
 		//VALIDAR CONTENIDO EN LAS VARIABLES O CAJAS DE TEXTO
-		if (empty($usuario) | empty($pass)) 
+		if (empty($usuario) | empty($pass))
 		{
 			$this->view->render('principal/index');
 		}

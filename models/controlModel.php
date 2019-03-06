@@ -1,4 +1,9 @@
 <?php
+/**
+* Clase ControlModel mapea con la base de datos
+* La informacion ingresada en el Login para el formulario
+* de Registro
+**/
 class ControlModel extends Model{
 	public function __construct(){
 		parent::__construct();

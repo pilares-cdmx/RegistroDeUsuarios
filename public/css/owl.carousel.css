@@ -115,7 +115,7 @@
 }
 .owl-carousel .owl-item img {
   display: block;
-  width: 100%;
+  width: 80%;
   -webkit-transform-style: preserve-3d;
 }
 .owl-carousel.owl-text-select-on .owl-item {
@@ -163,7 +163,7 @@
  */
 .owl-carousel .owl-video-wrapper {
   position: relative;
-  height: 100%;
+  height: 50%;
   background: #000;
 }
 .owl-carousel .owl-video-play-icon {
@@ -197,7 +197,7 @@
 }
 .owl-carousel .owl-video-tn {
   opacity: 0;
-  height: 100%;
+  height: 80%;
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: contain;

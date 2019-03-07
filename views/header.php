@@ -1,6 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,28 +12,24 @@
     <link rel="icon" href="<?php echo constant('URL')?>public/img/core-img/favicon.ico">
   <!--  <link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.css'>
   -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" href="<?php echo constant('URL')?>public/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo constant('URL')?>public/css/normalize.css">
+    <link rel="stylesheet" href="public/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo constant('URL')?>public/css/bootstrap.min.css">
     <!--Material Design for Bootsrap -->
-    <link href="<?php echo constant('URL')?>public/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo constant('URL')?>public/css/mdb.min.css">
     <!-- Style CSS -->
     <link rel="stylesheet" href="<?php echo constant('URL')?>public/css/mpg.css">
     <link rel="stylesheet" href="<?php echo constant('URL')?>public/css/scroll-style.css">
     <link rel="stylesheet" href="<?php echo constant('URL')?>public/css/estilos.css">
-    <link rel="stylesheet" href="<?php echo constant('URL')?>public/css/style.css">
+    <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-
-
     <!-- Preloader Start -->
     <div id="preloader">
         <div class="preload-content">
             <div id="world-load"></div>
         </div>
     </div>
-    <!-- Preloader End -->
-
     <!-- ***** Header Area Start ***** -->
     <header class="header-area">
         <div class="container">
@@ -41,23 +37,23 @@
                 <div class="col-12 col-lg-12">
                     <nav class="navbar navbar-expand-lg">
                         <!-- Logo -->
-                        <a class="navbar-brand" href="index.html"><img src="<?php echo constant('URL')?>public/img/core-img/Pilares_logo.svg" alt="Logo"></a>
+                        <a class="navbar-brand" href="<?php echo constant('URL')?>principal/index.php"><img src="<?php echo constant('URL')?>public/img/core-img/Pilares_logo.svg" alt="Logo"></a>
                         <!-- Navbar Toggler -->
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#worldNav" aria-controls="worldNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                         <!-- Navbar -->
                         <div class="collapse navbar-collapse" id="worldNav">
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="regular-page.html">Convocatorias</a>
+                                    <a class="nav-link" href="<?php echo constant('URL')?>views/main/convocatorias.php">Convocatorias</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Ubica tu PILARES</a>
+                                    <a class="nav-link" href="<?php echo constant('URL')?>views/main/ubicapilares.php">Ubica tu PILARES</a>
                                 </li>
                                 <li class="nav-item">
                                     <a id="btn-abrir-popup" class="nav-link btn-abrir-popup">Registro Usuarios</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a  class="nav-link" href="single-blog.html">Administración <span class="sr-only">(current)</span></a>
+                                    <a  class="nav-link" href="<?php echo constant('URL')?>views/main/administracion.php">Administración <span class="sr-only">(current)</span></a>
                                 </li>
                             </ul>
                             <ul class="navbar-nav nav-flex-icons">
@@ -100,5 +96,6 @@
             </div>
         </div>
     </header>
-
+    <body>
     <!-- ***** Header Area End ***** -->
+    

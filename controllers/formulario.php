@@ -62,7 +62,9 @@ class Formulario extends Controller{
 	function registrarUsuario(){
 		/** funcion Desecha los valores de una variable. En otras palabras, limpia el contenido de una variable */
 		var_dump($_POST);
-
+		/**
+		 * Capturando en variables de PHP los datos ingresados por el ususario.
+		 */
 		$nombre=(!is_null($_POST['nombreuser'])) ? $_POST['nombreuser'] : "Sin Datos";
 		$apellidopat=(!is_null($_POST['apellidopat'])) ? $_POST['apellidopat'] : "Sin Datos";
 		$apellidomat=(!is_null($_POST['apellidomat'])) ? $_POST['apellidomat'] : "Sin Datos";
@@ -80,7 +82,17 @@ class Formulario extends Controller{
 		$opcionEdu=(!is_null($_POST['opcionEdu'])) ? $_POST['opcionEdu'] : "Sin Datos";
 		$pilarSelect_id=(!is_null($_POST['state_id'])) ? $_POST['state_id'] : "Sin Datos";
 
-		$this->model->setDatosContacto(['value1' => $value1, 'value2' => $value2, 'valueETC' => $valueETC]);
+		/**
+		 * Llamando a las funciones declaradas en el formularioModel para hacer el almacenamiento en la base
+		 */
+
+		$this->model->setDatosContacto(
+			['idContacto' => '',
+			 'correo' => $email,
+			 'telefonoCelular' => $telMovil,
+			 'telefonoCasa' => $telCasa]
+		 );
+
 		$this->model->setCodigoPostal(['value1' => $value1, 'value2' => $value2, 'valueETC' => $valueETC]);
 		$this->model->setColonia(['value1' => $value1, 'value2' => $value2, 'valueETC' => $valueETC]);
 		$this->model->setAlcaldiaUsuario(['value1' => $value1, 'value2' => $value2, 'valueETC' => $valueETC]);

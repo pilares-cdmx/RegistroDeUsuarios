@@ -72,7 +72,7 @@ class FormularioModel extends Model {
 
 /**
  *
- *  SECCIÓN PARA EL REGISTRO DE DATOS
+ *  SECCIÓN PARA LA PERSISTENCIA DE DATOS
  *  debido a que estamos trabajando con una base de datos  normalizada en loas primeras tres formas normales
  *  es muy importante persistir los datos en el orden correcto  defiido en el modelo relacional
  *  se comienza persistiendo las tablas que no tienen dependencias y  se continua en cascada
@@ -80,16 +80,54 @@ class FormularioModel extends Model {
  *
  */
 
-	public function setDatosContacto($datos){
-		try {
-			$query = $this->db->connect()->prepare('INSERT INTO NOMBRETABLA (COLUM1, COLUM2, COLUM...) VALUES (:value1, :value2, :value...)');
-			$query->execute(['value1' => $datos['value1'], 'value2' => $datos['value2'], 'value...' => $datos['value...']]);
-			return true;
-		} catch (PDOException $e) {
-				echo $e->getMessage();
-				return flase;
-		}
-	}
+ public function setDireccion($datos){
+	 try {
+		 //Seprocede a llenar primero la tabla codigosPostales
+		 $consulta = $this->db->connect();
+		 $query = $consulta->prepare('INSERT INTO codigosPostales (id, colonias_id, COLUM...) VALUES (:value1, :value2, :value...)');
+		 $query->bindParam(":idContacto",$datos[''],PDO::PARAM_INT);
+		 $query->bindParam(":correo",$datos[''],PDO::PARAM_STR);
+		 $query->bindParam(":telefonoCelular",$datos[''],PDO::PARAM_STR);
+		 $query->bindParam(":telefonoCasa",$datos[''],PDO::PARAM_STR);
+		 $query->execute();
+		 $query->execute(['value1' => $datos['value1'], 'value2' => $datos['value2'], 'value...' => $datos['value...']]);
+		 return true;
+	 } catch (PDOException $e) {
+			 echo $e->getMessage();
+			 return flase;
+	 }
+ }
+
+ public function setDatosContacto($datos){
+ 	try {
+ 		$consulta = $this->db->connect();
+ 		$query = $consulta->prepare('INSERT INTO contacto (idContacto, correo, telefonoCelular, telefonoCasa) VALUES (:idContacto, :correo, :telefonoCelular, :telefonoCasa)');
+ 		$query->bindParam(":idContacto",$datos[''],PDO::PARAM_INT);
+ 		$query->bindParam(":correo",$datos[''],PDO::PARAM_STR);
+ 		$query->bindParam(":telefonoCelular",$datos[''],PDO::PARAM_STR);
+ 		$query->bindParam(":telefonoCasa",$datos[''],PDO::PARAM_STR);
+ 		$query->execute();
+ 		//$query->execute(['' => $datos['idContacto'], 'correo' => $datos['correo'], 'telefonoCelular' => $datos['telefonoCelular'], 'telefonoCasa' => $datos['telefonoCasa']]);
+ 		return true;
+ 	} catch (PDOException $e) {
+ 			echo $e->getMessage();
+ 			return false;
+ 	}
+ }
+
+	 public function setUsuario($datos){
+		 //echo "insertando datos de ususario";
+		 try {
+			 $query = $this->db->connect()->prepare('INSERT INTO NOMBRETABLA (COLUM1, COLUM2, COLUM...) VALUES (:value1, :value2, :value...)');
+			 $query->execute(['value1' => $datos['value1'], 'value2' => $datos['value2'], 'value...' => $datos['value...']]);
+			 return true;
+		 } catch (PDOException $e) {
+				 echo $e->getMessage();
+				 return flase;
+		 }
+	 }
+
+
 	public function setCodigoPostal($datos){
 		try {
 			$query = $this->db->connect()->prepare('INSERT INTO NOMBRETABLA (COLUM1, COLUM2, COLUM...) VALUES (:value1, :value2, :value...)');
@@ -101,41 +139,9 @@ class FormularioModel extends Model {
 		}
 	}
 
-	public function setColonia($datos){
-		try {
-			$query = $this->db->connect()->prepare('INSERT INTO NOMBRETABLA (COLUM1, COLUM2, COLUM...) VALUES (:value1, :value2, :value...)');
-			$query->execute(['value1' => $datos['value1'], 'value2' => $datos['value2'], 'value...' => $datos['value...']]);
-			return true;
-		} catch (PDOException $e) {
-				echo $e->getMessage();
-				return flase;
-		}
-	}
+
 
 	public function setAlcaldiaUsuario($datos){
-		try {
-			$query = $this->db->connect()->prepare('INSERT INTO NOMBRETABLA (COLUM1, COLUM2, COLUM...) VALUES (:value1, :value2, :value...)');
-			$query->execute(['value1' => $datos['value1'], 'value2' => $datos['value2'], 'value...' => $datos['value...']]);
-			return true;
-		} catch (PDOException $e) {
-				echo $e->getMessage();
-				return flase;
-		}
-	}
-
-	public function setDireccion($datos){
-		try {
-			$query = $this->db->connect()->prepare('INSERT INTO NOMBRETABLA (COLUM1, COLUM2, COLUM...) VALUES (:value1, :value2, :value...)');
-			$query->execute(['value1' => $datos['value1'], 'value2' => $datos['value2'], 'value...' => $datos['value...']]);
-			return true;
-		} catch (PDOException $e) {
-				echo $e->getMessage();
-				return flase;
-		}
-	}
-
-	public function setUsuario($datos){
-		//echo "insertando datos de ususario";
 		try {
 			$query = $this->db->connect()->prepare('INSERT INTO NOMBRETABLA (COLUM1, COLUM2, COLUM...) VALUES (:value1, :value2, :value...)');
 			$query->execute(['value1' => $datos['value1'], 'value2' => $datos['value2'], 'value...' => $datos['value...']]);

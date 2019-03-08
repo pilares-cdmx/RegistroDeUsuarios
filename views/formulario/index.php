@@ -19,8 +19,6 @@
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label for="nombre">Nombre(s)</label><br>
             <input id="nombre" type="text" class="validate" name="nombreuser" style="text-transform:uppercase;" size="30" required>
-
-
           </div>
         </div>
         <div class="row">
@@ -82,8 +80,8 @@
           <div class="col-lg-12 col-md-12 estilo-forma">
 
             <label for="nombre">Alcaldia </label><br>
-            <!--id "pais" corresponde a Alcaldias-->
-            <select name="pais" id="pais">
+            <!--id "alcaldia" corresponde a Alcaldias-->
+            <select name="alcaldia" id="alcaldia">
               <option value="">Selecciona</option>
                       <?php
                          foreach ($this->alcaldias as $a)
@@ -100,7 +98,7 @@
 
             <label for="nombre">Colonia </label><br>
               <!--id "estados" corresponde a Colonia-->
-            <select name="estados" id="estados" required>
+            <select name="colonia" id="colonia" required>
               <option value="">Selecciona</option>
             </select>
 
@@ -111,7 +109,7 @@
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label for="nombre">Codigo Postal </label><br>
             <!--id "municipio" corresponde a Codigo postal-->
-            <select name="municipio" id="municipio" required>
+            <select name="codigoPostal" id="codigoPostal" required>
               <option value="">Selecciona</option>
             </select>
           </div>
@@ -120,7 +118,7 @@
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label for="nombre">Calle y Número</label><br>
-            <input id="nombre" type="text" class="validate" name="callenumero" style="text-transform:uppercase;" size="30" required>
+            <input id="nombre" type="text" class="validate" name="calleNumero" style="text-transform:uppercase;" size="30" required>
           </div>
         </div>
 
@@ -128,7 +126,7 @@
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label for="numrec">Tiempo en residencia CDMX</label><br>
-            <input onkeypress="return justNumbers(event);" maxlength="3" id="numrec" type="text" class="validate" name="numre">
+            <input onkeypress="return justNumbers(event);" maxlength="3" id="timepoResidencia" type="text" class="validate" name="timepoResidencia">
             <small id="residenciaHelp" class="form-text text-muted">Tiempo en años</small>
           </div>
         </div>
@@ -136,16 +134,16 @@
 
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
-            <label for="tel" <input type="number">Teléfono de casa</label><br>
-            <input onkeypress="return justNumbers(event);" maxlength="12" id="tel" type="text" class="validate" name="t1" placeholder="Proporciona algún número">
+            <label for="telCasa" <input type="number">Teléfono de casa</label><br>
+            <input onkeypress="return justNumbers(event);" maxlength="12" id="telCasa" type="text" class="validate" name="telCasa" placeholder="Proporciona un número local">
           </div>
         </div>
 
 
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
-            <label for="cel" <input type="number">Teléfono celular</label><br>
-            <input onkeypress="return justNumbers(event);" maxlength="12" id="cel" type="text" name="t2" class="validate">
+            <label for="telMovil" <input type="number">Teléfono celular</label><br>
+            <input onkeypress="return justNumbers(event);" maxlength="12" id="telMovil" type="text" name="telMovil" class="validate">
           </div>
         </div>
 
@@ -209,7 +207,7 @@
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label>Ocupación actual</label><br>
 
-            <select name="ocupacionact">
+            <select name="ocupacionAct">
               <option value="0" disabled selected>Selecciona</option>
               <option value="1">Estudiantes</option>
               <option value="2">Profesionistas</option>
@@ -318,7 +316,7 @@
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label>Opción educativa</label><br>
-            <select name="opedu">
+            <select name="opcionEdu">
               <option value="0" disabled selected>Ciberescuela</option>
               <option value="1">Alfabetización</option>
               <option value="2">Primaria</option>
@@ -562,7 +560,7 @@
 
             <div class="form-group">
               <label for="name1">PILARES</label>
-              <select id="state_id" class="form-control" name="state_id" required>
+              <select id="pilarSelect_id" class="form-control" name="pilarSelect_id" required>
                 <option value="">Selecciona</option>
               </select>
             </div> <br><br>

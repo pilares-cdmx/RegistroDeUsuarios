@@ -31,8 +31,8 @@ class Formulario extends Controller{
 	 */
 	function getPilares(){
 		$id = $_GET['id'];
-		$country = $this->model->getPilaresById($id);
-		$data=$country;
+		$pilares = $this->model->getPilaresById($id);
+		$data=$pilares;
 		echo json_encode($data);
 	}
 	/**
@@ -41,18 +41,18 @@ class Formulario extends Controller{
 	 */
 	function getColonias(){
 		$id = $_GET['id'];
-		$country = $this->model->getColoniaPorId($id);
-		$data=$country;
+		$colonias = $this->model->getColoniaPorId($id);
+		$data=$colonias;
 		echo json_encode($data);
 	}
 	/**
 	 * [getMunicipios description]
 	 * @return [type] [description]
 	 */
-	function getMunicipios(){
+	function getCodigoPostal(){
 		$id = $_GET['id'];
-		$country = $this->model->getMunicipiosPorId($id);
-		$data=$country;
+		$codPostal = $this->model->getCodigoPostalPorId($id);
+		$data=$codPostal;
 		echo json_encode($data);
 	}
 	/**
@@ -80,17 +80,17 @@ class Formulario extends Controller{
 		$opcionEdu=(!is_null($_POST['opcionEdu'])) ? $_POST['opcionEdu'] : "Sin Datos";
 		$pilarSelect_id=(!is_null($_POST['state_id'])) ? $_POST['state_id'] : "Sin Datos";
 
-		$this->model->setDatosContacto();
-		$this->model->setCodigoPostal();
-		$this->model->setColonia();
-		$this->model->setAlcaldiaUsuario();
-		$this->model->setDireccion();
+		$this->model->setDatosContacto(['value1' => $value1, 'value2' => $value2, 'valueETC' => $valueETC]);
+		$this->model->setCodigoPostal(['value1' => $value1, 'value2' => $value2, 'valueETC' => $valueETC]);
+		$this->model->setColonia(['value1' => $value1, 'value2' => $value2, 'valueETC' => $valueETC]);
+		$this->model->setAlcaldiaUsuario(['value1' => $value1, 'value2' => $value2, 'valueETC' => $valueETC]);
+		$this->model->setDireccion(['value1' => $value1, 'value2' => $value2, 'valueETC' => $valueETC]);
 
 		if (this->model->setUsuario(['value1' => $value1, 'value2' => $value2, 'valueETC' => $valueETC])) {
 			echo "nuevo ususario creado";
 		}
-		this->model->setServiciosSelecionados();
-		this->model->setPilarSelecionado();
+		this->model->setServiciosSelecionados(['value1' => $value1, 'value2' => $value2, 'valueETC' => $valueETC]);
+		this->model->setPilarSelecionado(['value1' => $value1, 'value2' => $value2, 'valueETC' => $valueETC]);
 
 	}
 

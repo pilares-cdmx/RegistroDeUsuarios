@@ -57,7 +57,7 @@ class FormularioModel extends Model {
 	 * @param  [type] $id [description]
 	 * @return [type]     [description]
 	 */
-	public function getMunicipiosPorId($id){
+	public function getCodigoPostalPorId($id){
 		try{
 			$result=array();
 			$consulta=$this->db->connect()->prepare("SELECT id,nombre FROM municipios where estado_id=:estado_id");
@@ -81,22 +81,57 @@ class FormularioModel extends Model {
  */
 
 	public function setDatosContacto($datos){
-
+		try {
+			$query = $this->db->connect()->prepare('INSERT INTO NOMBRETABLA (COLUM1, COLUM2, COLUM...) VALUES (:value1, :value2, :value...)');
+			$query->execute(['value1' => $datos['value1'], 'value2' => $datos['value2'], 'value...' => $datos['value...']]);
+			return true;
+		} catch (PDOException $e) {
+				echo $e->getMessage();
+				return flase;
+		}
 	}
 	public function setCodigoPostal($datos){
-
+		try {
+			$query = $this->db->connect()->prepare('INSERT INTO NOMBRETABLA (COLUM1, COLUM2, COLUM...) VALUES (:value1, :value2, :value...)');
+			$query->execute(['value1' => $datos['value1'], 'value2' => $datos['value2'], 'value...' => $datos['value...']]);
+			return true;
+		} catch (PDOException $e) {
+				echo $e->getMessage();
+				return flase;
+		}
 	}
 
 	public function setColonia($datos){
-
+		try {
+			$query = $this->db->connect()->prepare('INSERT INTO NOMBRETABLA (COLUM1, COLUM2, COLUM...) VALUES (:value1, :value2, :value...)');
+			$query->execute(['value1' => $datos['value1'], 'value2' => $datos['value2'], 'value...' => $datos['value...']]);
+			return true;
+		} catch (PDOException $e) {
+				echo $e->getMessage();
+				return flase;
+		}
 	}
 
 	public function setAlcaldiaUsuario($datos){
-
+		try {
+			$query = $this->db->connect()->prepare('INSERT INTO NOMBRETABLA (COLUM1, COLUM2, COLUM...) VALUES (:value1, :value2, :value...)');
+			$query->execute(['value1' => $datos['value1'], 'value2' => $datos['value2'], 'value...' => $datos['value...']]);
+			return true;
+		} catch (PDOException $e) {
+				echo $e->getMessage();
+				return flase;
+		}
 	}
 
 	public function setDireccion($datos){
-
+		try {
+			$query = $this->db->connect()->prepare('INSERT INTO NOMBRETABLA (COLUM1, COLUM2, COLUM...) VALUES (:value1, :value2, :value...)');
+			$query->execute(['value1' => $datos['value1'], 'value2' => $datos['value2'], 'value...' => $datos['value...']]);
+			return true;
+		} catch (PDOException $e) {
+				echo $e->getMessage();
+				return flase;
+		}
 	}
 
 	public function setUsuario($datos){
@@ -112,11 +147,25 @@ class FormularioModel extends Model {
 	}
 
 	public function setServiciosSelecionados($datos){
-
+		try {
+			$query = $this->db->connect()->prepare('INSERT INTO NOMBRETABLA (COLUM1, COLUM2, COLUM...) VALUES (:value1, :value2, :value...)');
+			$query->execute(['value1' => $datos['value1'], 'value2' => $datos['value2'], 'value...' => $datos['value...']]);
+			return true;
+		} catch (PDOException $e) {
+				echo $e->getMessage();
+				return flase;
+		}
 	}
 
 	public function setPilarSelecionado($datos){
-
+		try {
+			$query = $this->db->connect()->prepare('INSERT INTO NOMBRETABLA (COLUM1, COLUM2, COLUM...) VALUES (:value1, :value2, :value...)');
+			$query->execute(['value1' => $datos['value1'], 'value2' => $datos['value2'], 'value...' => $datos['value...']]);
+			return true;
+		} catch (PDOException $e) {
+				echo $e->getMessage();
+				return flase;
+		}
 	}
 
 }

@@ -5511,7 +5511,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Single Blog Post -->
                                 <div class="single-blog-post post-style-2 d-flex align-items-center widget-post">
                                     <!-- Post Thumbnail -->
@@ -5945,7 +5945,7 @@
 
     <?php require 'views/footer.php'; ?>
 
-   
+
 
 </body>
 

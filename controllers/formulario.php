@@ -30,8 +30,8 @@ class Formulario extends Controller{
 	 * @return [type] [description]
 	 */
 	function getPilares(){
-		$id = $_GET['id'];
-		$pilares = $this->model->getPilaresById($id);
+		$Direccion_Alcaldias_idAlcaldias = $_GET['id'];
+		$pilares = $this->model->getPilaresById($Direccion_Alcaldias_idAlcaldias);
 		$data=$pilares;
 		echo json_encode($data);
 	}
@@ -40,8 +40,8 @@ class Formulario extends Controller{
 	 * @return [type] [description]
 	 */
 	function getColonias(){
-		$id = $_GET['id'];
-		$colonias = $this->model->getColoniaPorId($id);
+		$idAlcaldia = $_GET['idAlcaldia'];
+		$colonias = $this->model->getColoniaPorId($idAlcaldia);
 		$data=$colonias;
 		echo json_encode($data);
 	}

@@ -77,16 +77,16 @@
 
 
         <div class="row">
-          <div class="col-lg-12 col-md-12 estilo-forma">
+          <div class="col-lg-12 col-lg-12 estilo-forma">
 
-            <label for="nombre">Alcaldia </label><br>
+            <label for="nombre">Alcaldia</label><br>
             <!--id "alcaldia" corresponde a Alcaldias-->
             <select name="alcaldia" id="alcaldia">
               <option value="">Selecciona</option>
                       <?php
                          foreach ($this->alcaldias as $a)
                          {
-                         echo '<option value="'.$a->Id.'">'.$a->Pais.'</option>';
+                         echo '<option value="'.$a->idAlcaldias.'">'.$a->nombre.'</option>';
                          }
                        ?>
             </select>
@@ -164,9 +164,9 @@
             <div class="radio">
               <!--Se modifico el name de los radio buttons. ahora tienen
                 el mismo nombre para darles la propiedad "group"-->
-              <input name="estudias" type="radio" id="4" value="4">
+              <input name="estudias" type="radio" id="4" value="Si">
               <label for="4" class="rc_sty">Si</label>
-              <input name="estudias" type="radio" id="5" value="5">
+              <input name="estudias" type="radio" id="5" value="No">
               <label for="5" class="rc_sty">No</label>
             </div>
           </div>
@@ -547,14 +547,14 @@
 
             <div class="form-group">
               <label for="name1">Alcaldia</label>
-              <select id="country_id" class="form-control" name="country_id" required>
+              <select id="alcaldiaPilar" class="form-control" name="alcaldiaPilar" required>
                 <option value="">Selecciona</option>
-                <?php
-                       foreach ($this->alcaldias as $a)
-                       {
-                       echo '<option value="'.$a->Id.'">'.$a->Pais.'</option>';
-
-                       }?>
+                  <?php
+                     foreach ($this->alcaldias as $a)
+                     {
+                     echo '<option value="'.$a->idAlcaldias.'">'.$a->nombre.'</option>';
+                     }
+                   ?>
               </select>
             </div>
 
@@ -603,8 +603,8 @@
 
   <script type="text/javascript">
     $(document).ready(function() {
-      $("#country_id").change(function() {
-        var id = document.getElementById("country_id").value;
+      $("#alcaldiaPilar").change(function() {
+        var id = document.getElementById("alcaldiaPilar").value;
         $.ajax({
           url: "http://localhost/webformulario/formulario/getPilares",
           type: 'GET',
@@ -614,7 +614,7 @@
           },
           success: function(json) {
             $.each(json, function(i, estado) {
-              $("#state_id").append('<option value=' + estado.id + '>' + estado.name + '</option>');
+              $("#pilarSelect_id").append('<option value=' + estado.id + '>' + estado.name + '</option>');
             });
           },
           error: function(xhr, status) {
@@ -627,18 +627,18 @@
 
   <script type="text/javascript">
     $(document).ready(function() {
-      $("#pais").change(function() {
-        var id = document.getElementById("pais").value;
+      $("#alcaldia").change(function() {
+        var idAlcaldia = document.getElementById("alcaldia").value;
         $.ajax({
           url: "http://localhost/webformulario/formulario/getColonias",
           type: 'GET',
           dataType: "json",
           data: {
-            id: id
+            id: idAlcaldia
           },
           success: function(json) {
             $.each(json, function(i, resultado) {
-              $("#estados").append('<option value=' + resultado.id + '>' + resultado.nombre + '</option>');
+              $("#colonia").append('<option value=' + resultado.id + '>' + resultado.nombre + '</option>');
             });
           },
           error: function(xhr, status) {
@@ -648,11 +648,11 @@
       });
     });
   </script>
-
+<!--
   <script type="text/javascript">
     $(document).ready(function() {
-      $("#estados").change(function() {
-        var id = document.getElementById("estados").value;
+      $("#colonia").change(function() {
+        var id = document.getElementById("colonia").value;
         $.ajax({
           url: "http://localhost/webformulario/formulario/getMunicipios",
           type: 'GET',
@@ -672,6 +672,7 @@
       });
     });
   </script>
+-->
 </body>
 
 </html>

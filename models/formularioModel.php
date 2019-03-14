@@ -20,7 +20,7 @@ class FormularioModel extends Model {
 	public function getAlcaldias() {
 		try{
 			$result=array();
-			$consulta=$this->db->connect()->prepare("SELECT Id,Pais FROM paises");
+			$consulta=$this->db->connect()->prepare("SELECT idAlcaldias, nombre FROM Alcaldias");
 			$consulta->execute();
 			return $consulta->fetchAll(PDO::FETCH_OBJ);
 		}catch(PDOException $e){
@@ -28,24 +28,24 @@ class FormularioModel extends Model {
 			return false;
 		}
 	}
-	public function getPilaresById($country_id){
+	public function getPilaresById($Direccion_Alcaldias_idAlcaldias){
 		try{
 			$result=array();
-			$consulta=$this->db->connect()->prepare("SELECT id,name FROM state where country_id=:country_id");
+			$consulta=$this->db->connect()->prepare("SELECT idPilares, nombre FROM Pilares where Direccion_Alcaldias_idAlcaldias = :Direccion_Alcaldias_idAlcaldias");
 			$consulta->execute([
-				'country_id'  =>$country_id]);
+				'Direccion_Alcaldias_idAlcaldias'  => $Direccion_Alcaldias_idAlcaldias]);
 			return $consulta->fetchAll(PDO::FETCH_OBJ);
 		}catch(PDOException $e){
 			die($e->getMessage());
 			return false;
 		}
 	}
-	public function getColoniaPorId($id){
+	public function getColoniaPorId($idAlcaldia){
 		try{
 			$result=array();
-			$consulta=$this->db->connect()->prepare("SELECT id,nombre FROM estados where Id_pais=:Id_pais");
+			$consulta=$this->db->connect()->prepare("SELECT idColonia, nombre FROM Colonias where Alcaldias_idAlcaldiasZonas = :Alcaldias_idAlcaldiasZonas");
 			$consulta->execute([
-				'Id_pais'  =>$id]);
+				'Alcaldias_idAlcaldiasZonas'  => $idAlcaldia]);
 			return $consulta->fetchAll(PDO::FETCH_OBJ);
 		}catch(PDOException $e){
 			die($e->getMessage());
@@ -56,19 +56,20 @@ class FormularioModel extends Model {
 	 * [getMunicipiosPorId description]
 	 * @param  [type] $id [description]
 	 * @return [type]     [description]
-	 */
-	public function getCodigoPostalPorId($id){
-		try{
-			$result=array();
-			$consulta=$this->db->connect()->prepare("SELECT id,nombre FROM municipios where estado_id=:estado_id");
-			$consulta->execute([
-				'estado_id'  =>$id]);
-			return $consulta->fetchAll(PDO::FETCH_OBJ);
-		}catch(PDOException $e){
-			die($e->getMessage());
-			return false;
-		}
-	}
+**/
+
+//	public function getCodigoPostalPorId($idCodigoPostal){
+//		try{
+	//		$result=array();
+	//		$consulta=$this->db->connect()->prepare("SELECT idCodigoPostal, codigo FROM CodigosPostales where idCodigoPostal = :idCodigoPostal");
+	//		$consulta->execute([
+	//			'estado_id'  =>$id]);
+	//		return $consulta->fetchAll(PDO::FETCH_OBJ);
+	//	}catch(PDOException $e){
+	//		die($e->getMessage());
+	//		return false;
+	//	}
+	//}
 
 /**
  *

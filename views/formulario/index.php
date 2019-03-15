@@ -21,7 +21,7 @@
 
  </head>
  <body>
-  <img src="<?php ////echo constant('URL')?>../../public/img/form-img/cenefa3.jpg" <br>
+  <img src="<?php ////echo constant('URL')?>../../public/img/blog-img/cenefa4.png" <br>
   <br>
   <div class="container">
     <div class="row">
@@ -43,13 +43,13 @@
         </div>
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
-            <label for="ap_pat">Apellido Paterno</label><br>
+            <label for="ap_pat">Apellido paterno</label><br>
             <input id="ap_pat" type="text" class="validate" name="apellidopat" style="text-transform:uppercase;" size="30" required>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
-            <label for="ap_mat">Apellido Materno</label><br>
+            <label for="ap_mat">Apellido materno</label><br>
             <input id="ap_mat" type="text" class="validate" name="apellidomat" style="text-transform:uppercase;" size="30" required>
           </div>
         </div>
@@ -84,7 +84,8 @@
               <option value="15">Huasteco</option>
               <option value="16">Tzotzil</option>
               <option value="17">Pueblo Originario (CDMX)</option>
-              <option value="18">Otro</option>
+              <option value="18">Ninguno</option>
+              <option value="19">Otro</option>
             </select>
           </div>
         </div>
@@ -129,7 +130,7 @@
 
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
-            <label for="nombre">Codigo Postal </label><br>
+            <label for="nombre">Código postal </label><br>
             <!--id "municipio" corresponde a Codigo postal-->
             <select name="codigoPostal" id="codigoPostal" required>
               <option value="">Selecciona</option>
@@ -139,7 +140,7 @@
 
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
-            <label for="nombre">Calle y Número</label><br>
+            <label for="nombre">Calle y número</label><br>
             <input id="nombre" type="text" class="validate" name="calleNumero" style="text-transform:uppercase;" size="30" required>
           </div>
         </div>
@@ -147,7 +148,7 @@
 
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
-            <label for="numrec">Tiempo en residencia CDMX</label><br>
+            <label for="numrec">Tiempo de residencia en CDMX</label><br>
             <input onkeypress="return justNumbers(event);" maxlength="3" id="timepoResidencia" type="text" class="validate" name="timepoResidencia">
             <small id="residenciaHelp" class="form-text text-muted">Tiempo en años</small>
           </div>
@@ -157,7 +158,7 @@
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label for="telCasa" <input type="number">Teléfono de casa</label><br>
-            <input onkeypress="return justNumbers(event);" maxlength="12" id="telCasa" type="text" class="validate" name="telCasa" placeholder="Proporciona un número local">
+            <input onkeypress="return justNumbers(event);" maxlength="12" id="telCasa" type="text" class="validate" name="telCasa" >
           </div>
         </div>
 

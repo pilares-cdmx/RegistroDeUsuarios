@@ -1522,7 +1522,9 @@ input[type=number] {
 
 input:invalid,
 textarea:invalid {
-  border-bottom : 2px solid red;
+  /*
+  border-bottom : 2px solid #06A099;
+   */
 }
 
 .datepicker::-webkit-input-placeholder {

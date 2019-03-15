@@ -12,7 +12,8 @@
 		 * [render description]
 		 */
 		function render(){
-		$this->view->render('principal/index');
+		$this->view->render('formulario/index');	
+	//	$this->view->render('principal/index');
 	 }
 	}
 ?>

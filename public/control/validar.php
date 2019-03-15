@@ -7,11 +7,11 @@ $pass = $_POST['txtpass'];
 //VALIDAR CONTENIDO EN LAS VARIABLES O CAJAS DE TEXTO
 if (empty($usuario) | empty($pass))
 	{
-	header("Location: ../../index.html");
+	header("Location: ../../index.php");
 	exit();
 	}
 //VALIDANDO EXISTENCIA DEL USUARIO
-$sql = mysql_query("SELECT * from usuarios where usuario = '$usuario' and pass = '$pass' ");
+$sql = mysql_query("SELECT * from Login where nombre = '$usuario' and contraseña = '$pass' ");
 if ($row = mysql_fetch_array($sql))
 		{
 		session_start();
@@ -19,7 +19,7 @@ if ($row = mysql_fetch_array($sql))
 		header("Location: ../perfil.php");
 		}else
 			{
-			header("Location: ../../index.html");
+			header("Location: ../../index.php");
 			exit();
 		}
 }

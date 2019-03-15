@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="<?php echo constant('URL');?>css/estilos.css">
   <title>Aviso de Privacidad</title>
-  
+
 
 </head>
 
@@ -17,38 +17,38 @@
  <form action="pruebaconexion.php" method="get" accept-charset="utf-8">
 <script type="text/javascript"> </script>
 
-  <img src="img/cenefa3.jpg">
+  <img src="<?php echo constant('URL');?>img/cenefa3.jpg">
   <br>
   <br>
- 
-  
+
+
 
   <div class="container">
     <div class="row">
       <div class="col">
       <H1 align="center">Aviso de Privacidad</H1>
-		
+
       </div>
     </div>
   </div><br>
-  
-  
- 
- 
 
 
- 
- 
+
+
+
+
+
+
 
     <div class="container">
       <fieldset>
-    
+
 
 <div class="row">
-        
+
 <div class="col-lg-12 col-md-12 estilo-forma">
 <font color="#4C4948">
-<P ALIGN="justify"> La Secretaría de Educación, Ciencia, Tecnología e Innovación de la Ciudad de México, con domicilio en Avenida Chapultepec No 49, Col. Centro, Alcaldía Cuauhtémoc, C.P. 06010, Ciudad de México, es la responsable del tratamiento de los datos personales contenidos en el Sistema de Datos Personales de los  Puntos de Innovación, Libertad, Arte, Educación y Saberes (PILARES), los cuales serán protegidos conforme a lo dispuesto por la Ley de Protección de Datos Personales en posesión de Sujetos Obligados de la Ciudad de México, y demás normatividad aplicable. 
+<P ALIGN="justify"> La Secretaría de Educación, Ciencia, Tecnología e Innovación de la Ciudad de México, con domicilio en Avenida Chapultepec No 49, Col. Centro, Alcaldía Cuauhtémoc, C.P. 06010, Ciudad de México, es la responsable del tratamiento de los datos personales contenidos en el Sistema de Datos Personales de los  Puntos de Innovación, Libertad, Arte, Educación y Saberes (PILARES), los cuales serán protegidos conforme a lo dispuesto por la Ley de Protección de Datos Personales en posesión de Sujetos Obligados de la Ciudad de México, y demás normatividad aplicable.
 
 <P ALIGN="justify">Los datos recabados se utilizarán para la siguiente finalidad: En el caso de los facilitadores, revisar que los interesados reúnen los requisitos para acceder a los beneficios, incorporación a los proyectos, ayudas o servicios que se otorgan en los PILARES, para selección, prelación, verificación, seguimiento, integración de expedientes, integración del padrón de beneficiarios y su publicación en la Gaceta Oficial de la Ciudad de México, para recibir capacitación y contribuir a la profesionalización, para elaboración de reportes, recibir su ayuda social por su aporte, publicación en Internet de la información sobre los montos pagados durante el período por concepto de ayudas conforme a lo establecido en la Ley General de Contabilidad Gubernamental. En el caso de los usuarios, para registro de las personas atendidas, seguimiento y en su caso integración de expediente, de igual manera para su incorporación a proyectos pedagógicos, estudios, actividades de difusión, foros y fortalecimiento de los programas operados por la Coordinación General de Inclusión Educativa e Innovación (CGIEI) de la Secretaría de Educación, Ciencia, Tecnología e Innovación de la Ciudad de México. Así como para fines estadísticos, asignación de claves y contraseñas, soporte técnico, en su caso la elaboración de la evaluación interna y externa, así como para atención de quejas.
 
@@ -64,16 +64,16 @@
 <br>
 <div align="center">
   <input type="button" value="Aceptar" name="Back2" onclick="history.back()" />
-  
+
   </div>
 </br>
 </tr>
- 
+
  </fieldset>
     </div>
 </form>
   </form>
-<img src="img/cenefa.png">
+<img src="<?php echo constant('URL');?>img/cenefa.png">
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

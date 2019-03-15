@@ -8,11 +8,11 @@
 		}
 		/**
 		 * [loadModel description]
-		 * @param  [type] $model [description]
+		 * @param  model $model carga el modelo asiganado a cada  controlador
 		 */
 		function loadModel($model){
 			/** @var string [description] */
-			$url = 'models/'.$model.'model.php';
+			$url = 'models/'.$model.'Model.php';
 			if(file_exists($url)){
 				require $url;
 				$modelName = $model.'Model';

@@ -314,12 +314,14 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-12 col-md-12 estilo-forma">
+          <div class="col-lg-12 estilo-forma">
             <label>Deporte</label>
             <div class="checkbox">
               <p>
+                <!--
                 <input type="checkbox" name="check17" id="dep1" />
-                <label for="dep1" class="rc_sty">Escuela técnico deportiva futbol</label>
+              -->
+                <label for="dep1" class="rc_sty"><strong>Escuela técnico deportiva futbol</strong></label>
 
                 <input type="checkbox" name="check18" id="dep2" />
                 <label for="dep2" class="rc_sty">Escuela técnico deportiva básquetbol</label>

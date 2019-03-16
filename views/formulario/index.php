@@ -264,85 +264,156 @@
 
 
         <div class="row">
-          <div class="col-lg-12 col-md-12 estilo-forma">
-            <label>Cultura</label>
-            <div class="checkbox">
+          <div class="col-lg-12 estilo-forma">
+            <label class="h3">Cultura</label>
               <div class="row">
                 <div class="col-lg-4">
-                  <input type="checkbox" name="check1" id="cul1" />
-                  <label for="cul1" class="rc_sty" value="Teatro">Teatro</label><br>
-                  <input type="checkbox" name="check2" id="cul2" />
-                  <label for="cul2" class="rc_sty" value="Danza">Danza</label><br>
-                  <input type="checkbox" name="check3" id="cul3" />
-                  <label for="cul3" class="rc_sty" value="Ballet">Ballet</label><br>
-                  <input type="checkbox" name="check4" id="cul4" />
-                  <label for="cul4" class="rc_sty" value="Perfonmance">Perfonmance</label><br>
-                  <input type="checkbox" name="check5" id="cul5" />
-                  <label for="cul5" class="rc_sty" value="Música">Música</label> <br>
+                  <label>Artes escénicas</label>
+                  <div class="checkbox">
+                    <input type="checkbox" name="check1" id="cul1" />
+                    <label for="cul1" class="rc_sty" value="Danza">Danza</label><br>
+                    <input type="checkbox" name="check2" id="cul2" />
+                    <label for="cul2" class="rc_sty" value="BaileSocial">Baile Social</label><br>
+                    <input type="checkbox" name="check3" id="cul3" />
+                    <label for="cul3" class="rc_sty" value="DanzaNiños">Danza para niños</label><br>
+                    <input type="checkbox" name="check4" id="cul4" />
+                    <label for="cul4" class="rc_sty" value="DanzaAdultos">Danza para adultos</label><br>
+                    <input type="checkbox" name="check5" id="cul5" />
+                    <label for="cul5" class="rc_sty" value="DanzaFolklorica">Danza folklórica</label> <br>
+                    <input type="checkbox" name="check1" id="cul1" />
+                    <label for="cul1" class="rc_sty" value="Ballet">Ballet</label><br>
+                    <input type="checkbox" name="check2" id="cul2" />
+                    <label for="cul2" class="rc_sty" value="Actuación">Actuación</label><br>
+                    <input type="checkbox" name="check3" id="cul3" />
+                    <label for="cul3" class="rc_sty" value="TeatroCalle">Teatro de calle</label><br>
+                    <input type="checkbox" name="check4" id="cul4" />
+                    <label for="cul4" class="rc_sty" value="DanzaContemporánea">Danza contemporánea</label><br>
+                    <input type="checkbox" name="check5" id="cul5" />
+                    <label for="cul5" class="rc_sty" value="DanzaPolinesia">Danza polinesia</label> <br>
+                    <input type="checkbox" name="check4" id="cul4" />
+                    <label for="cul4" class="rc_sty" value="TeatroMascaras">Teatro de máscaras</label><br>
+                    <input type="checkbox" name="check5" id="cul5" />
+                    <label for="cul5" class="rc_sty" value="ExpresiónCorporal">Expresión corporal y teatro</label> <br>
+                  </div>
                 </div>
                 <div class="col-lg-4">
-                  <input type="checkbox" name="check6" id="cul6" />
-                  <label for="cul6" class="rc_sty" value="Encuadernación">Encuadernación</label><br>
-                  <input type="checkbox" name="check7" id="cul7" />
-                  <label for="cul7" class="rc_sty" value="Reciclaje">Reciclaje</label><br>
-                  <input type="checkbox" name="check8" id="cul8" />
-                  <label for="cul8" class="rc_sty" value="Artesplasticas">Artes plásticas y artes gráficas</label><br>
-                  <input type="checkbox" name="check9" id="cul9" />
-                  <label for="cul9" class="rc_sty" value="Fotografia">Fotografía</label><br>
-                  <input type="checkbox" name="check10" id="cul10" />
-                  <label for="cul10" class="rc_sty" value="Videodoc">Video documental</label>
-                  <br>
+                  <label>Oficios</label>
+                  <div class="checkbox">
+                    <input type="checkbox" name="check6" id="cul6" />
+                    <label for="cul6" class="rc_sty" value="TelarCintura">Telar de cintura</label><br>
+                    <input type="checkbox" name="check7" id="cul7" />
+                    <label for="cul7" class="rc_sty" value="Cartoneria">Cartonería</label><br>
+                    <input type="checkbox" name="check8" id="cul8" />
+                    <label for="cul8" class="rc_sty" value="BordadoVida">Bordado para la vida</label><br>
+                    <input type="checkbox" name="check9" id="cul9" />
+                    <label for="cul9" class="rc_sty" value="Encuadernacion">Encuadernación</label><br>
+                    <input type="checkbox" name="check10" id="cul10" />
+                    <label for="cul10" class="rc_sty" value="ConstruccionInstrumentos">Construcción artesanal de instrumentos</label>
+                    <input type="checkbox" name="check10" id="cul10" />
+                    <label for="cul10" class="rc_sty" value="DiseñoJuguetesMaderaReuso">Diseño de juguetes de madera y materiales de reuso</label>
+                    <br>
+                  </div>
+                  <label>Artes sustentables</label>
+                  <div class="checkbox">
+                    <input type="checkbox" name="check6" id="cul6" />
+                    <label for="cul6" class="rc_sty" value="ReciclajeAmbiente">Reciclaje y medio ambiente</label><br>
+                  </div>
+                  <label>Literatura</label>
+                  <div class="checkbox">
+                    <input type="checkbox" name="check6" id="cul6" />
+                    <label for="cul6" class="rc_sty" value="EscrituraCreativa">Escritura creativa</label><br>
+                  </div>
+                  <label>Artes plásticas</label>
+                  <div class="checkbox">
+                    <input type="checkbox" name="check6" id="cul6" />
+                    <label for="cul6" class="rc_sty" value="PinturaArtistica">Pintura artística</label><br>
+                  </div>
                 </div>
                 <div class="col-lg-4">
-
-                  <input type="checkbox" name="check11" id="cul11" />
-                  <label for="cul11" class="rc_sty" value="Stopmotion">Stop motion</label><br>
-                  <input type="checkbox" name="check12" id="cul12" />
-                  <label for="cul12" class="rc_sty" value="Arteybio">Arte y biología</label><br>
-                  <input type="checkbox" name="check13" id="cul13" />
-                  <label for="cul13" class="rc_sty" value="Tallerdehu">Taller de huerto</label><br>
-                  <input type="checkbox" name="check14" id="cul14" />
-                  <label for="cul14" class="rc_sty" value="Ceramica">Cerámica</label><br>
-                  <input type="checkbox" name="check15" id="cul15" />
-                  <label for="cul15" class="rc_sty" value="Libroclub">Libroclub</label> <br>
-                  <input type="checkbox" name="check16" id="cul16" />
-                  <label for="cul16" class="rc_sty" value="Cineclub">Cineclub y trashumante radio comunitaria</label>
+                  <label>Artes Visuales</label>
+                  <div class="checkbox">
+                    <input type="checkbox" name="check11" id="cul11" />
+                    <label for="cul11" class="rc_sty" value="MediosAudiovisuales">Medios Audiovisuales</label><br>
+                    <input type="checkbox" name="check12" id="cul12" />
+                    <label for="cul12" class="rc_sty" value="Cine">Cine</label><br>
+                    <input type="checkbox" name="check13" id="cul13" />
+                    <label for="cul13" class="rc_sty" value="Fotografia">Fotografía</label><br>
+                    <input type="checkbox" name="check14" id="cul14" />
+                    <label for="cul14" class="rc_sty" value="AnimacionNiños">Animación para niños</label><br>
+                    <input type="checkbox" name="check15" id="cul15" />
+                    <label for="cul15" class="rc_sty" value="VideoComunitario">Vídeo comunitario</label> <br>
+                  </div>
+                  <label>Música</label>
+                  <div class="checkbox">
+                    <input type="checkbox" name="check11" id="cul11" />
+                    <label for="cul11" class="rc_sty" value="GuitarraClasica">Guitarra clásica</label><br>
+                    <input type="checkbox" name="check12" id="cul12" />
+                    <label for="cul12" class="rc_sty" value="Rap">Música Rap</label><br>
+                    <input type="checkbox" name="check13" id="cul13" />
+                    <label for="cul13" class="rc_sty" value="Percusiones">Percusiones</label><br>
+                    <input type="checkbox" name="check14" id="cul14" />
+                    <label for="cul14" class="rc_sty" value="IniciacionMusica">Iniciación a la música</label><br>
+                    <input type="checkbox" name="check15" id="cul15" />
+                    <label for="cul15" class="rc_sty" value="SonHuasteco">Son Huasteco</label> <br>
+                  </div>
                 </div>
               </div>
-            </div>
+
           </div>
         </div>
 
         <div class="row">
           <div class="col-lg-12 estilo-forma">
-            <label>Deporte</label>
-            <div class="checkbox">
-              <p>
-                <!--
-                <input type="checkbox" name="check17" id="dep1" />
-              -->
-                <label for="dep1" class="rc_sty"><strong>Escuela técnico deportiva futbol</strong></label>
-
-                <input type="checkbox" name="check18" id="dep2" />
-                <label for="dep2" class="rc_sty">Escuela técnico deportiva básquetbol</label>
-              </p>
-
-              <p>
-                <input type="checkbox" name="check19" id="dep3" />
-                <label for="dep3" class="rc_sty">Escuela técnico deportiva volivol</label>
-
-                <input type="checkbox" name="check20" id="dep4" />
-                <label for="dep4" class="rc_sty">Activación física</label>
-              </p>
-            </div>
+            <label class="h3">Deporte</label><br>
+              <div class="row">
+                <div class="col-lg-4">
+                  <label>Escuela técnico deportivas de:</label>
+                  <div class="checkbox">
+                    <input type="checkbox" name="check1" id="cul1" />
+                    <label for="cul1" class="rc_sty" value="Fútbol">Fútbol</label><br>
+                    <input type="checkbox" name="check2" id="cul2" />
+                    <label for="cul2" class="rc_sty" value="Basquetbol">Basquetbol</label><br>
+                    <input type="checkbox" name="check3" id="cul3" />
+                    <label for="cul3" class="rc_sty" value="Voleibol">Voleibol</label><br>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <label>Activación Física</label>
+                  <div class="checkbox">
+                    <input type="checkbox" name="check6" id="cul6" />
+                    <label for="cul6" class="rc_sty" value="AcondicionamientoFisico">Acondicionamiento físico</label><br>
+                    <input type="checkbox" name="check7" id="cul7" />
+                    <label for="cul7" class="rc_sty" value="Zumba">Zumba</label><br>
+                    <input type="checkbox" name="check8" id="cul8" />
+                    <label for="cul8" class="rc_sty" value="TaeBo">Tae bo</label><br>
+                    <input type="checkbox" name="check9" id="cul9" />
+                    <label for="cul9" class="rc_sty" value="Yoga">Yoga</label><br>
+                    <input type="checkbox" name="check10" id="cul10" />
+                    <label for="cul10" class="rc_sty" value="TaiChi">Tai chi</label>
+                    <br>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <label>Otras disciplinas</label>
+                  <div class="checkbox">
+                    <input type="checkbox" name="check11" id="cul11" />
+                    <label for="cul11" class="rc_sty" value="Boxeo">Boxeo</label><br>
+                    <input type="checkbox" name="check12" id="cul12" />
+                    <label for="cul12" class="rc_sty" value="Atletismo">Atletismo</label><br>
+                    <input type="checkbox" name="check13" id="cul13" />
+                    <label for="cul13" class="rc_sty" value="KarateDo">Karate do</label><br>
+                    <input type="checkbox" name="check16" id="cul16" />
+                    <label for="cul16" class="rc_sty" value="KunFu">Kun fu</label>
+                  </div>
+                </div>
+              </div>
           </div>
         </div>
-
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
-            <label>Opción educativa</label><br>
+            <label class="h3">Ciberescuela</label><br>
             <select name="opcionEdu">
-              <option value="0" disabled selected>Ciberescuela</option>
+              <option value="0" disabled selected>Opción</option>
               <option value="1">Alfabetización</option>
               <option value="2">Primaria</option>
               <option value="3">Secundaria</option>
@@ -362,15 +433,15 @@
             </select>
           </div>
         </div>
-
         <div class="row">
-          <div class="col-lg-12 col-md-12 estilo-forma">
+          <div class="col-lg-12 estilo-forma">
             <label>Talleres de habilidades cognitivas</label><br>
             <div class="checkbox">
+              <div class="row">
 
+              </div>
               <input type="checkbox" name="check21" id="cog1" />
               <label for="cog1" class="rc_sty">Ajedrez</label>
-
               <input type="checkbox" name="check22" id="cog2" />
               <label for="cog2" class="rc_sty">Difusión Cientifica</label>
             </div>
@@ -378,31 +449,33 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-12 col-md-12 estilo-forma">
+          <div class="col-lg-12 estilo-forma">
             <label>Talleres de habilidades digitales</label>
-            <div class="checkbox">
-              <p>
+            <div class="col-lg-4">
+              <div class="checkbox">
                 <input type="checkbox" name="check23" id="dig1" />
-                <label for="dig1" class="rc_sty">Programación y Aplicaciones</label>
-
+                <label for="dig1" class="rc_sty">Club de Ciencias</label>
                 <input type="checkbox" name="check24" id="dig2" />
-                <label for="dig2" class="rc_sty">Club deCiencias</label>
+                <label for="dig2" class="rc_sty">Club de Código</label>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="checkbox">
                 <input type="checkbox" name="check25" id="dig3" />
-                <label for="dig3" class="rc_sty">Club de Codigo</label>
-                <p>
-                  <input type="checkbox" name="check26" id="dig4" />
-                  <label for="dig4" class="rc_sty">Reparacíon y Mantenimiento</label>
-                  <input type="checkbox" name="check27" id="dig5" />
-                  <label for="dig5" class="rc_sty">Edición y Diseño</label>
-                  <input type="checkbox" name="check28" id="dig6" />
-                  <label for="dig6" class="rc_sty">Club de Codigo</label>
-                </p>
+                <label for="dig3" class="rc_sty">Edición y diseño</label>
+                <input type="checkbox" name="check26" id="dig4" />
+                <label for="dig4" class="rc_sty">Talleres de cómputo</label>
+              </div>
+             </div>
+             <div class="col-lg-4">
+               <div class="checkbox">
+                <input type="checkbox" name="check27" id="dig5" />
+                <label for="dig5" class="rc_sty">Robótica aplicada</label>
+              </div>
             </div>
           </div>
-        </div>
-
         <div class="row">
-          <div class="col-lg-12 col-md-12 estilo-forma">
+          <div class="col-lg-12 estilo-forma">
             <label>Talleres de habilidades emocionales</label><br>
             <div class="checkbox">
               <div class="row">
@@ -439,7 +512,7 @@
 
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
-            <label>Talleres de autonomía económica</label><br>
+            <label class="h3">Talleres de autonomía económica</label><br>
             <div class="checkbox">
               <div class="row">
                 <div class="col-lg-4">
@@ -569,7 +642,6 @@
 
         <div class="row">
           <div class="col-md-6">
-
             <div class="form-group">
               <label for="name1">Alcaldia</label>
               <select id="country_id" class="form-control" name="country_id" required>
@@ -583,21 +655,18 @@
                        }
                 */
                   ?>
-
               </select>
             </div>
-
             <div class="form-group">
               <label for="name1">PILARES</label>
               <select id="pilarSelect_id" class="form-control" name="pilarSelect_id" required>
                 <option value="">Selecciona</option>
               </select>
             </div> <br><br>
-            <div class="trans text-center">
-              <button type="submit" onclick="return message()" class="btn btn-success btn-lg ">Enviar</button>
-            </div>
-
           </div>
+        </div>
+        <div class="text-center m-auto btn-block">
+          <button type="submit" onclick="return message()" class="btn btn-success btn-lg px-5">Enviar</button>
         </div>
       </fieldset>
 

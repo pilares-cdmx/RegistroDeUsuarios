@@ -13,7 +13,7 @@
         <div id="cenefa">
           <img id="pie" src="<?php echo constant('URL');?>public/img/blog-img/cenefa4.png">
         </div>
-
+		<h1>HOLA MUNDO!!!!!!!!</h1>
 	<div class="container">
 		<h1>Ingresa Usuario y Contraseña</h1>
 
@@ -36,7 +36,7 @@
 		<li></li>
 		<li></li>
 		<li></li>
-    <li></li>
+        <li></li>
 		<li></li>
 		<li></li>
 		<li></li>

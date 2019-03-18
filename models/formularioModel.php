@@ -20,7 +20,7 @@ class FormularioModel extends Model {
 	public function getAlcaldias() {
 		try{
 			$result=array();
-			$consulta=$this->db->connect()->prepare("SELECT Id,Pais FROM paises");
+			$consulta=$this->db->connect()->prepare("SELECT idAlcaldias, nombre FROM Alcaldias");
 			$consulta->execute();
 			return $consulta->fetchAll(PDO::FETCH_OBJ);
 		}catch(PDOException $e){
@@ -31,9 +31,9 @@ class FormularioModel extends Model {
 	public function getPilaresById($country_id){
 		try{
 			$result=array();
-			$consulta=$this->db->connect()->prepare("SELECT id,name FROM state where country_id=:country_id");
+			$consulta=$this->db->connect()->prepare("SELECT idPilares, nombre FROM Pilares where idPilares=:country_id");
 			$consulta->execute([
-				'country_id'  =>$country_id]);
+				'idPilares'  =>$country_id]);
 			return $consulta->fetchAll(PDO::FETCH_OBJ);
 		}catch(PDOException $e){
 			die($e->getMessage());
@@ -43,9 +43,9 @@ class FormularioModel extends Model {
 	public function getColoniaPorId($id){
 		try{
 			$result=array();
-			$consulta=$this->db->connect()->prepare("SELECT id,nombre FROM estados where Id_pais=:Id_pais");
+			$consulta=$this->db->connect()->prepare("SELECT idColonia, nombre FROM Colonias where idColonia=:id");
 			$consulta->execute([
-				'Id_pais'  =>$id]);
+				'idColonia'  =>$id]);
 			return $consulta->fetchAll(PDO::FETCH_OBJ);
 		}catch(PDOException $e){
 			die($e->getMessage());
@@ -60,9 +60,9 @@ class FormularioModel extends Model {
 	public function getCodigoPostalPorId($id){
 		try{
 			$result=array();
-			$consulta=$this->db->connect()->prepare("SELECT id,nombre FROM municipios where estado_id=:estado_id");
+			$consulta=$this->db->connect()->prepare("SELECT idCodigoPostal,codigo FROM CodigosPostales where idCodigoPostal=:estado_id");
 			$consulta->execute([
-				'estado_id'  =>$id]);
+				'idCodigoPostal'  =>$id]);
 			return $consulta->fetchAll(PDO::FETCH_OBJ);
 		}catch(PDOException $e){
 			die($e->getMessage());

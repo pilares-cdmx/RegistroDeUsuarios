@@ -1,9 +1,8 @@
  <?php
   require_once  'views/headerFormulario.php'
  ?>
-
  <body>
-  <img src="<?php echo constant('URL');?>public/img/form-img/cenefa3.jpg" <br>
+  <img src="<?php echo constant('URL');?>public/img/blog-img/cenefa4.png" <br>
   <br>
   <div class="container">
     <div class="row">

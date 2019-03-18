@@ -88,7 +88,7 @@
 
                          foreach ($this->alcaldias as $a)
                          {
-                         echo '<option value="'.$a->Id.'">'.$a->Pais.'</option>';
+                         echo '<option value="'.$a->idAlcaldias.'">'.$a->nombre.'</option>';
                          }
 
                        ?>
@@ -581,11 +581,11 @@
 
     </div>
   </form>
-  <img src="<?php //echo constant('URL')?>../../public/img/form-img/cenefa.png">
+  <img src="<?php echo constant('URL')?>public/img/form-img/cenefa.png">
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="<?php //echo constant('URL')?>../../public/js/curpValidacion.js" charset="utf-8"></script>
+  <script src="<?php echo constant('URL')?>public/js/curpValidacion.js" charset="utf-8"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
   <script type="text/javascript">
@@ -610,10 +610,10 @@
 
   <script type="text/javascript">
     $(document).ready(function() {
-      $("#country_id").change(function() {
-        var id = document.getElementById("country_id").value;
+      $("#alcaldia").change(function() {
+        var id = document.getElementById("alcaldia").value;
         $.ajax({
-          url: "http://localhost/webformulario/formulario/getPilares",
+          url: "http://localhost/Pilares/PILARES-login-mvc/formulario/getPilares",
           type: 'GET',
           dataType: "json",
           data: {

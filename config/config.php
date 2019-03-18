@@ -1,12 +1,12 @@
 <?php
 
 /** @var [type] [description] */
-define('URL', 'http://187.216.164.109/PILARES-login/');
+define('URL', 'http://localhost/Pilares/PILARES-login-mvc/');
 /**
  * [define description]
  * @var [type]
  */
-define('HOST', '187.216.164.109');
+define('HOST', 'localhost');
 /**
  * [define description]
  * @var [type]
@@ -21,7 +21,7 @@ define('USER', 'root');
  * [define description]
  * @var [type]
  */
-define('PASSWORD', "C2B1N1T2102$");
+define('PASSWORD', "S2NT2m2r2d0n2...");
 /**
  * [define description]
  * @var [type]

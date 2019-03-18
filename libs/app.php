@@ -6,11 +6,13 @@
 **/
 require_once 'controllers/errores.php';
 /**
- * [App description]
+ * App esta clase contiene la lógica  sobre el patron de diseño y los mecanismos de comunicación
+ * de sus diferentes capas: Controladores, vistas y modelos
  */
 class App{
 	/**
-	 * [__construct description]
+	 * El atributo de esta clase es la URL y apartir de ella construye un arreglo de elementos
+	 * donde el primer elemento es el controlador y el segundo un metodo de ese controlador
 	 */
 	function __construct(){
 		/** @var [type] [description] */

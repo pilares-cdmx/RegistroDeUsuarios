@@ -13,11 +13,10 @@
         <div id="cenefa">
           <img id="pie" src="<?php echo constant('URL');?>public/img/blog-img/cenefa4.png">
         </div>
-		<h1>HOLA MUNDO!!!!!!!!</h1>
 	<div class="container">
 		<h1>Ingresa Usuario y Contraseña</h1>
 
-		<form action='<?php echo constant('URL');?>control/validar' method="post">
+		<form action='<?php echo constant('URL');?>controllers/validar.php' method="post">
 			<input placeholder="Usuario" name='txtusuario'>
 			<input type="password" placeholder="Contraseña" name='txtpass'>
 			<button type="submit" name="login">Ingresar</button>

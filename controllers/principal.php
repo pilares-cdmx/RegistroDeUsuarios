@@ -12,7 +12,7 @@
 		 * [render description]
 		 */
 		function render(){
-		$this->view->render('formulario/index');	
+		$this->view->render('formulario/login');	
 	//	$this->view->render('principal/index');
 	 }
 	}

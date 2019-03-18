@@ -20,7 +20,7 @@ class ControlModel extends Model{
 		try{
 			/** @var [ControlModel] [variable encargada de hacer la consulta a la base] */
 			$consulta=$this->db->connect()->prepare(
-				"SELECT * FROM login WHERE usuario=:usuario and pass=:pass");
+				"SELECT * FROM Login WHERE nombre=:usuario and contraseña=:pass");
 			$consulta->execute([
 				'usuario'  =>$usuario,
 				'pass'  =>$pass]);

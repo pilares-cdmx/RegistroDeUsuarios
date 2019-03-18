@@ -26,17 +26,17 @@ class Control extends Controller{
 				session_start();
 				$array = $this->model->validar($usuario,$pass);
 				foreach ($array as $row) {
-				    $_SESSION['usuario']= $row->usuario ;
+				    //$_SESSION['usuario']= $row->usuario ;
 				}
-				//$this->view->render('formulario/index');
-				header('Location:'.constant('URL').'formulario');
+				$this->view->render('formulario/mascara');
+				//header('Location:'.constant('URL').'formulario');
 			}else{
-				$this->view->render('principal/index');
+				$this->view->render('formulario/login');
 			}
 		//VALIDAR CONTENIDO EN LAS VARIABLES O CAJAS DE TEXTO
 		if (empty($usuario) | empty($pass))
 		{
-			$this->view->render('principal/index');
+			$this->view->render('formulario/login');
 		}
 	}
 }

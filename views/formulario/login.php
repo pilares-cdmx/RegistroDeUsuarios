@@ -16,7 +16,7 @@
 	<div class="container">
 		<h1>Ingresa Usuario y Contraseña</h1>
 
-		<form action='<?php echo constant('URL');?>controllers/validar.php' method="post">
+		<form action='<?php echo constant('URL');?>control/validar' method="post">
 			<input placeholder="Usuario" name='txtusuario'>
 			<input type="password" placeholder="Contraseña" name='txtpass'>
 			<button type="submit" name="login">Ingresar</button>

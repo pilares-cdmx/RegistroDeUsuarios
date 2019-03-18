@@ -15,7 +15,7 @@ class Formulario extends Controller{
 	function render(){
 
 		$this->view->alcaldias = $this->listarAlcaldias();
-		$this->view->render('formulario/index');
+		$this->view->render('formulario/mascara');
 	}
 	/**
 	 * [listarAlcaldias Enlista alcaldías en el elemento s]
@@ -85,7 +85,7 @@ class Formulario extends Controller{
 		/**
 		 * Llamando a las funciones declaradas en el formularioModel para hacer el almacenamiento en la base
 		 */
-
+/*
 		$this->model->setDatosContacto(
 			['idContacto' => '',
 			 'correo' => $email,
@@ -103,7 +103,7 @@ class Formulario extends Controller{
 		}
 		this->model->setServiciosSelecionados(['value1' => $value1, 'value2' => $value2, 'valueETC' => $valueETC]);
 		this->model->setPilarSelecionado(['value1' => $value1, 'value2' => $value2, 'valueETC' => $valueETC]);
-
+*/
 	}
 
 }

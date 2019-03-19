@@ -43,9 +43,9 @@ class FormularioModel extends Model {
 	public function getColoniaPorId($id){
 		try{
 			$result=array();
-			$consulta=$this->db->connect()->prepare("SELECT idColonia, nombre FROM Colonias where idColonia=:id");
+			$consulta=$this->db->connect()->prepare("SELECT idColonia, nombre FROM Colonias where Alcaldias_idAlcaldiasZonas=:id");
 			$consulta->execute([
-				'idColonia'  =>$id]);
+				'Alcaldias_idAlcaldiasZonas'  =>$id]);
 			return $consulta->fetchAll(PDO::FETCH_OBJ);
 		}catch(PDOException $e){
 			die($e->getMessage());
@@ -70,6 +70,10 @@ class FormularioModel extends Model {
 		}
 	}
 
+
+	public function getFolio(){
+		
+	}
 /**
  *
  *  SECCIÓN PARA LA PERSISTENCIA DE DATOS

@@ -14,7 +14,7 @@ class Formulario extends Controller{
 	 */
 	function render(){
 
-		$this->view->alcaldias = $this->listarAlcaldias();
+		$alcaldias = $this->listarAlcaldias();
 		$this->view->render('formulario/mascara');
 	}
 	/**
@@ -55,6 +55,14 @@ class Formulario extends Controller{
 		$data=$codPostal;
 		echo json_encode($data);
 	}
+
+	function creaFolio(){
+		$folio = $this->model->getFolio();
+		return $folio;
+	}
+
+
+
 	/**
 	 * [registrarUsuario description]
 	 * @return [type] [description]
@@ -69,31 +77,40 @@ class Formulario extends Controller{
 		$apellidopat=(!is_null($_POST['apellidopat'])) ? $_POST['apellidopat'] : "Sin Datos";
 		$apellidomat=(!is_null($_POST['apellidomat'])) ? $_POST['apellidomat'] : "Sin Datos";
 		$curp=(!is_null($_POST['curp'])) ? $_POST['curp'] : "Sin Datos";
+		$sexo = substr($curp, 10, 1);
+		$fechaNacimiento = substr($curp, 4, 2)."-".substr($curp, 6, 2)."-".substr($curp, 8, 2);
+		$entidadNacimiento = substr($valor, 11, 2);
+		$grado=(!is_null($_POST['grado'])) ? $_POST['grado'] : "Sin Datos";
+		$estudias=(!is_null($_POST['estudias'])) ? $_POST['estudias'] : "Sin Datos";
+		$ocupacionAct=(!is_null($_POST['ocupacionAct'])) ? $_POST['ocupacionAct'] : "Sin Datos";
 		$grupoet=(!is_null($_POST['grupoet'])) ? $_POST['grupoet'] : "Sin Datos";
+		$timepoResidencia=(!is_null($_POST['timepoResidencia'])) ? $_POST['timepoResidencia'] : 0;
+		$email=(!is_null($_POST['email'])) ? $_POST['email'] : "Sin Datos";
+		$telMovil=(!is_null($_POST['telMovil'])) ? $_POST['telMovil'] : 0;
+		$telCasa=(!is_null($_POST['telCasa'])) ? $_POST['telCasa'] : 0;
+		$fechaRegistro;
+		$folio;
 		$codigoPostal=(!is_null($_POST['codigoPostal'])) ? $_POST['codigoPostal'] : "Sin Datos";
 		$callenumero=(!is_null($_POST['calleNumero'])) ? $_POST['calleNumero'] : "Sin Datos";
-		$timepoResidencia=(!is_null($_POST['timepoResidencia'])) ? $_POST['timepoResidencia'] : 0;
-		$telCasa=(!is_null($_POST['telCasa'])) ? $_POST['telCasa'] : 0;
-		$telMovil=(!is_null($_POST['telMovil'])) ? $_POST['telMovil'] : 0;
-		$email=(!is_null($_POST['email'])) ? $_POST['email'] : "Sin Datos";
-		$estudias=(!is_null($_POST['estudias'])) ? $_POST['estudias'] : "Sin Datos";
-		$grado=(!is_null($_POST['grado'])) ? $_POST['grado'] : "Sin Datos";
-		$ocupacionAct=(!is_null($_POST['ocupacionAct'])) ? $_POST['ocupacionAct'] : "Sin Datos";
+		
+		
 		$opcionEdu=(!is_null($_POST['opcionEdu'])) ? $_POST['opcionEdu'] : "Sin Datos";
-		$pilarSelect_id=(!is_null($_POST['state_id'])) ? $_POST['state_id'] : "Sin Datos";
+		
 
 		/**
 		 * Llamando a las funciones declaradas en el formularioModel para hacer el almacenamiento en la base
 		 */
-/*
-		$this->model->setDatosContacto(
-			['idContacto' => '',
-			 'correo' => $email,
+
+		$this->model->setDireccion(
+			['calle' => '',
+			 'numero' => $email,
 			 'telefonoCelular' => $telMovil,
 			 'telefonoCasa' => $telCasa]
 		 );
 
-		$this->model->setCodigoPostal(['value1' => $value1, 'value2' => $value2, 'valueETC' => $valueETC]);
+/*		 
+		$this->model->setCodigo
+		Postal(['value1' => $value1, 'value2' => $value2, 'valueETC' => $valueETC]);
 		$this->model->setColonia(['value1' => $value1, 'value2' => $value2, 'valueETC' => $valueETC]);
 		$this->model->setAlcaldiaUsuario(['value1' => $value1, 'value2' => $value2, 'valueETC' => $valueETC]);
 		$this->model->setDireccion(['value1' => $value1, 'value2' => $value2, 'valueETC' => $valueETC]);

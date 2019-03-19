@@ -83,26 +83,47 @@
             <label for="nombre">Alcaldia </label><br>
             <!--id "alcaldia" corresponde a Alcaldias-->
             <select name="alcaldia" id="alcaldia">
-              <option value="">Selecciona</option>
-                      <?php
-
-                         foreach ($this->alcaldias as $a)
-                         {
-                         echo '<option value="'.$a->idAlcaldias.'">'.$a->nombre.'</option>';
-                         }
-
-                       ?>
+              <option value="0" disabled selected>Selecciona</option>
+              <option value="1">Álvaro Obregón</option>
+              <option value="2">Azcapotzalco</option>
+              <option value="3">Benito Juárez</option>
+              <option value="4">Coyoacán</option>
+              <option value="5">Cuajimalpa de Morel</option>
+              <option value="6">Cuauhtémoc</option>
+              <option value="7">Gustavo A. Madero</option>
+              <option value="8">Iztacalco</option>
+              <option value="9">Iztapalapa</option>
+              <option value="10">Magdalena Contreras</option>
+              <option value="11">Miguel Hidalgo</option>
+              <option value="12">Milpa Alta</option>
+              <option value="13">Tláhuac</option>
+              <option value="14">Tlalpan</option>
+              <option value="15">Venustiano Carranza</option>
+              <option value="16">Xochimilco</option>
             </select>
           </div>
         </div>
 
         <div class="row">
           <div class="col-lg-12 col-md-30 estilo-forma">
-
             <label for="nombre">Colonia </label><br>
               <!--id "estados" corresponde a Colonia-->
             <select name="colonia" id="colonia" required>
-              <option value="">Selecciona</option>
+              <option value="0" disabled selected>Selecciona</option>
+              <option value="1">San Angel</option>
+              <option value="2">Los Alpes</option>
+              <option value="3">Guadalupe Inn </option>
+              <option value="4">Secretaria de Contraloría y Desarrollo Administra</option>
+              <option value="23">Ampliación El Capulin</option>
+              <?php
+              ec
+              /*
+                  foreach ($this->alcaldias as $a)
+                  {
+                    echo '<option value="'.$a->idAlcaldias.'">'.$a->nombre.'</option>';
+                  }
+              */      
+              ?>
             </select>
 
           </div>
@@ -113,14 +134,19 @@
             <label for="nombre">Codigo Postal </label><br>
             <!--id "municipio" corresponde a Codigo postal-->
             <select name="codigoPostal" id="codigoPostal" required>
-              <option value="">Selecciona</option>
+              <option value="0" disabled selected>Selecciona</option>
+              <option value="1">1000</option>
+              <option value="2">1010</option>
+              <option value="3">1020 </option>
+              <option value="4">1028</option>
+              <option value="23">1110</option>
             </select>
           </div>
         </div>
 
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
-            <label for="nombre">Calle y Número</label><br>
+            <label for="nombre">Calle</label><br>
             <input id="nombre" type="text" class="validate" name="calleNumero" style="text-transform:uppercase;" size="30" required>
           </div>
         </div>
@@ -551,7 +577,11 @@
             <div class="form-group">
               <label for="name1">Alcaldia</label>
               <select id="country_id" class="form-control" name="country_id" required>
-                <option value="">Selecciona</option>
+              <option value="0" disabled selected>Selecciona</option>
+              <option value="1">Álvaro Obregón</option>
+              <option value="2">Azcapotzalco</option>
+              <option value="3">Benito Juárez</option>
+              <option value="4">Coyoacán</option>
                 <?php
                 /*
                        foreach ($this->alcaldias as $a)
@@ -559,7 +589,7 @@
                        echo '<option value="'.$a->Id.'">'.$a->Pais.'</option>';
 
                        }
-                */
+                */       
                   ?>
 
               </select>
@@ -567,12 +597,13 @@
 
             <div class="form-group">
               <label for="name1">PILARES</label>
-              <select id="pilarSelect_id" class="form-control" name="pilarSelect_id" required>
-                <option value="">Selecciona</option>
+              <select id="c" class="form-control" name="pilarSelect_id" required>
+              <option value="0" disabled selected>Selecciona</option>
+              <option value="1">El Capulín</option>
               </select>
             </div> <br><br>
             <div class="trans text-center">
-              <button type="submit" onclick="return message()" class="btn btn-success btn-lg ">Enviar</button>
+              <button type="submit" name="registra" class="btn btn-success btn-lg ">Enviar</button>
             </div>
 
           </div>
@@ -613,15 +644,15 @@
       $("#alcaldia").change(function() {
         var id = document.getElementById("alcaldia").value;
         $.ajax({
-          url: "http://localhost/Pilares/PILARES-login-mvc/formulario/getPilares",
+          url: "http://localhost/Pilares/PILARES-login-mvc/formulario/getColonias",
           type: 'GET',
           dataType: "json",
           data: {
             id: id
           },
           success: function(json) {
-            $.each(json, function(i, estado) {
-              $("#state_id").append('<option value=' + estado.id + '>' + estado.name + '</option>');
+            $.each(json, function(i, colonia) {
+              $("#colonia").append('<option value=' + colonia.idColonia + '>' + colonia.nombre + '</option>');
             });
           },
           error: function(xhr, status) {

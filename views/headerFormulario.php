@@ -14,6 +14,13 @@
 	<link rel="stylesheet" href="<?php echo constant('URL')?>public/css/estiloFormulario.css" />
   <script src="<?php echo constant('URL')?>public/js/jquery-1.8.2.js"></script>
   <script src="<?php echo constant('URL')?>public/js/jquery-ui.js"></script>
-	
+	<script language="JavaScript"> 
+    if(window.screen.availWidth == 1920)window.parent.document.body.style.zoom="140%"
+    if(window.screen.availWidth == 1280)window.parent.document.body.style.zoom="120%" 
+    if(window.screen.availWidth == 1152)window.parent.document.body.style.zoom="108%" 
+    if(window.screen.availWidth == 1024)window.parent.document.body.style.zoom="96%" 
+    if(window.screen.availWidth == 800)window.parent.document.body.style.zoom="75%"; 
+    if(window.screen.availWidth == 640)window.parent.document.body.style.zoom="60%" 
+</script>
   
 </head>

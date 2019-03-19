@@ -88,7 +88,7 @@ class FormularioModel extends Model {
 	 try {
 		 //Seprocede a llenar primero la tabla codigosPostales
 		 $consulta = $this->db->connect();
-		 $query = $consulta->prepare('INSERT INTO codigosPostales (id, colonias_id, COLUM...) VALUES (:value1, :value2, :value...)');
+		 $query = $consulta->prepare('INSERT INTO codigosPostales (id, colonias_id, COLUM...) VALUES (:value1, :value2, :value3)');
 		 $query->bindParam(":idContacto",$datos[''],PDO::PARAM_INT);
 		 $query->bindParam(":correo",$datos[''],PDO::PARAM_STR);
 		 $query->bindParam(":telefonoCelular",$datos[''],PDO::PARAM_STR);

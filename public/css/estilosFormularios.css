@@ -4,7 +4,7 @@ img{
   width: 100%;
 }
 
-@import "https://fonts.googleapis.com/css?family=Lato";
+/*@import "https://fonts.googleapis.com/css?family=Lato";
 
 @font-face {
   font-family : 'dgaefont';
@@ -15,30 +15,56 @@ img{
                 url('../fonts/century-gothic.woff') format('woff'),
                 url('../fonts/century-gothic.ttf') format('truetype'),
                 url('../fonts/century-gothic.svg') format('svg');
+}*/
+
+@font-face
+{
+   font-family: 'Aldo-Bold';
+    font-style  : normal;
+  font-weight : 900;
+
+   src: url('../fonts/Aldo-Bold.ttf');
+   
 }
+@font-face
+{
+   font-family: 'Aldo-Regular';
+    font-style  : normal;
+  font-weight : 900;
+
+   src: url('../fonts/Aldo-Regular.ttf');
+   
+}
+
+@font-face
+{
+   font-family: 'Aldo-Italic';
+    font-style  : normal;
+  font-weight : 900;
+
+   src: url('../fonts/Aldo-Italic.ttf');
+   
+}
+
+
 
 body {
   color: #A31B5C;
-  font-family : 'Lato',
-                'Open Sans',
-                'Helvetica Neue',
-                Helvetica,
-                Arial,
-                sans-serif;
+  font-family : 'Aldo-Bold',
+                'Aldo-Regular',
+                'Aldo-Italic';
   font-size   : 16px;
   background-color: #EDEFF1;
 
 }
 
 input.iconcampo {
-  font-family : 'FontAwesome',
-                'Lato',
+  font-family : 'Aldo-Bold',
+                'Aldo-Regular',
                 'Open Sans',
-                'Helvetica Neue',
-                Helvetica,
-                Arial,
-                sans-serif;
+                'Aldo-Italic';
 }
+
 
 article,
 aside,
@@ -59,9 +85,16 @@ table {
   border-spacing  : 0;
 }
 
-h1,
+h1
+{
+   font-family: 'Aldo-Bold';
+},
 h2,
-h3,
+h3
+{
+   font-family: 'Aldo-Regular';
+    
+},
 h4,
 h5,
 h6 {
@@ -1522,7 +1555,9 @@ input[type=number] {
 
 input:invalid,
 textarea:invalid {
+  /*
   border-bottom : 2px solid #06A099;
+   */
 }
 
 .datepicker::-webkit-input-placeholder {

@@ -13,7 +13,7 @@
   <!--  <link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.css'>
   -->
     <link rel="stylesheet" href="<?php echo constant('URL')?>public/css/normalize.css">
-    <link rel="stylesheet" href="public/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo constant('URL')?>public/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo constant('URL')?>public/css/bootstrap.min.css">
     <!--Material Design for Bootsrap -->
     <link rel="stylesheet" href="<?php echo constant('URL')?>public/css/mdb.min.css">
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="<?php echo constant('URL')?>public/css/mpg.css">
     <link rel="stylesheet" href="<?php echo constant('URL')?>public/css/scroll-style.css">
     <link rel="stylesheet" href="<?php echo constant('URL')?>public/css/estilos.css">
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="<?php echo constant('URL')?>public/css/style.css">
 </head>
 <body>
     <!-- Preloader Start -->
@@ -34,7 +34,7 @@
     <header class="header-area">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-12">
+                <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg">
                         <!-- Logo -->
                         <a class="navbar-brand" href="<?php echo constant('URL')?>principal/index.php"><img src="<?php echo constant('URL')?>public/img/core-img/Pilares_logo.svg" alt="Logo"></a>
@@ -81,7 +81,7 @@
                                    </div>
                                   </div>
                                 </div>
-                            <!--Search Form
+                            <!--Search Form  --- elemneto visual para la busqueda de palabras o contenido
                             <div id="search-wrapper">
                                 <form action="#">
                                     <input type="text" id="search" placeholder="Search something...">

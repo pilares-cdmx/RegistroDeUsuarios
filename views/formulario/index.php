@@ -7,10 +7,24 @@
    <!-- Required meta tags -->
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <!-- Bootstrap CSS -->
+   
+     
+    
+     
+     <!-- Bootstrap CSS -->
+     
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
    <link rel="stylesheet" href="<?php //echo constant('URL')?>../../public/css/estilosFormularios.css">
+     
+     <linck rel="stylesheet" type="text/css" href="public/css/estilosFormularios.css"/>
+     
    <title>Formulario de registro</title>
+     
+    <link rel="icon" href="public/img/core-img/favicon.ico">
+
+
+     
+     
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
    <link rel="stylesheet" href="<?php //echo constant('URL')?>../../public/css/jquery-ui.css" />
@@ -18,7 +32,16 @@
    <script src="<?php //echo constant('URL')?>../../public/js/jquery-1.8.2.js"></script>
    <script src="<?php //echo constant('URL')?>../../public/js/jquery-ui.js"></script>
 
-
+<script language="JavaScript"> 
+if(window.screen.availWidth == 1920)window.parent.document.body.style.zoom="140%"
+if(window.screen.availWidth == 1280)window.parent.document.body.style.zoom="120%" 
+if(window.screen.availWidth == 1152)window.parent.document.body.style.zoom="108%" 
+if(window.screen.availWidth == 1024)window.parent.document.body.style.zoom="96%" 
+if(window.screen.availWidth == 800)window.parent.document.body.style.zoom="75%"; 
+if(window.screen.availWidth == 640)window.parent.document.body.style.zoom="60%" 
+</script>
+     
+     
  </head>
  <body>
   <img src="<?php ////echo constant('URL')?>../../public/img/blog-img/cenefa4.png" <br>
@@ -26,7 +49,7 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <h1>FORMULARIO DE REGISTRO</h1>
+          <h1><center>FORMULARIO DE REGISTRO</center></h1>
       </div>
     </div>
   </div><br>
@@ -38,25 +61,25 @@
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label for="nombre">Nombre(s)</label><br>
-            <input id="nombre" type="text" class="validate" name="nombreuser" style="text-transform:uppercase;" size="30" required>
+            <input id="nombre" type="text" class="validate" name="nombreuser" style="text-transform:uppercase;" size="40" required>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label for="ap_pat">Apellido paterno</label><br>
-            <input id="ap_pat" type="text" class="validate" name="apellidopat" style="text-transform:uppercase;" size="30" required>
+            <input id="ap_pat" type="text" class="validate" name="apellidopat" style="text-transform:uppercase;" size="40" required>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label for="ap_mat">Apellido materno</label><br>
-            <input id="ap_mat" type="text" class="validate" name="apellidomat" style="text-transform:uppercase;" size="30" required>
+            <input id="ap_mat" type="text" class="validate" name="apellidomat" style="text-transform:uppercase;" size="40" required>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label for="curp" class="active ">CURP</label><br>
-            <input required maxlength="18" id="curp" name="curp" type="text" class="validate" oninput="validarInput(this)" style="text-transform:uppercase;" maxlength="18" size="30" required>
+            <input required maxlength="18" id="curp" name="curp" type="text" class="validate" oninput="validarInput(this)" style="text-transform:uppercase;" maxlength="18" size="40" required>
             <small class="form-text text-muted" tabindex="0">Consulta tu CURP <a href="https://www.gob.mx/curp/" target="popup" onclick="window.open(this.href, this.target, 'width=900px,height=800px'); return false;">aquí</a> </small>
             <div id="curp-error" name="curp-error"></div>
             <pre id="resultado"></pre>
@@ -141,7 +164,7 @@
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label for="nombre">Calle y número</label><br>
-            <input id="nombre" type="text" class="validate" name="calleNumero" style="text-transform:uppercase;" size="30" required>
+            <input id="nombre" type="text" class="validate" name="calleNumero" style="text-transform:uppercase;" size="40" required>
           </div>
         </div>
 
@@ -149,7 +172,7 @@
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label for="numrec">Tiempo de residencia en CDMX</label><br>
-            <input onkeypress="return justNumbers(event);" maxlength="3" id="timepoResidencia" type="text" class="validate" name="timepoResidencia">
+            <input onkeypress="return justNumbers(event);" maxlength="3" id="timepoResidencia" type="text" class="validate" name="timepoResidencia" size="40">
             <small id="residenciaHelp" class="form-text text-muted">Tiempo en años</small>
           </div>
         </div>
@@ -158,7 +181,7 @@
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label for="telCasa" <input type="number">Teléfono de casa</label><br>
-            <input onkeypress="return justNumbers(event);" maxlength="12" id="telCasa" type="text" class="validate" name="telCasa" >
+            <input onkeypress="return justNumbers(event);" maxlength="12" id="telCasa" type="text" class="validate" name="telCasa" size="40" >
           </div>
         </div>
 
@@ -166,13 +189,14 @@
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label for="telMovil" <input type="number">Teléfono celular</label><br>
-            <input onkeypress="return justNumbers(event);" maxlength="12" id="telMovil" type="text" name="telMovil" class="validate">
+            <input onkeypress="return justNumbers(event);" maxlength="12" id="telMovil" type="text" name="telMovil" class="validate" size="40">
           </div>
         </div>
-
+      
+<div class="row">
         <div class="col-lg-12 col-md-12 estilo-forma">
           <label for="correo">Correo</label><br>
-          <input type="correo" class="validate" name="email" id="correo" aria-describedby="emailHelp" required>
+          <input type="correo" class="validate" name="email" id="correo" aria-describedby="emailHelp" size="40" required>
           <small id="emailHelp" class="form-text text-muted"></small>
         </div>
       </fieldset>
@@ -265,7 +289,7 @@
 
         <div class="row">
           <div class="col-lg-12 estilo-forma">
-            <label class="h3">Cultura</label>
+              <label class="h3"><h3>Cultura</h3></label>
               <div class="row">
                 <div class="col-lg-4">
                   <label>Artes escénicas</label>
@@ -404,6 +428,7 @@
                     <label for="cul13" class="rc_sty" value="KarateDo">Karate do</label><br>
                     <input type="checkbox" name="check16" id="cul16" />
                     <label for="cul16" class="rc_sty" value="KunFu">Kun fu</label>
+                      
                   </div>
                 </div>
               </div>
@@ -411,7 +436,7 @@
         </div>
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
-            <label class="h3">Ciberescuela</label><br>
+            <label class="h3">Ciberescuela</label><br><BR>
             <select name="opcionEdu">
               <option value="0" disabled selected>Opción</option>
               <option value="1">Alfabetización</option>
@@ -443,37 +468,46 @@
               <input type="checkbox" name="check21" id="cog1" />
               <label for="cog1" class="rc_sty">Ajedrez</label>
               <input type="checkbox" name="check22" id="cog2" />
-              <label for="cog2" class="rc_sty">Difusión Cientifica</label>
+              <label for="cog2" class="rc_sty">Redacción y comprensión de lectura</label>
             </div>
           </div>
         </div>
-
-        <div class="row">
+        
+            
+            
+            <div class="row">
           <div class="col-lg-12 estilo-forma">
-            <label>Talleres de habilidades digitales</label>
-            <div class="col-lg-4">
-              <div class="checkbox">
-                <input type="checkbox" name="check23" id="dig1" />
-                <label for="dig1" class="rc_sty">Club de Ciencias</label>
-                <input type="checkbox" name="check24" id="dig2" />
-                <label for="dig2" class="rc_sty">Club de Código</label>
+            <label>Talleres de habilidades digitales</label><br>
+            <div class="checkbox">
+              <div class="row">
+                <div class="col-lg-4">
+                  <input type="checkbox" name="check29" id="emo1" />
+                  <label for="emo1" class="rc_sty">Club de Ciencias</label><br>
+                  <input type="checkbox" name="check30" id="emo2" />
+                  <label for="emo2" class="rc_sty">Club de Código</label><br>
+             
+                 
+                </div>
+                <div class="col-lg-4">
+                  <input type="checkbox" name="check32" id="emo4" />
+                  <label for="emo4" class="rc_sty">Edición y diseño</label>
+                  <br>
+                  <input type="checkbox" name="check33" id="emo5" />
+                  <label for="emo5" class="rc_sty">Talleres de cómputo</label> <br>
+                  
+                </div>
+                  <div class="col-lg-4">
+                  <input type="checkbox" name="check32" id="emo7" />
+                  <label for="emo7" class="rc_sty">Robótica aplicada</label>
+                  
+                </div>
+                  
+                </div>
+            
+                
               </div>
             </div>
-            <div class="col-lg-4">
-              <div class="checkbox">
-                <input type="checkbox" name="check25" id="dig3" />
-                <label for="dig3" class="rc_sty">Edición y diseño</label>
-                <input type="checkbox" name="check26" id="dig4" />
-                <label for="dig4" class="rc_sty">Talleres de cómputo</label>
-              </div>
-             </div>
-             <div class="col-lg-4">
-               <div class="checkbox">
-                <input type="checkbox" name="check27" id="dig5" />
-                <label for="dig5" class="rc_sty">Robótica aplicada</label>
-              </div>
-            </div>
-          </div>
+          </div>   
         <div class="row">
           <div class="col-lg-12 estilo-forma">
             <label>Talleres de habilidades emocionales</label><br>
@@ -486,6 +520,8 @@
                   <label for="emo2" class="rc_sty">Prevención de adicciones</label><br>
                   <input type="checkbox" name="check31" id="emo3" />
                   <label for="emo3" class="rc_sty">Habilidades para la vida</label> <br>
+                    <input type="checkbox" name="check33" id="emo7" />
+                  <label for="emo8" class="rc_sty">Baile, cuerpo y emociones</label>
                 </div>
                 <div class="col-lg-4">
                   <input type="checkbox" name="check32" id="emo4" />
@@ -495,21 +531,28 @@
                   <label for="emo5" class="rc_sty">Autoestima</label> <br>
                   <input type="checkbox" name="check34" id="emo6" />
                   <label for="emo6" class="rc_sty">Tanatología o manejo del duelo</label>
+                <input type="checkbox" name="check32" id="emo7" />
+                  <label for="emo7" class="rc_sty">Emociones mágicas</label>
                   <br>
                 </div>
-                <div class="col-lg-4">
-                  <input type="checkbox" name="check35" id="emo7" />
+                  <div class="col-lg-4">
+                  <input type="checkbox" name="check32" id="emo7" />
                   <label for="emo7" class="rc_sty">Inteligencia emocional</label>
                   <br>
-                  <input type="checkbox" name="check36" id="emo8" />
-                  <label for="emo8" class="rc_sty">Arte y Emociones</label>
+                  <input type="checkbox" name="check33" id="emo7" />
+                  <label for="emo8" class="rc_sty">Arte y Emociones</label> <br>
+                  <input type="checkbox" name="check34" id="emo9" />
+                  <label for="emo9" class="rc_sty">Pintando emociones</label>
+                  <br>
                 </div>
+                  
+                </div>
+            
                 <br>
               </div>
             </div>
           </div>
-        </div>
-
+     
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label class="h3">Talleres de autonomía económica</label><br>
@@ -634,7 +677,7 @@
             </div>
           </div>
         </div>
-      </fieldset>
+     </fieldset>
 
 
       <fieldset>
@@ -770,6 +813,16 @@
       });
     });
   </script>
+     
+     <style>
+div {
+ 
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 15px;
+}
+</style>
+     
 </body>
 
 </html>

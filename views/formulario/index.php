@@ -304,80 +304,80 @@ if(window.screen.availWidth == 640)window.parent.document.body.style.zoom="60%"
                     <label for="cul4" class="rc_sty" value="DanzaAdultos">Danza para adultos</label><br>
                     <input type="checkbox" name="check5" id="cul5" />
                     <label for="cul5" class="rc_sty" value="DanzaFolklorica">Danza folklórica</label> <br>
-                    <input type="checkbox" name="check1" id="cul1" />
+                    <input type="checkbox" name="check6" id="cul6" />
                     <label for="cul1" class="rc_sty" value="Ballet">Ballet</label><br>
-                    <input type="checkbox" name="check2" id="cul2" />
+                    <input type="checkbox" name="check7" id="cul7" />
                     <label for="cul2" class="rc_sty" value="Actuación">Actuación</label><br>
-                    <input type="checkbox" name="check3" id="cul3" />
+                    <input type="checkbox" name="check8" id="cul8" />
                     <label for="cul3" class="rc_sty" value="TeatroCalle">Teatro de calle</label><br>
-                    <input type="checkbox" name="check4" id="cul4" />
+                    <input type="checkbox" name="check9" id="cul9" />
                     <label for="cul4" class="rc_sty" value="DanzaContemporánea">Danza contemporánea</label><br>
-                    <input type="checkbox" name="check5" id="cul5" />
+                    <input type="checkbox" name="check10" id="cul10" />
                     <label for="cul5" class="rc_sty" value="DanzaPolinesia">Danza polinesia</label> <br>
-                    <input type="checkbox" name="check4" id="cul4" />
+                    <input type="checkbox" name="check11" id="cul11" />
                     <label for="cul4" class="rc_sty" value="TeatroMascaras">Teatro de máscaras</label><br>
-                    <input type="checkbox" name="check5" id="cul5" />
+                    <input type="checkbox" name="check12" id="cul12" />
                     <label for="cul5" class="rc_sty" value="ExpresiónCorporal">Expresión corporal y teatro</label> <br>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <label>Oficios</label>
                   <div class="checkbox">
-                    <input type="checkbox" name="check6" id="cul6" />
+                    <input type="checkbox" name="check13" id="cul13" />
                     <label for="cul6" class="rc_sty" value="TelarCintura">Telar de cintura</label><br>
-                    <input type="checkbox" name="check7" id="cul7" />
+                    <input type="checkbox" name="check14" id="cul14" />
                     <label for="cul7" class="rc_sty" value="Cartoneria">Cartonería</label><br>
-                    <input type="checkbox" name="check8" id="cul8" />
+                    <input type="checkbox" name="check15" id="cul15" />
                     <label for="cul8" class="rc_sty" value="BordadoVida">Bordado para la vida</label><br>
-                    <input type="checkbox" name="check9" id="cul9" />
+                    <input type="checkbox" name="check16" id="cul16" />
                     <label for="cul9" class="rc_sty" value="Encuadernacion">Encuadernación</label><br>
-                    <input type="checkbox" name="check10" id="cul10" />
+                    <input type="checkbox" name="check17" id="cul17" />
                     <label for="cul10" class="rc_sty" value="ConstruccionInstrumentos">Construcción artesanal de instrumentos</label>
-                    <input type="checkbox" name="check10" id="cul10" />
+                    <input type="checkbox" name="check18" id="cul18" />
                     <label for="cul10" class="rc_sty" value="DiseñoJuguetesMaderaReuso">Diseño de juguetes de madera y materiales de reuso</label>
                     <br>
                   </div>
                   <label>Artes sustentables</label>
                   <div class="checkbox">
-                    <input type="checkbox" name="check6" id="cul6" />
+                    <input type="checkbox" name="check19" id="cul19" />
                     <label for="cul6" class="rc_sty" value="ReciclajeAmbiente">Reciclaje y medio ambiente</label><br>
                   </div>
                   <label>Literatura</label>
                   <div class="checkbox">
-                    <input type="checkbox" name="check6" id="cul6" />
+                    <input type="checkbox" name="check20" id="cul20" />
                     <label for="cul6" class="rc_sty" value="EscrituraCreativa">Escritura creativa</label><br>
                   </div>
                   <label>Artes plásticas</label>
                   <div class="checkbox">
-                    <input type="checkbox" name="check6" id="cul6" />
+                    <input type="checkbox" name="check21" id="cul21" />
                     <label for="cul6" class="rc_sty" value="PinturaArtistica">Pintura artística</label><br>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <label>Artes Visuales</label>
                   <div class="checkbox">
-                    <input type="checkbox" name="check11" id="cul11" />
+                    <input type="checkbox" name="check22" id="cul22" />
                     <label for="cul11" class="rc_sty" value="MediosAudiovisuales">Medios Audiovisuales</label><br>
-                    <input type="checkbox" name="check12" id="cul12" />
+                    <input type="checkbox" name="check23" id="cul23" />
                     <label for="cul12" class="rc_sty" value="Cine">Cine</label><br>
-                    <input type="checkbox" name="check13" id="cul13" />
+                    <input type="checkbox" name="check24" id="cul24" />
                     <label for="cul13" class="rc_sty" value="Fotografia">Fotografía</label><br>
-                    <input type="checkbox" name="check14" id="cul14" />
+                    <input type="checkbox" name="check25" id="cul25" />
                     <label for="cul14" class="rc_sty" value="AnimacionNiños">Animación para niños</label><br>
-                    <input type="checkbox" name="check15" id="cul15" />
+                    <input type="checkbox" name="check26" id="cul26" />
                     <label for="cul15" class="rc_sty" value="VideoComunitario">Vídeo comunitario</label> <br>
                   </div>
                   <label>Música</label>
                   <div class="checkbox">
-                    <input type="checkbox" name="check11" id="cul11" />
+                    <input type="checkbox" name="check27" id="cul27" />
                     <label for="cul11" class="rc_sty" value="GuitarraClasica">Guitarra clásica</label><br>
-                    <input type="checkbox" name="check12" id="cul12" />
+                    <input type="checkbox" name="check28" id="cul28" />
                     <label for="cul12" class="rc_sty" value="Rap">Música Rap</label><br>
-                    <input type="checkbox" name="check13" id="cul13" />
+                    <input type="checkbox" name="check29" id="cul29" />
                     <label for="cul13" class="rc_sty" value="Percusiones">Percusiones</label><br>
-                    <input type="checkbox" name="check14" id="cul14" />
+                    <input type="checkbox" name="check30" id="cul30" />
                     <label for="cul14" class="rc_sty" value="IniciacionMusica">Iniciación a la música</label><br>
-                    <input type="checkbox" name="check15" id="cul15" />
+                    <input type="checkbox" name="check31" id="cul31" />
                     <label for="cul15" class="rc_sty" value="SonHuasteco">Son Huasteco</label> <br>
                   </div>
                 </div>
@@ -393,26 +393,26 @@ if(window.screen.availWidth == 640)window.parent.document.body.style.zoom="60%"
                 <div class="col-lg-4">
                   <label>Escuela técnico deportivas de:</label>
                   <div class="checkbox">
-                    <input type="checkbox" name="check1" id="cul1" />
+                    <input type="checkbox" name="check32" id="dep1" />
                     <label for="cul1" class="rc_sty" value="Fútbol">Fútbol</label><br>
-                    <input type="checkbox" name="check2" id="cul2" />
+                    <input type="checkbox" name="check33" id="dep2" />
                     <label for="cul2" class="rc_sty" value="Basquetbol">Basquetbol</label><br>
-                    <input type="checkbox" name="check3" id="cul3" />
+                    <input type="checkbox" name="check34" id="dep3" />
                     <label for="cul3" class="rc_sty" value="Voleibol">Voleibol</label><br>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <label>Activación Física</label>
                   <div class="checkbox">
-                    <input type="checkbox" name="check6" id="cul6" />
+                    <input type="checkbox" name="check36" id="dep4" />
                     <label for="cul6" class="rc_sty" value="AcondicionamientoFisico">Acondicionamiento físico</label><br>
-                    <input type="checkbox" name="check7" id="cul7" />
+                    <input type="checkbox" name="check37" id="dep5" />
                     <label for="cul7" class="rc_sty" value="Zumba">Zumba</label><br>
-                    <input type="checkbox" name="check8" id="cul8" />
+                    <input type="checkbox" name="check38" id="dep6" />
                     <label for="cul8" class="rc_sty" value="TaeBo">Tae bo</label><br>
-                    <input type="checkbox" name="check9" id="cul9" />
+                    <input type="checkbox" name="check39" id="dep7" />
                     <label for="cul9" class="rc_sty" value="Yoga">Yoga</label><br>
-                    <input type="checkbox" name="check10" id="cul10" />
+                    <input type="checkbox" name="check40" id="dep8" />
                     <label for="cul10" class="rc_sty" value="TaiChi">Tai chi</label>
                     <br>
                   </div>
@@ -420,13 +420,13 @@ if(window.screen.availWidth == 640)window.parent.document.body.style.zoom="60%"
                 <div class="col-lg-4">
                   <label>Otras disciplinas</label>
                   <div class="checkbox">
-                    <input type="checkbox" name="check11" id="cul11" />
+                    <input type="checkbox" name="check41" id="dep9" />
                     <label for="cul11" class="rc_sty" value="Boxeo">Boxeo</label><br>
-                    <input type="checkbox" name="check12" id="cul12" />
+                    <input type="checkbox" name="check42" id="dep10" />
                     <label for="cul12" class="rc_sty" value="Atletismo">Atletismo</label><br>
-                    <input type="checkbox" name="check13" id="cul13" />
+                    <input type="checkbox" name="check43" id="dep11" />
                     <label for="cul13" class="rc_sty" value="KarateDo">Karate do</label><br>
-                    <input type="checkbox" name="check16" id="cul16" />
+                    <input type="checkbox" name="check44" id="dep12" />
                     <label for="cul16" class="rc_sty" value="KunFu">Kun fu</label>
                       
                   </div>
@@ -465,9 +465,9 @@ if(window.screen.availWidth == 640)window.parent.document.body.style.zoom="60%"
               <div class="row">
 
               </div>
-              <input type="checkbox" name="check21" id="cog1" />
+              <input type="checkbox" name="check45" id="cog1" />
               <label for="cog1" class="rc_sty">Ajedrez</label>
-              <input type="checkbox" name="check22" id="cog2" />
+              <input type="checkbox" name="check46" id="cog2" />
               <label for="cog2" class="rc_sty">Redacción y comprensión de lectura</label>
             </div>
           </div>
@@ -481,23 +481,23 @@ if(window.screen.availWidth == 640)window.parent.document.body.style.zoom="60%"
             <div class="checkbox">
               <div class="row">
                 <div class="col-lg-4">
-                  <input type="checkbox" name="check29" id="emo1" />
+                  <input type="checkbox" name="check47" id="dig1" />
                   <label for="emo1" class="rc_sty">Club de Ciencias</label><br>
-                  <input type="checkbox" name="check30" id="emo2" />
+                  <input type="checkbox" name="check48" id="dig2" />
                   <label for="emo2" class="rc_sty">Club de Código</label><br>
              
                  
                 </div>
                 <div class="col-lg-4">
-                  <input type="checkbox" name="check32" id="emo4" />
+                  <input type="checkbox" name="check49" id="dig3" />
                   <label for="emo4" class="rc_sty">Edición y diseño</label>
                   <br>
-                  <input type="checkbox" name="check33" id="emo5" />
+                  <input type="checkbox" name="check50" id="dig4" />
                   <label for="emo5" class="rc_sty">Talleres de cómputo</label> <br>
                   
                 </div>
                   <div class="col-lg-4">
-                  <input type="checkbox" name="check32" id="emo7" />
+                  <input type="checkbox" name="check51" id="dig5" />
                   <label for="emo7" class="rc_sty">Robótica aplicada</label>
                   
                 </div>
@@ -514,34 +514,34 @@ if(window.screen.availWidth == 640)window.parent.document.body.style.zoom="60%"
             <div class="checkbox">
               <div class="row">
                 <div class="col-lg-4">
-                  <input type="checkbox" name="check29" id="emo1" />
+                  <input type="checkbox" name="check52" id="emo1" />
                   <label for="emo1" class="rc_sty">Amor y sexualidad</label><br>
-                  <input type="checkbox" name="check30" id="emo2" />
+                  <input type="checkbox" name="check53" id="emo2" />
                   <label for="emo2" class="rc_sty">Prevención de adicciones</label><br>
-                  <input type="checkbox" name="check31" id="emo3" />
+                  <input type="checkbox" name="check54" id="emo3" />
                   <label for="emo3" class="rc_sty">Habilidades para la vida</label> <br>
-                    <input type="checkbox" name="check33" id="emo7" />
+                    <input type="checkbox" name="check55" id="emo4" />
                   <label for="emo8" class="rc_sty">Baile, cuerpo y emociones</label>
                 </div>
                 <div class="col-lg-4">
-                  <input type="checkbox" name="check32" id="emo4" />
+                  <input type="checkbox" name="check56" id="emo5" />
                   <label for="emo4" class="rc_sty">Proyecto de vida</label>
                   <br>
-                  <input type="checkbox" name="check33" id="emo5" />
+                  <input type="checkbox" name="check57" id="emo6" />
                   <label for="emo5" class="rc_sty">Autoestima</label> <br>
-                  <input type="checkbox" name="check34" id="emo6" />
+                  <input type="checkbox" name="check58" id="emo7" />
                   <label for="emo6" class="rc_sty">Tanatología o manejo del duelo</label>
-                <input type="checkbox" name="check32" id="emo7" />
+                <input type="checkbox" name="check59" id="emo8" />
                   <label for="emo7" class="rc_sty">Emociones mágicas</label>
                   <br>
                 </div>
                   <div class="col-lg-4">
-                  <input type="checkbox" name="check32" id="emo7" />
+                  <input type="checkbox" name="check60" id="emo9" />
                   <label for="emo7" class="rc_sty">Inteligencia emocional</label>
                   <br>
-                  <input type="checkbox" name="check33" id="emo7" />
+                  <input type="checkbox" name="check61" id="emo10" />
                   <label for="emo8" class="rc_sty">Arte y Emociones</label> <br>
-                  <input type="checkbox" name="check34" id="emo9" />
+                  <input type="checkbox" name="check62" id="emo11" />
                   <label for="emo9" class="rc_sty">Pintando emociones</label>
                   <br>
                 </div>
@@ -559,116 +559,116 @@ if(window.screen.availWidth == 640)window.parent.document.body.style.zoom="60%"
             <div class="checkbox">
               <div class="row">
                 <div class="col-lg-4">
-                  <input type="checkbox" name="check37" id="econo1" />
+                  <input type="checkbox" name="check63" id="econo1" />
                   <label for="econo1" class="rc_sty">Carpintería</label> <br>
 
-                  <input type="checkbox" name="check38" id="econo2" />
+                  <input type="checkbox" name="check64" id="econo2" />
                   <label for="econo2" class="rc_sty">Plomería</label><br>
 
-                  <input type="checkbox" name="check39" id="econo3" />
+                  <input type="checkbox" name="check65" id="econo3" />
                   <label for="econo3" class="rc_sty">Herrería y Aluminero</label> <br>
 
-                  <input type="checkbox" name="check40" id="econo4" />
+                  <input type="checkbox" name="check66" id="econo4" />
                   <label for="econo4" class="rc_sty">Electricidad</label> <br>
 
-                  <input type="checkbox" name="check41" id="econo5" />
+                  <input type="checkbox" name="check67" id="econo5" />
                   <label for="econo5" class="rc_sty">Gastronomía</label> <br>
 
 
-                  <input type="checkbox" name="check42" id="econo6" />
+                  <input type="checkbox" name="check68" id="econo6" />
                   <label for="econo6" class="rc_sty">Panadería</label><br>
 
-                  <input type="checkbox" name="check43" id="econo7" />
+                  <input type="checkbox" name="check69" id="econo7" />
                   <label for="econo7" class="rc_sty">Joyería y accesorios</label> <br>
 
-                  <input type="checkbox" name="check44" id="econo8" />
+                  <input type="checkbox" name="check70" id="econo8" />
                   <label for="econo8" class="rc_sty">Agricultura urbana</label> <br>
 
-                  <input type="checkbox" name="check45" id="econo9" />
+                  <input type="checkbox" name="check71" id="econo9" />
                   <label for="econo9" class="rc_sty">Bicimaquinas</label> <br>
 
-                  <input type="checkbox" name="check46" id="econo10" />
+                  <input type="checkbox" name="check72" id="econo10" />
                   <label for="econo10" class="rc_sty">Estilismo</label>
                 </div>
                 <div class="col-lg-4">
-                  <input type="checkbox" name="check47" id="econo11" />
+                  <input type="checkbox" name="check73" id="econo11" />
                   <label for="econo11" class="rc_sty">Diseño de imagen y Cosmetología orgánica</label>
                   <br>
 
-                  <input type="checkbox" name="check48" id="econo12" />
+                  <input type="checkbox" name="check74" id="econo12" />
                   <label for="econo12" class="rc_sty">Codigo para mujeres</label>
                   <br>
 
-                  <input type="checkbox" name="check49" id="econo13" />
+                  <input type="checkbox" name="check75" id="econo13" />
                   <label for="econo13" class="rc_sty">Electrónica</label>
                   <br>
 
-                  <input type="checkbox" name="check50" id="econo14" />
+                  <input type="checkbox" name="check76" id="econo14" />
                   <label for="econo14" class="rc_sty">Cosecha de agua de lluvias</label>
                   <br>
 
-                  <input type="checkbox" name="check51" id="econo15" />
+                  <input type="checkbox" name="check77" id="econo15" />
                   <label for="econo15" class="rc_sty">Instalación y reparación de dispositivos Fotovotaícos</label>
 
 
-                  <input type="checkbox" name="check52" id="econo16" />
+                  <input type="checkbox" name="check78" id="econo16" />
                   <label for="econo16" class="rc_sty">Textiles y diseño de modas</label>
                   <br>
 
-                  <input type="checkbox" name="check53" id="econo17" />
+                  <input type="checkbox" name="check79" id="econo17" />
                   <label for="econo17" class="rc_sty">Banquetes</label>
                   <br>
 
-                  <input type="checkbox" name="check54" id="econo18" />
+                  <input type="checkbox" name="check80" id="econo18" />
                   <label for="econo18" class="rc_sty">Fotografia de producto</label>
                   <br>
 
-                  <input type="checkbox" name="check55" id="econo19" />
+                  <input type="checkbox" name="check81" id="econo19" />
                   <label for="econo19" class="rc_sty">Logos e identidad de marca</label>
                   <br>
 
-                  <input type="checkbox" name="check56" id="econo20" />
+                  <input type="checkbox" name="check82" id="econo20" />
                   <label for="econo20" class="rc_sty">Calidad en el servicio</label>
                 </div>
 
                 <div class="col-lg-4">
-                  <input type="checkbox" name="check57" id="econo21" />
+                  <input type="checkbox" name="check83" id="econo21" />
                   <label for="econo21" class="rc_sty">Creación de cooperativas</label>
                   <br>
 
-                  <input type="checkbox" name="check58" id="econo22" />
+                  <input type="checkbox" name="check84" id="econo22" />
                   <label for="econo22" class="rc_sty">Emprendedurismo</label>
                   <br>
 
-                  <input type="checkbox" name="check59" id="econo23" />
+                  <input type="checkbox" name="check85" id="econo23" />
                   <label for="econo23" class="rc_sty">Creación de micro-negocios</label>
                   <br>
 
-                  <input type="checkbox" name="check60" id="econo24" />
+                  <input type="checkbox" name="check86" id="econo24" />
                   <label for="econo24" class="rc_sty">Comercio digital</label>
                   <br>
 
-                  <input type="checkbox" name="check61" id="econo25" />
+                  <input type="checkbox" name="check87" id="econo25" />
                   <label for="econo25" class="rc_sty">Estrategias de venta</label>
                   <br>
 
-                  <input type="checkbox" name="check62" id="econo26" />
+                  <input type="checkbox" name="check88" id="econo26" />
                   <label for="econo26" class="rc_sty">Comercio justo</label>
                   <br>
 
-                  <input type="checkbox" name="check63" id="econo27" />
+                  <input type="checkbox" name="check89" id="econo27" />
                   <label for="econo27" class="rc_sty">Hospedaje</label>
                   <br>
 
-                  <input type="checkbox" name="check64" id="econo28" />
+                  <input type="checkbox" name="check90" id="econo28" />
                   <label for="econo28" class="rc_sty">Electrónica digital</label>
                   <br>
 
-                  <input type="checkbox" name="check65" id="econo29" />
+                  <input type="checkbox" name="check91" id="econo29" />
                   <label for="econo29" class="rc_sty">Distribución</label>
                   <br>
 
-                  <input type="checkbox" name="check66" id="econo30" />
+                  <input type="checkbox" name="check92" id="econo30" />
                   <label for="econo30" class="rc_sty">Desarrollo web, Desarrollo de apps</label>
                 </div>
 

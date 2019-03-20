@@ -16,11 +16,11 @@
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
    <link rel="stylesheet" href="<?php //echo constant('URL')?>../../public/css/estilosFormularios.css">
      
-     <linck rel="stylesheet" type="text/css" href="public/css/estilosFormularios.css"/>
+     <link rel="stylesheet" type="text/css" href="public/css/estilosFormularios.css"/>
      
    <title>Formulario de registro</title>
      
-    <link rel="icon" href="public/img/core-img/favicon.ico">
+    <link rel="icon" href="../../public/img/core-img/favicon.ico">
 
 
      

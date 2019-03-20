@@ -305,80 +305,80 @@ if(window.screen.availWidth == 640)window.parent.document.body.style.zoom="60%"
                     <input type="checkbox" name="check5" id="cul5" />
                     <label for="cul5" class="rc_sty" value="DanzaFolklorica">Danza folklórica</label> <br>
                     <input type="checkbox" name="check6" id="cul6" />
-                    <label for="cul1" class="rc_sty" value="Ballet">Ballet</label><br>
+                    <label for="cul6" class="rc_sty" value="Ballet">Ballet</label><br>
                     <input type="checkbox" name="check7" id="cul7" />
-                    <label for="cul2" class="rc_sty" value="Actuación">Actuación</label><br>
+                    <label for="cul7" class="rc_sty" value="Actuación">Actuación</label><br>
                     <input type="checkbox" name="check8" id="cul8" />
-                    <label for="cul3" class="rc_sty" value="TeatroCalle">Teatro de calle</label><br>
+                    <label for="cul8" class="rc_sty" value="TeatroCalle">Teatro de calle</label><br>
                     <input type="checkbox" name="check9" id="cul9" />
-                    <label for="cul4" class="rc_sty" value="DanzaContemporánea">Danza contemporánea</label><br>
+                    <label for="cul9" class="rc_sty" value="DanzaContemporánea">Danza contemporánea</label><br>
                     <input type="checkbox" name="check10" id="cul10" />
-                    <label for="cul5" class="rc_sty" value="DanzaPolinesia">Danza polinesia</label> <br>
+                    <label for="cul10" class="rc_sty" value="DanzaPolinesia">Danza polinesia</label> <br>
                     <input type="checkbox" name="check11" id="cul11" />
-                    <label for="cul4" class="rc_sty" value="TeatroMascaras">Teatro de máscaras</label><br>
+                    <label for="cul11" class="rc_sty" value="TeatroMascaras">Teatro de máscaras</label><br>
                     <input type="checkbox" name="check12" id="cul12" />
-                    <label for="cul5" class="rc_sty" value="ExpresiónCorporal">Expresión corporal y teatro</label> <br>
+                    <label for="cul12" class="rc_sty" value="ExpresiónCorporal">Expresión corporal y teatro</label> <br>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <label>Oficios</label>
                   <div class="checkbox">
                     <input type="checkbox" name="check13" id="cul13" />
-                    <label for="cul6" class="rc_sty" value="TelarCintura">Telar de cintura</label><br>
+                    <label for="cul13" class="rc_sty" value="TelarCintura">Telar de cintura</label><br>
                     <input type="checkbox" name="check14" id="cul14" />
-                    <label for="cul7" class="rc_sty" value="Cartoneria">Cartonería</label><br>
+                    <label for="cul14" class="rc_sty" value="Cartoneria">Cartonería</label><br>
                     <input type="checkbox" name="check15" id="cul15" />
-                    <label for="cul8" class="rc_sty" value="BordadoVida">Bordado para la vida</label><br>
+                    <label for="cul15" class="rc_sty" value="BordadoVida">Bordado para la vida</label><br>
                     <input type="checkbox" name="check16" id="cul16" />
-                    <label for="cul9" class="rc_sty" value="Encuadernacion">Encuadernación</label><br>
+                    <label for="cul16" class="rc_sty" value="Encuadernacion">Encuadernación</label><br>
                     <input type="checkbox" name="check17" id="cul17" />
-                    <label for="cul10" class="rc_sty" value="ConstruccionInstrumentos">Construcción artesanal de instrumentos</label>
+                    <label for="cul17" class="rc_sty" value="ConstruccionInstrumentos">Construcción artesanal de instrumentos</label>
                     <input type="checkbox" name="check18" id="cul18" />
-                    <label for="cul10" class="rc_sty" value="DiseñoJuguetesMaderaReuso">Diseño de juguetes de madera y materiales de reuso</label>
+                    <label for="cul18" class="rc_sty" value="DiseñoJuguetesMaderaReuso">Diseño de juguetes de madera y materiales de reuso</label>
                     <br>
                   </div>
                   <label>Artes sustentables</label>
                   <div class="checkbox">
                     <input type="checkbox" name="check19" id="cul19" />
-                    <label for="cul6" class="rc_sty" value="ReciclajeAmbiente">Reciclaje y medio ambiente</label><br>
+                    <label for="cul9" class="rc_sty" value="ReciclajeAmbiente">Reciclaje y medio ambiente</label><br>
                   </div>
                   <label>Literatura</label>
                   <div class="checkbox">
                     <input type="checkbox" name="check20" id="cul20" />
-                    <label for="cul6" class="rc_sty" value="EscrituraCreativa">Escritura creativa</label><br>
+                    <label for="cul20" class="rc_sty" value="EscrituraCreativa">Escritura creativa</label><br>
                   </div>
                   <label>Artes plásticas</label>
                   <div class="checkbox">
                     <input type="checkbox" name="check21" id="cul21" />
-                    <label for="cul6" class="rc_sty" value="PinturaArtistica">Pintura artística</label><br>
+                    <label for="cul21" class="rc_sty" value="PinturaArtistica">Pintura artística</label><br>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <label>Artes Visuales</label>
                   <div class="checkbox">
                     <input type="checkbox" name="check22" id="cul22" />
-                    <label for="cul11" class="rc_sty" value="MediosAudiovisuales">Medios Audiovisuales</label><br>
+                    <label for="cul22" class="rc_sty" value="MediosAudiovisuales">Medios Audiovisuales</label><br>
                     <input type="checkbox" name="check23" id="cul23" />
-                    <label for="cul12" class="rc_sty" value="Cine">Cine</label><br>
+                    <label for="cul23" class="rc_sty" value="Cine">Cine</label><br>
                     <input type="checkbox" name="check24" id="cul24" />
-                    <label for="cul13" class="rc_sty" value="Fotografia">Fotografía</label><br>
+                    <label for="cul24" class="rc_sty" value="Fotografia">Fotografía</label><br>
                     <input type="checkbox" name="check25" id="cul25" />
-                    <label for="cul14" class="rc_sty" value="AnimacionNiños">Animación para niños</label><br>
+                    <label for="cul25" class="rc_sty" value="AnimacionNiños">Animación para niños</label><br>
                     <input type="checkbox" name="check26" id="cul26" />
-                    <label for="cul15" class="rc_sty" value="VideoComunitario">Vídeo comunitario</label> <br>
+                    <label for="cul26" class="rc_sty" value="VideoComunitario">Vídeo comunitario</label> <br>
                   </div>
                   <label>Música</label>
                   <div class="checkbox">
                     <input type="checkbox" name="check27" id="cul27" />
-                    <label for="cul11" class="rc_sty" value="GuitarraClasica">Guitarra clásica</label><br>
+                    <label for="cul27" class="rc_sty" value="GuitarraClasica">Guitarra clásica</label><br>
                     <input type="checkbox" name="check28" id="cul28" />
-                    <label for="cul12" class="rc_sty" value="Rap">Música Rap</label><br>
+                    <label for="cul28" class="rc_sty" value="Rap">Música Rap</label><br>
                     <input type="checkbox" name="check29" id="cul29" />
-                    <label for="cul13" class="rc_sty" value="Percusiones">Percusiones</label><br>
+                    <label for="cul29" class="rc_sty" value="Percusiones">Percusiones</label><br>
                     <input type="checkbox" name="check30" id="cul30" />
-                    <label for="cul14" class="rc_sty" value="IniciacionMusica">Iniciación a la música</label><br>
+                    <label for="cul30" class="rc_sty" value="IniciacionMusica">Iniciación a la música</label><br>
                     <input type="checkbox" name="check31" id="cul31" />
-                    <label for="cul15" class="rc_sty" value="SonHuasteco">Son Huasteco</label> <br>
+                    <label for="cul31" class="rc_sty" value="SonHuasteco">Son Huasteco</label> <br>
                   </div>
                 </div>
               </div>
@@ -394,26 +394,26 @@ if(window.screen.availWidth == 640)window.parent.document.body.style.zoom="60%"
                   <label>Escuela técnico deportivas de:</label>
                   <div class="checkbox">
                     <input type="checkbox" name="check32" id="dep1" />
-                    <label for="cul1" class="rc_sty" value="Fútbol">Fútbol</label><br>
+                    <label for="dep1" class="rc_sty" value="Fútbol">Fútbol</label><br>
                     <input type="checkbox" name="check33" id="dep2" />
-                    <label for="cul2" class="rc_sty" value="Basquetbol">Basquetbol</label><br>
+                    <label for="dep2" class="rc_sty" value="Basquetbol">Basquetbol</label><br>
                     <input type="checkbox" name="check34" id="dep3" />
-                    <label for="cul3" class="rc_sty" value="Voleibol">Voleibol</label><br>
+                    <label for="dep3" class="rc_sty" value="Voleibol">Voleibol</label><br>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <label>Activación Física</label>
                   <div class="checkbox">
                     <input type="checkbox" name="check36" id="dep4" />
-                    <label for="cul6" class="rc_sty" value="AcondicionamientoFisico">Acondicionamiento físico</label><br>
+                    <label for="dep4" class="rc_sty" value="AcondicionamientoFisico">Acondicionamiento físico</label><br>
                     <input type="checkbox" name="check37" id="dep5" />
-                    <label for="cul7" class="rc_sty" value="Zumba">Zumba</label><br>
+                    <label for="dep5" class="rc_sty" value="Zumba">Zumba</label><br>
                     <input type="checkbox" name="check38" id="dep6" />
-                    <label for="cul8" class="rc_sty" value="TaeBo">Tae bo</label><br>
+                    <label for="dep6" class="rc_sty" value="TaeBo">Tae bo</label><br>
                     <input type="checkbox" name="check39" id="dep7" />
-                    <label for="cul9" class="rc_sty" value="Yoga">Yoga</label><br>
+                    <label for="dep7" class="rc_sty" value="Yoga">Yoga</label><br>
                     <input type="checkbox" name="check40" id="dep8" />
-                    <label for="cul10" class="rc_sty" value="TaiChi">Tai chi</label>
+                    <label for="dep8" class="rc_sty" value="TaiChi">Tai chi</label>
                     <br>
                   </div>
                 </div>
@@ -421,13 +421,13 @@ if(window.screen.availWidth == 640)window.parent.document.body.style.zoom="60%"
                   <label>Otras disciplinas</label>
                   <div class="checkbox">
                     <input type="checkbox" name="check41" id="dep9" />
-                    <label for="cul11" class="rc_sty" value="Boxeo">Boxeo</label><br>
+                    <label for="dep9" class="rc_sty" value="Boxeo">Boxeo</label><br>
                     <input type="checkbox" name="check42" id="dep10" />
-                    <label for="cul12" class="rc_sty" value="Atletismo">Atletismo</label><br>
+                    <label for="dep10" class="rc_sty" value="Atletismo">Atletismo</label><br>
                     <input type="checkbox" name="check43" id="dep11" />
-                    <label for="cul13" class="rc_sty" value="KarateDo">Karate do</label><br>
+                    <label for="dep11" class="rc_sty" value="KarateDo">Karate do</label><br>
                     <input type="checkbox" name="check44" id="dep12" />
-                    <label for="cul16" class="rc_sty" value="KunFu">Kun fu</label>
+                    <label for="dep12" class="rc_sty" value="KunFu">Kun fu</label>
                       
                   </div>
                 </div>
@@ -482,23 +482,23 @@ if(window.screen.availWidth == 640)window.parent.document.body.style.zoom="60%"
               <div class="row">
                 <div class="col-lg-4">
                   <input type="checkbox" name="check47" id="dig1" />
-                  <label for="emo1" class="rc_sty">Club de Ciencias</label><br>
+                  <label for="dig1" class="rc_sty">Club de Ciencias</label><br>
                   <input type="checkbox" name="check48" id="dig2" />
-                  <label for="emo2" class="rc_sty">Club de Código</label><br>
+                  <label for="dig2" class="rc_sty">Club de Código</label><br>
              
                  
                 </div>
                 <div class="col-lg-4">
                   <input type="checkbox" name="check49" id="dig3" />
-                  <label for="emo4" class="rc_sty">Edición y diseño</label>
+                  <label for="dig3" class="rc_sty">Edición y diseño</label>
                   <br>
                   <input type="checkbox" name="check50" id="dig4" />
-                  <label for="emo5" class="rc_sty">Talleres de cómputo</label> <br>
+                  <label for="dig4" class="rc_sty">Talleres de cómputo</label> <br>
                   
                 </div>
                   <div class="col-lg-4">
                   <input type="checkbox" name="check51" id="dig5" />
-                  <label for="emo7" class="rc_sty">Robótica aplicada</label>
+                  <label for="dig5" class="rc_sty">Robótica aplicada</label>
                   
                 </div>
                   
@@ -521,28 +521,28 @@ if(window.screen.availWidth == 640)window.parent.document.body.style.zoom="60%"
                   <input type="checkbox" name="check54" id="emo3" />
                   <label for="emo3" class="rc_sty">Habilidades para la vida</label> <br>
                     <input type="checkbox" name="check55" id="emo4" />
-                  <label for="emo8" class="rc_sty">Baile, cuerpo y emociones</label>
+                  <label for="emo4" class="rc_sty">Baile, cuerpo y emociones</label>
                 </div>
                 <div class="col-lg-4">
                   <input type="checkbox" name="check56" id="emo5" />
-                  <label for="emo4" class="rc_sty">Proyecto de vida</label>
+                  <label for="emo5" class="rc_sty">Proyecto de vida</label>
                   <br>
                   <input type="checkbox" name="check57" id="emo6" />
-                  <label for="emo5" class="rc_sty">Autoestima</label> <br>
+                  <label for="emo6" class="rc_sty">Autoestima</label> <br>
                   <input type="checkbox" name="check58" id="emo7" />
-                  <label for="emo6" class="rc_sty">Tanatología o manejo del duelo</label>
+                  <label for="emo7" class="rc_sty">Tanatología o manejo del duelo</label>
                 <input type="checkbox" name="check59" id="emo8" />
-                  <label for="emo7" class="rc_sty">Emociones mágicas</label>
+                  <label for="emo8" class="rc_sty">Emociones mágicas</label>
                   <br>
                 </div>
                   <div class="col-lg-4">
                   <input type="checkbox" name="check60" id="emo9" />
-                  <label for="emo7" class="rc_sty">Inteligencia emocional</label>
+                  <label for="emo9" class="rc_sty">Inteligencia emocional</label>
                   <br>
                   <input type="checkbox" name="check61" id="emo10" />
-                  <label for="emo8" class="rc_sty">Arte y Emociones</label> <br>
+                  <label for="emo10" class="rc_sty">Arte y Emociones</label> <br>
                   <input type="checkbox" name="check62" id="emo11" />
-                  <label for="emo9" class="rc_sty">Pintando emociones</label>
+                  <label for="emo11" class="rc_sty">Pintando emociones</label>
                   <br>
                 </div>
                   

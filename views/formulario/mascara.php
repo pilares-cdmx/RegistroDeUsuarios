@@ -1,5 +1,5 @@
  <?php
- require_once  'views/headerFormulario.php'
+ require_once  ('views/headerFormulario.php');
  ?>
 
  <body>

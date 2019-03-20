@@ -6,7 +6,7 @@ define('URL', 'http://187.216.164.109/PILARES-login-mvc/');
  * [define description]
  * @var [type]
  */
-define('HOST', 'http://187.216.164.109');
+define('HOST', 'localhost');
 /**
  * [define description]
  * @var [type]

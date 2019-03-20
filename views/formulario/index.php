@@ -340,7 +340,7 @@ if(window.screen.availWidth == 640)window.parent.document.body.style.zoom="60%"
                   <label>Artes sustentables</label>
                   <div class="checkbox">
                     <input type="checkbox" name="check19" id="cul19" />
-                    <label for="cul9" class="rc_sty" value="ReciclajeAmbiente">Reciclaje y medio ambiente</label><br>
+                    <label for="cul19" class="rc_sty" value="ReciclajeAmbiente">Reciclaje y medio ambiente</label><br>
                   </div>
                   <label>Literatura</label>
                   <div class="checkbox">

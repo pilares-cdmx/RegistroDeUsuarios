@@ -1,7 +1,7 @@
 <?php
 
 /** @var [type] [description] */
-define('URL', 'http://localhost/webformulario/');
+define('URL', 'http://localhost/webformulario-Produccion-front/');
 /**
  * [define description]
  * @var [type]

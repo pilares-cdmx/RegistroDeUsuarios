@@ -12,12 +12,15 @@ class Control extends Controller{
 	 */
 	public function __construct(){
 		parent::__construct();
+		echo "soy control";
 	}
 	/**
 	 * [validar description]
 	 * @return [type] [description]
 	 */
 	public function validar(){
+		echo " soy validar";
+	/*	
 		if (isset($_POST['login'])) {
 		//VARIABLES DEL USUARIO
 			$usuario = $_POST['txtusuario'];
@@ -39,6 +42,7 @@ class Control extends Controller{
 			$this->view->render('formulario/login');
 		}
 	}
+*/
 }
 }
 ?>

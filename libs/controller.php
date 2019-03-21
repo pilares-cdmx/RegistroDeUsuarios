@@ -17,6 +17,8 @@
 				require $url;
 				$modelName = $model.'Model';
 				$this->model = new $modelName();
+			}else{
+				echo "no existo segun php";
 			}
 
 		}

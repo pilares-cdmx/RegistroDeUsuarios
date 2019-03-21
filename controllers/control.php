@@ -12,24 +12,28 @@ class Control extends Controller{
 	 */
 	public function __construct(){
 		parent::__construct();
+		echo "soy control";
 	}
 	/**
 	 * [validar description]
 	 * @return [type] [description]
 	 */
 	public function validar(){
+		echo " - soy validar";
 		if (isset($_POST['login'])) {
 		//VARIABLES DEL USUARIO
 			$usuario = $_POST['txtusuario'];
 			$pass = $_POST['txtpass'];
+			
 			if($this->model->validar($usuario,$pass)){
-				session_start();
+				//session_start();
+				//echo "estoy en if control";
 				$array = $this->model->validar($usuario,$pass);
 				foreach ($array as $row) {
-				    $_SESSION['usuario']= $row->usuario ;
+				    //$_SESSION['usuario']= $row->usuario ;
 				}
-				//$this->view->render('formulario/index');
-				header('Location:'.constant('URL').'formulario');
+				$this->view->render('formulario/index');
+				//header('Location:'.constant('URL').'formulario');
 			}else{
 				$this->view->render('principal/index');
 			}

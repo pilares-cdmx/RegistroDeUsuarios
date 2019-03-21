@@ -7,6 +7,7 @@
 class ControlModel extends Model{
 	public function __construct(){
 		parent::__construct();
+		echo "soy control model";
 	}
 	/**
 	 * [validar Mapea las credenciales de acceso]
@@ -17,13 +18,14 @@ class ControlModel extends Model{
 	 *  datos o  si  son erroneas]
 	 */
 	public function validar($usuario,$pass){
+		echo "soy validar de model";
 		try{
 			/** @var [ControlModel] [variable encargada de hacer la consulta a la base] */
 			$consulta=$this->db->connect()->prepare(
-				"SELECT * FROM login WHERE usuario=:usuario and pass=:pass");
+				"SELECT * FROM Login WHERE nombre='$usuario' and contraseña='$pass'");
 			$consulta->execute([
-				'usuario'  =>$usuario,
-				'pass'  =>$pass]);
+				'nombre'  =>$usuario,
+				'contraseña'  =>$pass]);
 			return  $consulta->fetchAll(PDO::FETCH_OBJ);
 		}catch(PDOException $e){
 

@@ -88,13 +88,13 @@ table {
 h1
 {
    font-family: 'Aldo-Bold';
-},
+}
 h2,
 h3
 {
    font-family: 'Aldo-Regular';
     
-},
+}
 h4,
 h5,
 h6 {
@@ -593,8 +593,8 @@ label {
   }
 }
 
-@media \0screen\,
-       screen\9 {
+@media screen,
+       screen {
   /* Tus estilos CSS para IE6, IE7, IE8 */
 
   .input-field label {
@@ -1320,7 +1320,7 @@ form.para-botones {
 }
 
 .titulonormal {
-  color       : #;
+ /* color       : #;*/
   font-weight : bold;
 }
 

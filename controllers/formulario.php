@@ -5,6 +5,9 @@
 * para persistir los datos del Registro formulario en una
 * base de datos normalizada
 **/
+ini_set('display_startup_errors', 1);
+ini_set('display_errors', 1);
+error_reporting(-1);
 class Formulario extends Controller{
 	public function __construct(){
 		parent::__construct();

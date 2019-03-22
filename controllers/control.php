@@ -39,7 +39,7 @@ class Control extends Controller{
 				    $_SESSION['usuario']= $row->usuario ;
 				}
 				*/
-				$this->view->render('formulario/mascara');		
+				$this->view->render('aviso-de-privacidad/index');		
 			}
 			
 			else{

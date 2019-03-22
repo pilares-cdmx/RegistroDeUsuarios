@@ -1,9 +1,9 @@
 <?php
 session_start();
 if (isset($_SESSION['usuario'])) {
-	echo "Has iniciado tu sesion";
+	echo "";
 }else{
-	header("Location: index.php");
+	header("Location: index.html");
 	exit();
 }
 echo "Bienvenido ".$_SESSION['usuario']."<br>

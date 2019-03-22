@@ -22,9 +22,7 @@ class ControlModel extends Model{
 	 */
 	
 	public function validar($usuario,$pass){
-		
-		
-		
+			
 			$conn = $this->db->conectar();
 			$consulta = mysqli_query($conn, "SELECT * FROM Login WHERE nombre = '$usuario'");
 			/*

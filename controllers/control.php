@@ -9,6 +9,7 @@
 ini_set('display_startup_errors', 1);
 ini_set('display_errors', 1);
 error_reporting(-1);
+
 class Control extends Controller{
 	/**
 	 * [__construct description]
@@ -24,14 +25,15 @@ class Control extends Controller{
 	public function validar(){
 		
 	
-		if (isset($_POST['login'])) {
+	if (isset($_POST['login'])) 
+	{
 		//VARIABLES DEL USUARIO
 			$usuario = $_POST['txtusuario'];
 			$pass = $_POST['txtpass'];
 			
 			if($this->model->validar($usuario,$pass)){
-				//session_start();
 				/*
+				session_start();				
 				$array = $this->model->validar($usuario);
 				foreach ($array as $row) {
 				    $_SESSION['usuario']= $row->usuario ;
@@ -48,11 +50,10 @@ class Control extends Controller{
 		//VALIDAR CONTENIDO EN LAS VARIABLES O CAJAS DE TEXTO
 		if (empty($usuario) || empty($pass))
 		{
-			
 			$this->view->render('formulario/login');
-		}
+		}																																																																																										
 	}
 
-}
+  }
 }
 ?>

@@ -5,7 +5,7 @@
  * 	importa las clases que proveen las funcionalidades de la aplicación]
  */
 	
-	require_once 'libs/database.php';
+	require_once 'libs/dbcontroller.php';
 	require_once 'libs/controller.php';
 	require_once 'libs/view.php';
 	require_once 'libs/model.php';

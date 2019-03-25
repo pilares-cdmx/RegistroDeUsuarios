@@ -4,6 +4,9 @@
  * En esta clase se administran las funciones que obtienen y
  * persisten información en la base de datos
  */
+ini_set('display_startup_errors', 1);
+ini_set('display_errors', 1);
+error_reporting(-1);
 class FormularioModel extends Model {
 
 	public function __construct() {
@@ -17,16 +20,24 @@ class FormularioModel extends Model {
 	 *	pueda selecionar la información que se le solicita.
 	 *
 	 */
+
 	public function getAlcaldias() {
-		try{
-			$result=array();
-			$consulta=$this->db->connect()->prepare("SELECT idAlcaldias, nombre FROM Alcaldias");
-			$consulta->execute();
-			return $consulta->fetchAll(PDO::FETCH_OBJ);
-		}catch(PDOException $e){
-			$e->getMessage();
-			return false;
-		}
+		
+			//$result=array();
+			$conn=$this->db->conectar();
+			$query = "SELECT idAlcaldias, nombre FROM Alcaldias";
+			$result = $this->db->runQuery($query);
+			return $result;
+			/*
+			//mysqli_query($conn, $query);
+			//runQuery($query);
+			while ($row = mysqli_fetch_assoc($result)) {
+				$resultset[] = $row;
+			}
+			if (!empty($resultset)) {
+				return $resultset;
+			}
+			*/		
 	}
 	public function getPilaresById($country_id){
 		try{
@@ -41,16 +52,13 @@ class FormularioModel extends Model {
 		}
 	}
 	public function getColoniaPorId($id){
-		try{
-			$result=array();
-			$consulta=$this->db->connect()->prepare("SELECT idColonia, nombre FROM Colonias where Alcaldias_idAlcaldiasZonas=:id");
-			$consulta->execute([
-				'Alcaldias_idAlcaldiasZonas'  =>$id]);
-			return $consulta->fetchAll(PDO::FETCH_OBJ);
-		}catch(PDOException $e){
-			die($e->getMessage());
-			return false;
-		}
+	
+			//$result=array();
+			$conn=$this->db->conectar();			
+			$query = "SELECT * FROM Colonias where Alcaldias_idAlcaldiasZonas='$id";
+			$results = $db_handle->runQuery($query);
+			return $results;
+		
 	}
 	/**
 	 * [getMunicipiosPorId description]

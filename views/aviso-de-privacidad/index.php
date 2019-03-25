@@ -69,7 +69,7 @@ error_reporting(-1);
   <br>
 
 <div class="trans">
-  <a  class="btn btn-info btn-responsive btninter centerbtn"  href="<?php echo constant('URL');?>/views/formulario/mascara.php">Continuar</a>
+  <a  class="btn btn-info btn-responsive btninter centerbtn"  href="<?php echo constant('URL');?>formulario/render">Continuar</a>
   <!--
   <input class="btn btn-info btn-responsive btninter centerbtn" type="button" value="Aceptar" name="Back1" onclick="" />
 --> 

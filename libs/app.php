@@ -4,6 +4,9 @@
 * Clase App se enfoca en administrar todos los controladores, se hace el mapeo
 * a partir de la URL
 **/
+ini_set('display_startup_errors', 1);
+ini_set('display_errors', 1);
+error_reporting(-1);
 require_once 'controllers/errores.php';
 /**
  * App esta clase contiene la lógica  sobre el patron de diseño y los mecanismos de comunicación

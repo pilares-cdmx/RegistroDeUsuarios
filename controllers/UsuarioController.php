@@ -1,8 +1,52 @@
 <?php
-class UsuarioController extends ControladorBase{
-    /**
-     * Class constructor.
-     */
+
+require_once 'models/Usuario.php';
+class UsuarioController{
+    public function index(){
+        echo "Controlador usuarios, Accion index";  
+    }
+    
+    public function registro(){
+        require_once 'views/usuario/registro.php';
+    }
+    public function registroExitoso(){
+        require_once 'views/usuario/registroExitoso.php';
+    }
+    public function save(){
+        if (isset($_POST)) {
+           $usuario = new Usuario();
+           $usuario->setNombre($_POST['nombre']);
+           $usuario->setApellidoPaterno($_POST['apellidoPat']);
+           $usuario->setApellidoMaterno($_POST['apellidoMat']);
+           $usuario->setCurp($_POST['curp']);
+           $curp = $usuario->getCurp();  
+           $usuario->setSexo($curp);
+           $usuario->setFechaNacimiento($curp);
+           $usuario->setEntidadFederativaNacimiento($curp);  
+           $usuario->setGradoEstudios($_POST['grado']);
+           $usuario->setEstudias($_POST['estudias']);
+           $usuario->setOcupacionActual($_POST['ocupacionAct']);
+           $usuario->setGrupoEtnico($_POST['gruPoet']);
+           $usuario->setTiempoResidencia($_POST['timepoResidencia']);
+           $usuario->setCorreo($_POST['email']);
+           $usuario->setTelefonoCelular($_POST['telMovil']);
+           $usuario->setTelefonoCasa($_POST['telCasa']);
+           $usuario->setFechaDeRegistro();
+           /*  
+           $usuario->setFolio();
+           */
+           $save = $usuario->save();
+            //var_dump($usuario->setSexo($usuario->getCurp()));
+            if ($save) {
+                header("Location:".URL.'Usuario/registroExitoso');
+            }else{
+
+                echo "registro Fallido";
+            }
+            
+        }
+    }
+    /*
     public function __construct()
     {
         parent::__construct();
@@ -45,7 +89,7 @@ class UsuarioController extends ControladorBase{
             $this->redirect();
         }
     }
-    
+ */   
 
 }
 ?>

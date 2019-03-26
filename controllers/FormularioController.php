@@ -1,5 +1,11 @@
 <?php
-class FormularioController extends ControladorBase{
+class FormularioController{
+    public function index(){
+        require_once 'views/usuario/registro.php';  
+    }
+    
+    
+    /*
     public function __construct()
     {
         parent::__construct();
@@ -42,6 +48,8 @@ class FormularioController extends ControladorBase{
             $this->redirect();
         }
     }
+   */
+
 }
 
 ?>

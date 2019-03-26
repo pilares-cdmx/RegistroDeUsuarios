@@ -3,7 +3,7 @@ ini_set('display_startup_errors', 1);
 ini_set('display_errors', 1);
 error_reporting(-1);
 /** @var [type] [description] */
-define('URL', 'http://187.216.164.109/PILARES-login-mvc/');
+define('URL', 'http://187.216.164.109/PILARES-mvc-orm/');
 /**
  * [define description]
  * @var [type]

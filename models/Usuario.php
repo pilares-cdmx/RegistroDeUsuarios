@@ -164,7 +164,7 @@ class Usuario{
     }
     
     public function setFechaDeRegistro(){
-        $this->fechaDeRegistro = $fechaDeRegistro;
+        $this->fechaDeRegistro = null;
     
     }
 
@@ -204,7 +204,8 @@ class Usuario{
     '{$this->getCorreo()}',
     '{$this->getTelefonoCelular()}',
     '{$this->getTelefonoCasa()}',
-      NULL
+      NULL,
+    '{$this->getFolio()}'
     );";
         $save = $this->db->query($sql);
            

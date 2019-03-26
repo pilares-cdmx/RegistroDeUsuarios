@@ -8,11 +8,9 @@ require_once 'autoload.php';
 require_once 'config/db.php';
 require_once 'config/parameters.php';
 //require_once 'views/layout/headerFormulario.php';
-
-
 function show_error(){
 	$error = new ErrorController();
-	$error->index;
+	$error->index();
 }
 if (isset($_GET["controller"])) {
 	$nombre_controlador = $_GET["controller"].'Controller';

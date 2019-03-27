@@ -5943,7 +5943,7 @@
         </div>
     </div>
 
-    <?php require 'views/footer.php'; ?>
+    <?php require 'views/layout/footer.php'; ?>
 
 
 

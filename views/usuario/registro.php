@@ -34,28 +34,74 @@
     if(window.screen.availWidth == 800)window.parent.document.body.style.zoom="75%"; 
     if(window.screen.availWidth == 640)window.parent.document.body.style.zoom="60%" 
   </script>
-    <script language="JavaScript">
-    function showColoniasPorAlcaldia(str) {
-        if (str == "") {
-            document.getElementById("colonia").innerHTML = "";
-            return;
-        } else {
-            if (window.XMLHttpRequest) {
-                // code for IE7+, Firefox, Chrome, Opera, Safari
-                xmlhttp = new XMLHttpRequest();
-            } else {
-                // code for IE6, IE5
-                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-            }
-            xmlhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("colonia").innerHTML = this.responseText;
-                }
-            };
-            xmlhttp.open("GET", "getColoniasPorAlcaldia.php?q="+str,true);
-            xmlhttp.send();
-        }
-    }
+  <script language="JavaScript">
+      function showColoniasPorAlcaldia(str) {
+          if (str == "") {
+              document.getElementById("colonia").innerHTML = "";
+              return;
+          } else {
+              if (window.XMLHttpRequest) {
+                  // code for IE7+, Firefox, Chrome, Opera, Safari
+                  xmlhttp = new XMLHttpRequest();
+              } else {
+                  // code for IE6, IE5
+                  xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+              }
+              xmlhttp.onreadystatechange = function() {
+                  if (this.readyState == 4 && this.status == 200) {
+                      document.getElementById("colonia").innerHTML = this.responseText;
+                  }
+              };
+              xmlhttp.open("GET", "getColoniasPorAlcaldia.php?q="+str,true);
+              xmlhttp.send();
+          }
+      }
+  </script>
+  <script language="JavaScript">
+      function showCPporColonia(str) {
+          if (str == "") {
+              document.getElementById("codigoPostal").innerHTML = "";
+              return;
+          } else {
+              if (window.XMLHttpRequest) {
+                  // code for IE7+, Firefox, Chrome, Opera, Safari
+                  xmlhttp = new XMLHttpRequest();
+              } else {
+                  // code for IE6, IE5
+                  xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+              }
+              xmlhttp.onreadystatechange = function() {
+                  if (this.readyState == 4 && this.status == 200) {
+                      document.getElementById("codigoPostal").innerHTML = this.responseText;
+                  }
+              };
+              xmlhttp.open("GET", "getCPporColonia.php?q="+str,true);
+              xmlhttp.send();
+          }
+      }
+  </script>
+  <script language="JavaScript">
+      function showPilarPorAlcaldia(str) {
+          if (str == "") {
+              document.getElementById("pilarSelect_id").innerHTML = "";
+              return;
+          } else {
+              if (window.XMLHttpRequest) {
+                  // code for IE7+, Firefox, Chrome, Opera, Safari
+                  xmlhttp = new XMLHttpRequest();
+              } else {
+                  // code for IE6, IE5
+                  xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+              }
+              xmlhttp.onreadystatechange = function() {
+                  if (this.readyState == 4 && this.status == 200) {
+                      document.getElementById("pilarSelect_id").innerHTML = this.responseText;
+                  }
+              };
+              xmlhttp.open("GET", "getPilarPorAlcaldia.php?q="+str,true);
+              xmlhttp.send();
+          }
+      }
   </script>
 </head>
 <body>
@@ -167,8 +213,8 @@
           <div class="col-lg-12 estilo-forma">
               
             <label for="nombre">Colonia </label><br>
-              <!--id "estados" corresponde a Colonia   required-->
-            <select name="colonia" id="colonia" >
+              <!--id "estados" corresponde a Colonia   -->
+            <select name="colonia" id="colonia" onchange="showCPporColonia(this.value)" required>
               <option value="0" disabled selected>Selecciona</option>
               
             </select>
@@ -179,14 +225,10 @@
         <div class="row">
           <div class="col-lg-12 estilo-forma">
             <label for="nombre">Código postal </label><br>
-            <!--id "municipio" corresponde a Codigo postal    required-->
-            <select name="codigoPostal" id="codigoPostal">
+            <!--id "municipio" corresponde a Codigo postal    -->
+            <select name="codigoPostal" id="codigoPostal" required>
               <option value="0" disabled selected>Selecciona</option>
-              <option value="1">1000</option>
-              <option value="2">1010</option>
-              <option value="3">1020</option>
-              <option value="4">1028</option>
-              <option value="5">1029</option>
+      
             </select>
           </div>
         </div>
@@ -682,10 +724,10 @@
         <legend>PILARES</legend>
         <div class="row">
           <div class="col-md-6">
-          <!--                             required-->
+          <!--                            -->
             <div class="form-group">
               <label for="name1">Alcaldia</label>
-              <select id="country_id" class="form-control" name="country_id" >
+              <select id="alcaldia_id" class="form-control" name="alcaldia_id" onchange="showPilarPorAlcaldia(this.value)"  required>
                 <option value="">Selecciona</option>
                 <option value="0" disabled selected>Selecciona</option>
                 <option value="1">Álvaro Obregón</option>
@@ -704,19 +746,12 @@
                 <option value="14">Tlalpan</option>
                 <option value="15">Venustiano Carranza</option>
                 <option value="16">Xochimilco</option>
-                <?php
-                    foreach ($results as $alcaldias) {
-                ?>
-                <?php echo '<option value="'.$alcaldias["idAlcaldias"]; ?> <?php echo '">'.$alcaldias["nombre"];  echo '</option>'?>
-                <?php
-                }
-                ?>
                  </select>
             </div>
-            <!--                             required-->
+            <!--                            -->
             <div class="form-group">
               <label for="name1">PILARES</label>
-              <select id="pilarSelect_id" class="form-control" name="pilarSelect_id" >
+              <select id="pilarSelect_id" class="form-control" name="pilarSelect_id" required>
                 <option value="">Selecciona</option>
               </select>
             </div> <br><br>
@@ -755,83 +790,6 @@
       return /\d/.test(String.fromCharCode(keynum));
     }
   </script>
-
-<!--
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $("#country_id").change(function() {
-        var id = document.getElementById("country_id").value;
-        $.ajax({
-          url: "http://187.216.164.109/PILARES-login-mvc/formulario/getPilares",
-          type: 'GET',
-          dataType: "json",
-          data: {
-            id: id
-          },
-          success: function(json) {
-            $.each(json, function(i, pilar) {
-              $("#pilarSelect_id").append('<option value=' + pilar.id + '>' + pilar.name + '</option>');
-            });
-          },
-          error: function(xhr, status) {
-            console.log(id);
-          }
-        });
-      });
-    });
-  </script>
-
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $("#alcaldia").change(function() {
-        var id = document.getElementById("alcaldia").value;
-        $.ajax({
-          url: "http://187.216.164.109/PILARES-mvc-orm/Usuario/getColonias",
-          type: 'GET',
-          dataType: "json",
-          data: {
-            id: id
-          },
-          success: function(json) {
-             alert("Ajax  funcionando !!!!!");
-          /*
-            $.each(json, function(i, resultado) {
-              $("#colonia").append('<option value=' + resultado.id + '>' + resultado.nombre + '</option>');
-            });
-           */ 
-          },
-          error: function(xhr, status) {
-            console.log(id);
-          }
-        });
-      });
-    });
-  </script>
-
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $("#colonia").change(function() {
-        var id = document.getElementById("colonia").value;
-        $.ajax({
-          url: "http://187.216.164.109/PILARES-login-mvc/formulario/getMunicipios",
-          type: 'GET',
-          dataType: "json",
-          data: {
-            id: id
-          },
-          success: function(json) {
-            $.each(json, function(i, resultado) {
-              $("#codigoPostal").append('<option value=' + resultado.id + '>' + resultado.nombre + '</option>');
-            });
-          },
-          error: function(xhr, status) {
-            console.log(id);
-          }
-        });
-      });
-    });
-  </script>
--->
 <style>
       div {
       

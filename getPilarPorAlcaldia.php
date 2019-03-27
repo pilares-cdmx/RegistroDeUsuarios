@@ -33,7 +33,7 @@ if (!$con) {
 
 mysqli_select_db($con, "pilaresDB");
 mysqli_query($con, "SET NAMES 'utf8mb4'");
-$sql="SELECT * FROM Colonias WHERE Alcaldias_idAlcaldiasZonas = '".$q."'";
+$sql="SELECT * FROM Pilares WHERE Direccion_Colonias_Alcaldias_idAlcaldiasZonas = '".$q."'";
 $result = mysqli_query($con, $sql);
 /*
 echo "<table>
@@ -46,7 +46,7 @@ echo "<table>
 </tr>";
 */
 while ($row = mysqli_fetch_array($result)) {
-    echo "<option value=" . $row['idColonia'] . ">" . $row['nombre'] . "</option>";  
+    echo "<option value=" . $row['idPilares'] . ">" . $row['nombre'] . "</option>";  
 }
 
 mysqli_close($con);

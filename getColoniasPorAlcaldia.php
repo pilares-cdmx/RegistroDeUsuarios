@@ -33,7 +33,7 @@ if (!$con) {
 
 mysqli_select_db($con, "pilaresDB");
 mysqli_query($con, "SET NAMES 'utf8mb4'");
-$sql="SELECT * FROM Colonias WHERE Alcaldias_idAlcaldiasZonas = '".$q."'";
+$sql="SELECT * FROM Colonias WHERE Alcaldias_idAlcaldiasZonas = '".$q."' ORDER BY nombre";
 $result = mysqli_query($con, $sql);
 /*
 echo "<table>

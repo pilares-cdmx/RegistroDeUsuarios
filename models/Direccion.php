@@ -36,7 +36,7 @@ class Direccion{
         return $this->Colonias_Alcaldias_idAlcaldiasZonas;
     }
     public function getIdZonas(){
-        
+
         return $this->Colonias_Alcaldias_Zonas_idZonas;
     }
 
@@ -65,22 +65,26 @@ class Direccion{
 
     Public function save(){
 
-        $sql="INSERT INTO Direccion VALUES(NULL, 
+        $sql="INSERT INTO Direccion VALUES(NULL,
         '{$this->getCalleYnumero()}',
         '{$this->getIdAlcaldias()}',
         '{$this->getIdColonia()}',
         '{$this->getIdZonas()}'
         );";
-            $save = $this->db->query($sql);
-               
-            $result = false;
-    
-            if ($save) {
+        $save = $this->db->query($sql);
+
+        $result = false;
+        if ($save) {
                 $result = true;
-            }
-            return $result;
+        }
+        return $result;
     }
-    
+
+    public function lastInsertID(){
+        $tmp = $this->db->insert_id;
+        return $this->idDireccion = $tmp;
+    }
+
  }
 
 

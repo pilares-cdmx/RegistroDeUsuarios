@@ -16,15 +16,50 @@ img{
                 url('../fonts/century-gothic.ttf') format('truetype'),
                 url('../fonts/century-gothic.svg') format('svg');
 }*/
+@font-face
+{
+   font-family: 'Kollektif';
+    font-style  : normal;
+      font-weight : 900;
 
+   src: url('../fonts/Kollektif.ttf');
+
+}
+@font-face
+{
+   font-family: 'Kollektif-Italic';
+    font-style  : normal;
+      font-weight : 900;
+
+   src: url('../fonts/Kollektif-Italic.ttf');
+
+}
+@font-face
+{
+   font-family: 'Kollektif-Bold';
+    font-style  : normal;
+      font-weight : 900;
+
+   src: url('../fonts/Kollektif-Bold.ttf');
+
+}
+@font-face
+{
+   font-family: 'Kollektif-BoldItalic';
+    font-style  : normal;
+      font-weight : 900;
+
+   src: url('../fonts/Kollektif-BoldItalic.ttf');
+
+}
 @font-face
 {
    font-family: 'Aldo-Bold';
     font-style  : normal;
-  font-weight : 900;
+      font-weight : 900;
 
    src: url('../fonts/Aldo-Bold.ttf');
-   
+
 }
 @font-face
 {
@@ -33,7 +68,7 @@ img{
   font-weight : 900;
 
    src: url('../fonts/Aldo-Regular.ttf');
-   
+
 }
 
 @font-face
@@ -43,16 +78,17 @@ img{
   font-weight : 900;
 
    src: url('../fonts/Aldo-Italic.ttf');
-   
+
 }
 
 
 
 body {
   color: #A31B5C;
-  font-family : 'Aldo-Bold',
-                'Aldo-Regular',
-                'Aldo-Italic';
+  font-family : 'Kollektif',
+                'Kollektif-Italic',
+                'Kollektif-BoldItalic',
+                'Kollektif-Bold';
   font-size   : 16px;
   background-color: #EDEFF1;
 
@@ -87,13 +123,13 @@ table {
 
 h1
 {
-   font-family: 'Aldo-Bold';
+   font-family: 'Kollektif-Bold';
 }
 h2,
 h3
 {
-   font-family: 'Aldo-Regular';
-    
+   font-family: 'Kollektif';
+
 }
 h4,
 h5,
@@ -1004,7 +1040,9 @@ select:required:invalid {
   color       : #555;
   /*font-weight : 600;*/
 }
-
+select.selectOcupacion {
+    max-with: 1000px;
+}
 option[value=''][disabled] {
   display : none;
 }
@@ -1595,8 +1633,8 @@ textarea:invalid {
 }
 
 /*centrar boton*/
-.centerbtn{ 
-    position:absolute; 
+.centerbtn{
+    position:absolute;
     width:40%; left:280;
     text-align:center;
     margin:auto;
@@ -1604,8 +1642,8 @@ textarea:invalid {
 }
 
 /*centrar boton*/
-.centerboton{ 
-    position:absolute; 
+.centerboton{
+    position:absolute;
     width:40%; left:280;
     text-align:center;
     margin:auto;

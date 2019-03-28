@@ -3,9 +3,9 @@ ini_set('display_startup_errors', 1);
 ini_set('display_errors', 1);
 error_reporting(-1);
 class Usuario{
-    
-    private $idUsusarios; 
-    private $nombre; 
+
+    private $idUsusarios;
+    private $nombre;
     private $apellidoPaterno;
     private $apellidoMaterno;
     private $curp;
@@ -25,7 +25,9 @@ class Usuario{
     private $Direccion_idDireccion;
     private $Direccion_Colonias_idColonia;
     private $Direccion_Colonias_Alcaldias_idAlcaldiasZonas;
-    private $Direccion_Colonias_Alcaldias_Zonas_idZonas; 
+    private $Direccion_Colonias_Alcaldias_Zonas_idZonas;
+    private $pilarSeleccionado;
+    private $pilarId;
     private $db;
 
 
@@ -37,8 +39,9 @@ class Usuario{
     {
         $this->db = Database::connect();
     }
-
-
+/*
+*   GETTERS
+*/
     public function getId(){
         return $this->idUsusarios;
     }
@@ -72,7 +75,6 @@ class Usuario{
     public function getOcupacionActual(){
         return $this->ocupacionActual;
     }
-
     public function getGrupoEtnico(){
         return $this->grupoEtnico;
     }
@@ -82,7 +84,6 @@ class Usuario{
     public function getCorreo(){
         return $this->correo;
     }
-
     public function getTelefonoCelular(){
         return $this->telefonoCelular;
     }
@@ -107,10 +108,15 @@ class Usuario{
     public function getIdZonas(){
         return $this->Direccion_Colonias_Alcaldias_Zonas_idZonas;
     }
-
-
-
-
+    public function getPilarSelecionado(){
+        return $this->pilarSeleccionado;
+    }
+    public function getPilarId(){
+        return $this->pilarId;
+    }
+    /*
+    *   SETTERS
+    */
     public function setId($idUsusarios){
         $this->idUsusarios = $idUsusarios;
     }
@@ -132,7 +138,6 @@ class Usuario{
     public function setFechaNacimiento($curp){
         $this->fechaNacimiento = substr($curp, 4, 2).substr($curp, 6, 2).substr($curp, 8, 2);
     }
-
     public function setEntidadFederativaNacimiento($curp){
         $this->entidadFederativaNacimiento = substr($curp, 11, 2);
     }
@@ -145,14 +150,12 @@ class Usuario{
     public function setOcupacionActual($ocupacionActual){
         $this->ocupacionActual = $ocupacionActual;
     }
-
     public function setGrupoEtnico($grupoEtnico){
         $this->grupoEtnico = $grupoEtnico;
     }
     public function setTiempoResidencia($tiempoResidencia){
         $this->tiempoResidencia = $this->db->real_escape_string($tiempoResidencia);
     }
-
     public function setCorreo($correo){
         $this->correo = $this->db->real_escape_string($correo);
     }
@@ -162,14 +165,11 @@ class Usuario{
     public function setTelefonoCasa($telefonoCasa){
         $this->telefonoCasa = $telefonoCasa;
     }
-    
-    public function setFechaDeRegistro(){
-        $this->fechaDeRegistro = null;
-    
-    }
-
     public function setFolio(){
-        
+        //$idPilar = $this->getPilarId();
+        //$idDireccion = $this->getIdDireccion();
+        //$idUsusario = $this->getId();
+        //$this->folio = $idPilar.$idDireccion.$idUsusario;
         $this->folio = rand(9999, 32786);
     }
     public function setIdDireccion($Direccion_idDireccion){
@@ -184,38 +184,75 @@ class Usuario{
     public function setIdZonas($Direccion_Colonias_Alcaldias_Zonas_idZonas){
         $this->Direccion_Colonias_Alcaldias_Zonas_idZonas = $Direccion_Colonias_Alcaldias_Zonas_idZonas;
     }
-    
+    public function setPilarNombre($pilarSeleccionado){
+        //$this->pilarSeleccionado = $pilarSeleccionado;
+        $query="SELECT * FROM Pilares WHERE idPilares = '$pilarSeleccionado'";
+        $tmp = $this->db->query($query);
+        if ($row = mysqli_fetch_array($tmp)) {
+            $this->pilarSeleccionado = $row['nombre'];
+        }else {
+            echo "No encontré tu pilar";
+        }
+    }
+    public function setPilarId($pilarId){
+        $this->pilarId = $pilarId;
+    }
 
     Public function save(){
 
-    $sql="INSERT INTO UsuarioPrueba VALUES(NULL, 
-    '{$this->getNombre()}',
-    '{$this->getApellidoPaterno()}',
-    '{$this->getApellidoMaterno()}',
-    '{$this->getCurp()}',
-    '{$this->getSexo()}',
-    '{$this->getFechaNacimiento()}',
-    '{$this->getEntidadFederativaNacimiento()}',
-    '{$this->getGradoEstudios()}',
-    '{$this->getEstudias()}',
-    '{$this->getOcupacionActual()}',
-    '{$this->getGrupoEtnico()}',
-    '{$this->getTiempoResidencia()}',
-    '{$this->getCorreo()}',
-    '{$this->getTelefonoCelular()}',
-    '{$this->getTelefonoCasa()}',
-      NULL,
-    '{$this->getFolio()}'
-    );";
-        $save = $this->db->query($sql);
-           
-        $result = false;
+        $sql="INSERT INTO UsuarioPrueba VALUES(NULL,
+        '{$this->getNombre()}',
+        '{$this->getApellidoPaterno()}',
+        '{$this->getApellidoMaterno()}',
+        '{$this->getCurp()}',
+        '{$this->getSexo()}',
+        '{$this->getFechaNacimiento()}',
+        '{$this->getEntidadFederativaNacimiento()}',
+        '{$this->getGradoEstudios()}',
+        '{$this->getEstudias()}',
+        '{$this->getOcupacionActual()}',
+        '{$this->getGrupoEtnico()}',
+        '{$this->getTiempoResidencia()}',
+        '{$this->getCorreo()}',
+        '{$this->getTelefonoCelular()}',
+        '{$this->getTelefonoCasa()}',
+          NULL,
+        '{$this->getFolio()}'
+        );";
+            $save = $this->db->query($sql);
 
-        if ($save) {
-            $result = true;
-        }
-        return $result;
+            $result = false;
+
+            if ($save) {
+                $result = true;
+            }
+            return $result;
     }
+
+    public function lastInsertID(){
+        $tmp = $this->db->insert_id;
+        return $this->idDireccion = $tmp;
+    }
+
+    public function validar($usuario,$pass){
+            $query="SELECT * FROM Login WHERE nombre = '$usuario' AND contrasena = '$pass'";
+
+			$consulta = $this->db->query($query);
+
+            //mysqli_query($conn, "SELECT * FROM Login WHERE nombre = '$usuario' AND contrasena = '$pass'");
+
+			if(!$consulta){
+				echo mysqli_error();
+				exit;
+			}
+
+			if ($usuario = mysqli_fetch_assoc($consulta)) {
+				return true;
+			}else {
+				return false;
+			}
+
+	}
 
 }
 

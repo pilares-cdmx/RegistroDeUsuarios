@@ -17,22 +17,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   <link rel="stylesheet" href="<?php echo constant('URL')?>public/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="<?php echo constant('URL')?>public/css/estilosFormularios.css">
   <title>Formulario de registro</title>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="<?php echo constant('URL')?>public/css/jquery-ui.css" />
 	<link rel="stylesheet" href="<?php echo constant('URL')?>public/css/estiloFormulario.css" />
-  <script src="<?php echo constant('URL')?>public/js/jquery-1.8.2.js"></script>
-  <script src="<?php echo constant('URL')?>public/js/jquery-ui.js"></script>
-	<script language="JavaScript"> 
+
+	<script language="JavaScript">
     if(window.screen.availWidth == 1920)window.parent.document.body.style.zoom="140%"
-    if(window.screen.availWidth == 1280)window.parent.document.body.style.zoom="120%" 
-    if(window.screen.availWidth == 1152)window.parent.document.body.style.zoom="108%" 
-    if(window.screen.availWidth == 1024)window.parent.document.body.style.zoom="96%" 
-    if(window.screen.availWidth == 800)window.parent.document.body.style.zoom="75%"; 
-    if(window.screen.availWidth == 640)window.parent.document.body.style.zoom="60%" 
+    if(window.screen.availWidth == 1280)window.parent.document.body.style.zoom="120%"
+    if(window.screen.availWidth == 1152)window.parent.document.body.style.zoom="108%"
+    if(window.screen.availWidth == 1024)window.parent.document.body.style.zoom="96%"
+    if(window.screen.availWidth == 800)window.parent.document.body.style.zoom="75%";
+    if(window.screen.availWidth == 640)window.parent.document.body.style.zoom="60%"
   </script>
   <script language="JavaScript">
       function showColoniasPorAlcaldia(str) {
@@ -52,7 +49,8 @@
                       document.getElementById("colonia").innerHTML = this.responseText;
                   }
               };
-              xmlhttp.open("GET", "getColoniasPorAlcaldia.php?q="+str,true);
+
+              xmlhttp.open("GET", "<?=URL?>getColoniasPorAlcaldia.php?q="+str,true);
               xmlhttp.send();
           }
       }
@@ -75,7 +73,8 @@
                       document.getElementById("codigoPostal").innerHTML = this.responseText;
                   }
               };
-              xmlhttp.open("GET", "getCPporColonia.php?q="+str,true);
+
+              xmlhttp.open("GET", "<?=URL?>getCPporColonia.php?q="+str,true);
               xmlhttp.send();
           }
       }
@@ -98,7 +97,7 @@
                       document.getElementById("pilarSelect_id").innerHTML = this.responseText;
                   }
               };
-              xmlhttp.open("GET", "getPilarPorAlcaldia.php?q="+str,true);
+              xmlhttp.open("GET", "<?=URL?>getPilarPorAlcaldia.php?q="+str,true);
               xmlhttp.send();
           }
       }
@@ -192,7 +191,7 @@
               <option value="2">Azcapotzalco</option>
               <option value="3">Benito Juárez</option>
               <option value="4">Coyoacán</option>
-              <option value="5">Cuajimalpa de Morel </option>
+              <option value="5">Cuajimalpa de Morelos </option>
               <option value="6">Cuauhtémoc</option>
               <option value="7">Gustavo A. Madero</option>
               <option value="8">Iztacalco</option>
@@ -204,19 +203,19 @@
               <option value="14">Tlalpan</option>
               <option value="15">Venustiano Carranza</option>
               <option value="16">Xochimilco</option>
-                    
+
             </select>
           </div>
         </div>
 
         <div class="row">
           <div class="col-lg-12 estilo-forma">
-              
+
             <label for="nombre">Colonia </label><br>
               <!--id "estados" corresponde a Colonia   -->
             <select name="colonia" id="colonia" onchange="showCPporColonia(this.value)" required>
               <option value="0" disabled selected>Selecciona</option>
-              
+
             </select>
 
           </div>
@@ -228,7 +227,7 @@
             <!--id "municipio" corresponde a Codigo postal    -->
             <select name="codigoPostal" id="codigoPostal" required>
               <option value="0" disabled selected>Selecciona</option>
-      
+
             </select>
           </div>
         </div>
@@ -264,7 +263,7 @@
             <input onkeypress="return justNumbers(event);" maxlength="12" id="telMovil" type="text" name="telMovil" class="validate" size="40">
           </div>
         </div>
-      
+
 <div class="row">
         <div class="col-lg-12 col-md-12 estilo-forma">
           <label for="correo">Correo</label><br>
@@ -326,7 +325,7 @@
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label>Ocupación actual</label><br>
 
-            <select name="ocupacionAct">
+            <select name="ocupacionAct" class="selectOcupacion">
               <option value="0" disabled selected>Selecciona</option>
               <option value="1">Estudiantes</option>
               <option value="2">Profesionistas</option>
@@ -500,7 +499,7 @@
                     <label for="dep11" class="rc_sty" value="101">Karate do</label><br>
                     <input type="checkbox" name="check44" id="dep12" />
                     <label for="dep12" class="rc_sty" value="100">Kung fu</label>
-                      
+
                   </div>
                 </div>
               </div>
@@ -538,16 +537,16 @@
                 <div class="col-lg-4">
                   <input type="checkbox" name="check45" id="cog1" />
                   <label for="cog1" class="rc_sty" value="21">Ajedrez</label>
-                </div> 
+                </div>
                 <div class="col-lg-4">
                   <input type="checkbox" name="check46" id="cog2" />
                   <label for="cog2" class="rc_sty" value="102">Redacción y comprensión de lectura</label>
-                </div>   
-              </div>  
+                </div>
+              </div>
             </div>
           </div>
         </div>
-             
+
             <div class="row">
           <div class="col-lg-12 estilo-forma">
             <label>Talleres de habilidades digitales</label><br>
@@ -558,8 +557,8 @@
                   <label for="dig1" class="rc_sty" value="24">Club de Ciencias</label><br>
                   <input type="checkbox" name="check48" id="dig2" />
                   <label for="dig2" class="rc_sty" value="28">Club de Código</label><br>
-             
-                 
+
+
                 </div>
                 <div class="col-lg-4">
                   <input type="checkbox" name="check49" id="dig3" />
@@ -567,20 +566,20 @@
                   <br>
                   <input type="checkbox" name="check50" id="dig4" />
                   <label for="dig4" class="rc_sty" value="103">Talleres de cómputo</label> <br>
-                  
+
                 </div>
                   <div class="col-lg-4">
                   <input type="checkbox" name="check51" id="dig5" />
                   <label for="dig5" class="rc_sty" value="25">Robótica aplicada</label>
-                  
+
                 </div>
-                  
+
                 </div>
-            
-                
+
+
               </div>
             </div>
-          </div>   
+          </div>
         <div class="row">
           <div class="col-lg-12 estilo-forma">
             <label>Talleres de habilidades emocionales</label><br>
@@ -618,14 +617,14 @@
                   <label for="emo11" class="rc_sty" value="105">Pintando emociones</label>
                   <br>
                 </div>
-                  
+
                 </div>
-            
+
                 <br>
               </div>
             </div>
           </div>
-     
+
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label class="h3">Talleres de autonomía económica</label><br>
@@ -643,7 +642,7 @@
 
                   <input type="checkbox" name="check66" id="econo4" />
                   <label for="econo4" class="rc_sty" value="40">Electricidad y dispositivos fotovoltaicos</label> <br>
-                  
+
 
                   <input type="checkbox" name="check69" id="econo7" />
                   <label for="econo7" class="rc_sty" value="43">Joyería y accesorios</label> <br>
@@ -758,7 +757,7 @@
           </div>
         </div>
         <div class="text-center m-auto btn-block">
-          <button type="submit" onclick="return message()" class="btn btn-success btn-lg px-5">Enviar</button>
+          <button type="submit"  class="btn btn-info btn-lg px-5">Enviar</button>
         </div>
       </fieldset>
 
@@ -770,7 +769,10 @@
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="<?php echo constant('URL')?>public/js/curpValidacion.js" charset="utf-8"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
+  <script src="<?php echo constant('URL')?>public/js/jquery-1.8.2.js"></script>
+  <script src="<?php echo constant('URL')?>public/js/jquery-ui.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
   <script type="text/javascript">
     window.addEventListener('keydown', function(e) {
       if (e.keyIdentifier == 'U+000A' || e.keyIdentifier == 'Enter' || e.keyCode == 13) {
@@ -792,13 +794,13 @@
   </script>
 <style>
       div {
-      
+
         padding-top: 10px;
         padding-right: 10px;
         padding-left: 15px;
       }
 </style>
-     
+
 </body>
 
 </html>

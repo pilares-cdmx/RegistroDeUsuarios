@@ -2,19 +2,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-table, td, th {
-    border: 1px solid black;
-    padding: 5px;
-}
-
-th {text-align: left;}
-</style>
 </head>
 <body>
 
@@ -35,21 +22,12 @@ mysqli_select_db($con, "pilaresDB");
 mysqli_query($con, "SET NAMES 'utf8mb4'");
 $sql="SELECT * FROM Colonias WHERE Alcaldias_idAlcaldiasZonas = '".$q."' ORDER BY nombre";
 $result = mysqli_query($con, $sql);
-/*
-echo "<table>
-<tr>
-<th>idColonia</th>
-<th>nombre</th>
-<th>Age</th>
-<th>Hometown</th>
-<th>Job</th>
-</tr>";
-*/
+
 while ($row = mysqli_fetch_array($result)) {
-    echo "<option value=" . $row['idColonia'] . ">" . $row['nombre'] . "</option>";  
+    echo "<option value=" . $row['idColonia'] . ">" . $row['nombre'] . "</option>";
 }
 
 mysqli_close($con);
 ?>
 </body>
-</html> 
+</html>

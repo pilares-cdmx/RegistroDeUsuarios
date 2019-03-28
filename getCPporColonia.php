@@ -46,10 +46,10 @@ echo "<table>
 </tr>";
 */
 while ($row = mysqli_fetch_array($result)) {
-    echo "<option value=" . $row['idCodigoPostal'] . ">" . $row['codigo'] . "</option>";  
+    echo "<option value=" . $row['idCodigoPostal'] . ">" . $row['codigo'] . "</option>";
 }
 
 mysqli_close($con);
 ?>
 </body>
-</html> 
+</html>

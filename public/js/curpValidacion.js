@@ -1,11 +1,15 @@
 //Función para validar una CURP
 function curpValida(curp) {
+    var p1 = document.getElementById("curp").value;  //tomamos en una variable lo ingresado en el login nombre
     var re = /^([A-Z][AEIOUX][A-Z]{2}\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\d|3[01])[HM](?:AS|B[CS]|C[CLMSH]|D[FG]|G[TR]|HG|JC|M[CNS]|N[ETL]|OC|PL|Q[TR]|S[PLR]|T[CSL]|VZ|YN|ZS)[B-DF-HJ-NP-TV-Z]{3}[A-Z\d])(\d)$/,
         validado = curp.match(re);
-
-    if (!validado)  //Coincide con el formato general?
+     var noValido = /\s/;
+    if (!validado){  //Coincide con el formato general?
       return false;
-
+  }else if (noValido.test(p1)) {
+      alert ("El CURP no puede contener espacios en blanco,, unicamente 18 dígitos.");
+      return false;
+  }
     //Validar que coincida el dígito verificador
     function digitoVerificador(curp17) {
         //Fuente https://consultas.curp.gob.mx/CurpSP/

@@ -3,7 +3,7 @@ ini_set('display_startup_errors', 1);
 ini_set('display_errors', 1);
 error_reporting(-1);
 
-require_once 'models/Alcaldias.php';
+//require_once 'models/Alcaldias.php';
 class Direccion{
 
     private $idDireccion;
@@ -55,10 +55,15 @@ class Direccion{
     public function setIdAlcaldias($Colonias_Alcaldias_idAlcaldiasZonas){
         $this->Colonias_Alcaldias_idAlcaldiasZonas = $Colonias_Alcaldias_idAlcaldiasZonas;
     }
-    public function setIdZonas($Colonias_Alcaldias_Zonas_idZonas){
+    public function setIdZonas($idAlcaldia){
        // $this->Colonias_Alcaldias_Zonas_idZonas = $Colonias_Alcaldias_Zonas_idZonas;
-       $idZona = new Alcaldias();
-       $idZona->getIdZonas($Colonias_Alcaldias_Zonas_idZonas);
+       $query="SELECT * FROM Alcaldias WHERE idAlcaldias = '$idAlcaldia'";
+       $tmp = $this->db->query($query);
+       if ($row = mysqli_fetch_array($tmp)) {
+           $this->Colonias_Alcaldias_Zonas_idZonas = $row['Zonas_idZonas'];
+       }else {
+           echo "No encontré tu zona";
+       }
 
     }
 

@@ -1,9 +1,8 @@
 <?php
-//require_once 'models/Colonias';
-//require_once 'models/Alcaldias';
-require_once 'models/Colonias.php';
 require_once 'models/Direccion.php';
 require_once 'models/Usuario.php';
+//require_once 'models/ActividadesPorUsuario';
+//require_once 'models/UsuariosPorPilar';
 class UsuarioController{
     public function index(){
         //echo "Controlador usuarios, Accion index";
@@ -70,16 +69,22 @@ class UsuarioController{
            $direccion->setCalleYnumero($_POST['calleNumero']);
            $direccion->setIdAlcaldias($_POST['alcaldia']);
            $direccion->setIdColonia($_POST['colonia']);
-           $direccion->setIdZonas($_POST['alcaldia']);
-           $idDireccion = $direccion->lastInsertID();
+
+           $idAlcaldia=$direccion->getIdAlcaldias();
+           $direccion->setIdZonas($idAlcaldia);
+            /**primero se guarda la tabla direccion**/
            $save = $direccion->save();
+
+           $idDireccion = $direccion->lastInsertID();
 
            $usuario = new Usuario();
            $usuario->setNombre($_POST['nombre']);
            $usuario->setApellidoPaterno($_POST['apellidoPat']);
            $usuario->setApellidoMaterno($_POST['apellidoMat']);
            $usuario->setCurp($_POST['curp']);
+
            $curp = $usuario->getCurp();
+
            $usuario->setSexo($curp);
            $usuario->setFechaNacimiento($curp);
            $usuario->setEntidadFederativaNacimiento($curp);
@@ -91,18 +96,19 @@ class UsuarioController{
            $usuario->setCorreo($_POST['email']);
            $usuario->setTelefonoCelular($_POST['telMovil']);
            $usuario->setTelefonoCasa($_POST['telCasa']);
-           $usuario->setFolio();
            $usuario->setIdDireccion($idDireccion);
+           $usuario->setIdColonia($idDireccion);
+           $usuario->setIdAlcaldias($idDireccion);
+           $usuario->setIdZonas($idDireccion);
 
-           $usuario->setPilarNombre($_POST['pilarSelect_id']);
            $usuario->setPilarId($_POST['pilarSelect_id']);
-
-
+           $pilarId=$usuario->getPilarId();
+           $usuario->setPilarNombre($pilarId);
+           $usuario->setFolio($pilarId, $curp);
+           /**Se almacena la tabla usuario**/
            $save = $usuario->save();
 
            $idUsuario = $usuario->lastInsertID();
-           $usuario->setId($idUsuario);
-            //var_dump($usuario->setSexo($usuario->getCurp()));
             if ($save) {
                 $_SESSION['nombreUsuarioNuevo'] = $_POST['nombre'];
                 $_SESSION['folioUsuarioNuevo'] = $usuario->getFolio();
@@ -112,6 +118,29 @@ class UsuarioController{
                 $_SESSION['register']= "No completado";
 
             }
+
+            $usuarioPorPilar = new UsuariosPorPilar();
+            $usuarioPorPilar->setPilares_idPilares($pilarId);
+            $usuarioPorPilar->setPilares_Direccion_idDireccion($pilarId);
+            $usuarioPorPilar->setPilares_Direccion_Colonias_idColonia($pilarId);
+            $usuarioPorPilar->setPilares_Direccion_Colonias_Alcaldias_idAlcaldiasZonas($pilarId);
+            $usuarioPorPilar->setPilares_Direccion_Colonias_Alcaldias_Zonas_idZonas($pilarId);
+            $usuarioPorPilar->setIdUsuarios($idUsuario);
+            $usuarioPorPilar->setUsuario_Direccion_idDireccion($idUsuario);
+            $usuarioPorPilar->setUsuario_Direccion_Colonias_idColonia($idUsuario);
+            $usuarioPorPilar->setUsuario_Direccion_Colonias_Alcaldias_idAlcaldiasZonas($idUsuario);
+            $usuarioPorPilar->setUsuario_Direccion_Colonias_Alcaldias_Zonas_idZonas($idUsuario);
+
+            $saveUsuarioPorPilar = $usuarioPorPilar->save();
+
+            $actividadesPorUsuario = new ActividadesPorUsuario();
+            $actividadesPorUsuario->setActividades_idActividades();
+            $actividadesPorUsuario->setActividades_TiposActividades_idTiposActividades();
+            $actividadesPorUsuario->setUsuario_idUsuarios();
+            $actividadesPorUsuario->setUsuario_Direccion_idDireccion();
+            $actividadesPorUsuario->setUsuario_Direccion_Colonias_idColonia();
+            $actividadesPorUsuario->setUsuario_Direccion_Colonias_Alcaldias_idAlcaldiasZonas();
+            $actividadesPorUsuario->setUsuario_Direccion_Colonias_Alcaldias_Zonas_idZonas();
 
         }else {
             $_SESSION['register']= "No completado";

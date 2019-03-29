@@ -131,6 +131,7 @@ class Usuario{
     }
     public function setCurp($curp){
         $this->curp = $this->db->real_escape_string($curp);
+        //$curpTmp = $this->db->real_escape_string($curp);
     }
     public function setSexo($curp){
         $this->sexo = substr($curp, 10, 1);
@@ -165,24 +166,51 @@ class Usuario{
     public function setTelefonoCasa($telefonoCasa){
         $this->telefonoCasa = $telefonoCasa;
     }
-    public function setFolio(){
-        //$idPilar = $this->getPilarId();
+    public function setFolio($folio, $curp){
+        //$this->pilarId = $this->getPilarId();
         //$idDireccion = $this->getIdDireccion();
         //$idUsusario = $this->getId();
         //$this->folio = $idPilar.$idDireccion.$idUsusario;
-        $this->folio = rand(9999, 32786);
+        //$this->folio = rand(9999, 32786);
+
+        $idDireccion=$this->getIdDireccion();
+        $idUsuario=substr($curp, 14, 4);
+        $this->folio = $folio.$idDireccion.$idUsuario;
     }
     public function setIdDireccion($Direccion_idDireccion){
         $this->Direccion_idDireccion = $Direccion_idDireccion;
     }
-    public function setIdColonia($idUsusaDireccion_Colonias_idColoniarios){
-        $this->Direccion_Colonias_idColonia = $Direccion_Colonias_idColonia;
+    public function setIdColonia($idDireccion){
+        //$this->Direccion_Colonias_idColonia = $Direccion_Colonias_idColonia;
+        $query="SELECT * FROM Direccion WHERE idDireccion = '$idDireccion'";
+        $tmp = $this->db->query($query);
+        if ($row = mysqli_fetch_array($tmp)) {
+            $this->Direccion_Colonias_idColonia = $row['Colonias_idColonia'];
+        }else {
+            echo "No encontré tu zona";
+        }
     }
-    public function setIdAlcaldias($Direccion_Colonias_Alcaldias_idAlcaldiasZonas){
-        $this->Direccion_Colonias_Alcaldias_idAlcaldiasZonas = $Direccion_Colonias_Alcaldias_idAlcaldiasZonas;
+    public function setIdAlcaldias($idDireccion){
+        //$this->Direccion_Colonias_Alcaldias_idAlcaldiasZonas = $Direccion_Colonias_Alcaldias_idAlcaldiasZonas;
+        $query="SELECT * FROM Direccion WHERE idDireccion = '$idDireccion'";
+        $tmp = $this->db->query($query);
+        if ($row = mysqli_fetch_array($tmp)) {
+            $this->Direccion_Colonias_Alcaldias_idAlcaldiasZonas = $row['Colonias_Alcaldias_idAlcaldiasZonas'];
+        }else {
+            echo "No encontré tu zona";
+        }
     }
-    public function setIdZonas($Direccion_Colonias_Alcaldias_Zonas_idZonas){
-        $this->Direccion_Colonias_Alcaldias_Zonas_idZonas = $Direccion_Colonias_Alcaldias_Zonas_idZonas;
+    public function setIdZonas($idDireccion){
+        //$this->Direccion_Colonias_Alcaldias_Zonas_idZonas = $Direccion_Colonias_Alcaldias_Zonas_idZonas;
+        $query="SELECT * FROM Direccion WHERE idDireccion = '$idDireccion'";
+        $tmp = $this->db->query($query);
+        if ($row = mysqli_fetch_array($tmp)) {
+            $this->Direccion_Colonias_Alcaldias_Zonas_idZonas = $row['Colonias_Alcaldias_Zonas_idZonas'];
+        }else {
+            echo "No encontré tu zona";
+        }
+        //$this->pilarId = $pilarId;
+
     }
     public function setPilarNombre($pilarSeleccionado){
         //$this->pilarSeleccionado = $pilarSeleccionado;
@@ -195,12 +223,20 @@ class Usuario{
         }
     }
     public function setPilarId($pilarId){
+
+        $query="SELECT * FROM Pilares WHERE idPilares = '$pilarSeleccionado'";
+        $tmp = $this->db->query($query);
+        if ($row = mysqli_fetch_array($tmp)) {
+            $this->pilarSeleccionado = $row['nombre'];
+        }else {
+            echo "No encontré tu pilar";
+        }
         $this->pilarId = $pilarId;
     }
 
     Public function save(){
 
-        $sql="INSERT INTO UsuarioPrueba VALUES(NULL,
+        $sql="INSERT INTO Usuario VALUES(NULL,
         '{$this->getNombre()}',
         '{$this->getApellidoPaterno()}',
         '{$this->getApellidoMaterno()}',
@@ -217,7 +253,11 @@ class Usuario{
         '{$this->getTelefonoCelular()}',
         '{$this->getTelefonoCasa()}',
           NULL,
-        '{$this->getFolio()}'
+        '{$this->getFolio()}',
+        '{$this->getIdDireccion()}',
+        '{$this->getIdColonia()}',
+        '{$this->getIdAlcaldias()}',
+        '{$this->getIdZonas()}'
         );";
             $save = $this->db->query($sql);
 
@@ -231,7 +271,7 @@ class Usuario{
 
     public function lastInsertID(){
         $tmp = $this->db->insert_id;
-        return $this->idDireccion = $tmp;
+        return $this->idUsusarios = $tmp;
     }
 
     public function validar($usuario,$pass){
@@ -255,13 +295,4 @@ class Usuario{
 	}
 
 }
-
-/*
-    '{$this->getFolio()}',
-    '{$this->getIdDireccion()}',
-    '{$this->getIdColonia()}',
-    '{$this->getIdAlcaldias()}',
-    '{$this->getIdZonas()}'
-*/
-
 ?>

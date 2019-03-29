@@ -102,6 +102,19 @@
           }
       }
   </script>
+  <script type="text/javascript">
+    function validaEspacios(str) {
+      var curpInput = document.getElementById("curp").value;  //tomamos en una variable lo ingresado en el login nombre
+      var digitos = 18;
+      var noValido = /\s/;
+        if(noValido.test(curpInput)){ // se chequea el regex de que el string no tenga espacio
+          alert ("El CURP no puede contener espacios en blanco, es una clave de 18 dígitos");
+          //return false;
+        }else if (curpInput.length != digitos) {
+          alert ("El CURP es una clave de 18 dígitos");
+        }
+    }
+  </script>
 </head>
 <body>
   <img src="<?php echo constant('URL')?>public/img/blog-img/cenefa4.png" <br>
@@ -121,25 +134,25 @@
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label for="nombre">Nombre(s)</label><br>
-            <input id="nombre" type="text" class="validate" name="nombre" style="text-transform:uppercase;" size="40" required>
+            <input id="nombre" type="text" class="validate text-uppercase" name="nombre"  size="40" required>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label for="ap_pat">Apellido paterno</label><br>
-            <input id="ap_pat" type="text" class="validate" name="apellidoPat" style="text-transform:uppercase;" size="40" required>
+            <input id="ap_pat" type="text" class="validate text-uppercase" name="apellidoPat"  size="40" required>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label for="ap_mat">Apellido materno</label><br>
-            <input id="ap_mat" type="text" class="validate" name="apellidoMat" style="text-transform:uppercase;" size="40" required>
+            <input id="ap_mat" type="text" class="validate text-uppercase" name="apellidoMat"  size="40" required>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label for="curp" class="active ">CURP</label><br>
-            <input required maxlength="18" id="curp" name="curp" type="text" class="validate" oninput="validarInput(this)" style="text-transform:uppercase;" maxlength="18" size="40" required>
+            <input maxlength="18" minlength="18" id="curp" name="curp" type="text" class="validate text-uppercase" oninput="validarInput(this)" onchange="validaEspacios(this.value)"  style="text-transform:uppercase;" maxlength="18" size="40" required>
             <small class="form-text text-muted" tabindex="0">Consulta tu CURP <a href="https://www.gob.mx/curp/" target="popup" onclick="window.open(this.href, this.target, 'width=900px,height=800px'); return false;">aquí</a> </small>
             <div id="curp-error" name="curp-error"></div>
             <pre id="resultado"></pre>
@@ -185,7 +198,7 @@
 
             <label for="nombre">Alcaldia </label><br>
             <!--id "alcaldia" corresponde a Alcaldias-->
-            <select name="alcaldia"  onchange="showColoniasPorAlcaldia(this.value)">
+            <select name="alcaldia"  onchange="showColoniasPorAlcaldia(this.value)" required>
               <option value="0" disabled selected>Selecciona</option>
               <option value="1">Álvaro Obregón</option>
               <option value="2">Azcapotzalco</option>
@@ -243,7 +256,7 @@
         <div class="row">
           <div class="col-lg-12  estilo-forma">
             <label for="numrec">Tiempo de residencia en CDMX</label><br>
-            <input onkeypress="return justNumbers(event);" maxlength="3" id="timepoResidencia" type="text" class="validate" name="timepoResidencia" size="40">
+            <input onkeypress="return justNumbers(event);" maxlength="2" id="timepoResidencia" type="text" class="validate" name="timepoResidencia" size="40">
             <small id="residenciaHelp" class="form-text text-muted">Tiempo en años</small>
           </div>
         </div>
@@ -325,7 +338,7 @@
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label>Ocupación actual</label><br>
 
-            <select name="ocupacionAct" class="selectOcupacion">
+            <select name="ocupacionAct" class="selectOcupacion" required>
               <option value="0" disabled selected>Selecciona</option>
               <option value="1">Estudiantes</option>
               <option value="2">Profesionistas</option>
@@ -755,6 +768,9 @@
               </select>
             </div> <br><br>
           </div>
+        </div>
+        <div class="text-center">
+            <small class="form-text text-muted"><strong>Verifica que tus datos sean correctos antes de enviar.</strong></small>
         </div>
         <div class="text-center m-auto btn-block">
           <button type="submit"  class="btn btn-info btn-lg px-5">Enviar</button>

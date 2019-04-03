@@ -174,11 +174,11 @@ class Usuario{
         //$this->folio = rand(9999, 32786);
 
         $idDireccion=$this->getIdDireccion();
-        $idUsuario=substr($curp, 14, 4);
-        $this->folio = $folio.$idDireccion.$idUsuario;
+        $idCurp=substr($curp, 14, 4);
+        $this->folio = $folio.$idDireccion.$idCurp;
     }
-    public function setIdDireccion($Direccion_idDireccion){
-        $this->Direccion_idDireccion = $Direccion_idDireccion;
+    public function setIdDireccion($idDireccion){
+        $this->Direccion_idDireccion = $idDireccion;
     }
     public function setIdColonia($idDireccion){
         //$this->Direccion_Colonias_idColonia = $Direccion_Colonias_idColonia;
@@ -187,7 +187,7 @@ class Usuario{
         if ($row = mysqli_fetch_array($tmp)) {
             $this->Direccion_Colonias_idColonia = $row['Colonias_idColonia'];
         }else {
-            echo "No encontré tu zona";
+            echo "No encontré tu Colonias_idColonia";
         }
     }
     public function setIdAlcaldias($idDireccion){
@@ -197,7 +197,7 @@ class Usuario{
         if ($row = mysqli_fetch_array($tmp)) {
             $this->Direccion_Colonias_Alcaldias_idAlcaldiasZonas = $row['Colonias_Alcaldias_idAlcaldiasZonas'];
         }else {
-            echo "No encontré tu zona";
+            echo "No encontré tu Colonias_Alcaldias_idAlcaldiasZonas";
         }
     }
     public function setIdZonas($idDireccion){
@@ -207,7 +207,7 @@ class Usuario{
         if ($row = mysqli_fetch_array($tmp)) {
             $this->Direccion_Colonias_Alcaldias_Zonas_idZonas = $row['Colonias_Alcaldias_Zonas_idZonas'];
         }else {
-            echo "No encontré tu zona";
+            echo "No encontré tu Colonias_Alcaldias_Zonas_idZonas";
         }
         //$this->pilarId = $pilarId;
 
@@ -224,13 +224,6 @@ class Usuario{
     }
     public function setPilarId($pilarId){
 
-        $query="SELECT * FROM Pilares WHERE idPilares = '$pilarSeleccionado'";
-        $tmp = $this->db->query($query);
-        if ($row = mysqli_fetch_array($tmp)) {
-            $this->pilarSeleccionado = $row['nombre'];
-        }else {
-            echo "No encontré tu pilar";
-        }
         $this->pilarId = $pilarId;
     }
 

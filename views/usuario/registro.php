@@ -378,91 +378,91 @@
                 <div class="col-lg-4">
                   <label>Artes escénicas</label>
                   <div class="checkbox">
-                    <input type="checkbox" name="check1" id="cul1" />
-                    <label for="cul1" class="rc_sty" value="2">Danza</label><br>
-                    <input type="checkbox" name="check2" id="cul2" />
-                    <label for="cul2" class="rc_sty" value="67">Baile Social</label><br>
-                    <input type="checkbox" name="check3" id="cul3" />
-                    <label for="cul3" class="rc_sty" value="68">Danza para niños</label><br>
-                    <input type="checkbox" name="check4" id="cul4" />
-                    <label for="cul4" class="rc_sty" value="69">Danza para adultos</label><br>
-                    <input type="checkbox" name="check5" id="cul5" />
-                    <label for="cul5" class="rc_sty" value="70">Danza folklórica</label> <br>
-                    <input type="checkbox" name="check6" id="cul6" />
-                    <label for="cul6" class="rc_sty" value="3">Ballet</label><br>
-                    <input type="checkbox" name="check7" id="cul7" />
-                    <label for="cul7" class="rc_sty" value="71">Actuación</label><br>
-                    <input type="checkbox" name="check8" id="cul8" />
-                    <label for="cul8" class="rc_sty" value="72">Teatro de calle</label><br>
-                    <input type="checkbox" name="check9" id="cul9" />
-                    <label for="cul9" class="rc_sty" value="73">Danza contemporánea</label><br>
-                    <input type="checkbox" name="check10" id="cul10" />
-                    <label for="cul10" class="rc_sty" value="74">Danza polinesia</label> <br>
-                    <input type="checkbox" name="check11" id="cul11" />
-                    <label for="cul11" class="rc_sty" value="75">Teatro de máscaras</label><br>
-                    <input type="checkbox" name="check12" id="cul12" />
-                    <label for="cul12" class="rc_sty" value="76">Expresión corporal y teatro</label> <br>
+                    <input type="checkbox" value="2" name="check[]" id="cul1" />
+                    <label for="cul1" class="rc_sty"value="2" name="check[]" >Danza</label><br>
+                    <input type="checkbox" value="67" name="check[]" id="cul2" />
+                    <label for="cul2" class="rc_sty" value="67" name="check[]">Baile Social</label><br>
+                    <input type="checkbox" value="68" name="check[]"  id="cul3" />
+                    <label for="cul3" class="rc_sty" value="68" name="check[]">Danza para niños</label><br>
+                    <input type="checkbox" value="69" name="check[]" id="cul4" />
+                    <label for="cul4" class="rc_sty" value="69" name="check[]">Danza para adultos</label><br>
+                    <input type="checkbox" value="70" name="check[]" id="cul5" />
+                    <label for="cul5" class="rc_sty" value="70" name="check[]">Danza folklórica</label> <br>
+                    <input type="checkbox" value="3" name="check[]" id="cul6" />
+                    <label for="cul6" class="rc_sty" value="3" name="check[]">Ballet</label><br>
+                    <input type="checkbox" value="71" name="check[]" id="cul7" />
+                    <label for="cul7" class="rc_sty" value="71" name="check[]">Actuación</label><br>
+                    <input type="checkbox" value="72" name="check[]" id="cul8" />
+                    <label for="cul8" class="rc_sty" value="72" name="check[]">Teatro de calle</label><br>
+                    <input type="checkbox" value="73" name="check[]" id="cul9" />
+                    <label for="cul9" class="rc_sty" value="73" name="check[]">Danza contemporánea</label><br>
+                    <input type="checkbox" value="74" name="check[]" id="cul10" />
+                    <label for="cul10" class="rc_sty" value="74" name="check[]">Danza polinesia</label> <br>
+                    <input type="checkbox" value="75" name="check[]" id="cul11" />
+                    <label for="cul11" class="rc_sty" value="75" name="check[]">Teatro de máscaras</label><br>
+                    <input type="checkbox" value="76" name="check[]" id="cul12" />
+                    <label for="cul12" class="rc_sty" value="76" name="check[]">Expresión corporal y teatro</label> <br>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <label>Oficios</label>
                   <div class="checkbox">
-                    <input type="checkbox" name="check13" id="cul13" />
-                    <label for="cul13" class="rc_sty" value="77">Telar de cintura</label><br>
-                    <input type="checkbox" name="check14" id="cul14" />
-                    <label for="cul14" class="rc_sty" value="78">Cartonería</label><br>
-                    <input type="checkbox" name="check15" id="cul15" />
-                    <label for="cul15" class="rc_sty" value="79">Bordado para la vida</label><br>
-                    <input type="checkbox" name="check16" id="cul16" />
-                    <label for="cul16" class="rc_sty" value="6">Encuadernación</label><br>
-                    <input type="checkbox" name="check17" id="cul17" />
-                    <label for="cul17" class="rc_sty" value="80">Construcción artesanal de instrumentos</label>
-                    <input type="checkbox" name="check18" id="cul18" />
-                    <label for="cul18" class="rc_sty" value="81">Diseño de juguetes de madera y materiales de reuso</label>
+                    <input type="checkbox" value="77" name="check[]" id="cul13" />
+                    <label for="cul13" class="rc_sty" value="77" name="check[]">Telar de cintura</label><br>
+                    <input type="checkbox" value="78" name="check[]" id="cul14" />
+                    <label for="cul14" class="rc_sty" value="78" name="check[]">Cartonería</label><br>
+                    <input type="checkbox" value="79" name="check[]" id="cul15" />
+                    <label for="cul15" class="rc_sty" value="79" name="check[]">Bordado para la vida</label><br>
+                    <input type="checkbox" value="6" name="check[]" id="cul16" />
+                    <label for="cul16" class="rc_sty" value="6" name="check[]">Encuadernación</label><br>
+                    <input type="checkbox" value="80" name="check[]" id="cul17" />
+                    <label for="cul17" class="rc_sty" value="80" name="check[]">Construcción artesanal de instrumentos</label>
+                    <input type="checkbox" value="81" name="check[]" id="cul18" />
+                    <label for="cul18" class="rc_sty" value="81" name="check[]">Diseño de juguetes de madera y materiales de reuso</label>
                     <br>
                   </div>
                   <label>Artes sustentables</label>
                   <div class="checkbox">
-                    <input type="checkbox" name="check19" id="cul19" />
-                    <label for="cul19" class="rc_sty" value="82">Reciclaje y medio ambiente</label><br>
+                    <input type="checkbox" value="82" name="check[]" id="cul19" />
+                    <label for="cul19" class="rc_sty" value="82" name="check[]">Reciclaje y medio ambiente</label><br>
                   </div>
                   <label>Literatura</label>
                   <div class="checkbox">
-                    <input type="checkbox" name="check20" id="cul20" />
-                    <label for="cul20" class="rc_sty" value="83">Escritura creativa</label><br>
+                    <input type="checkbox" value="83" name="check[]" id="cul20" />
+                    <label for="cul20" class="rc_sty" value="83" name="check[]">Escritura creativa</label><br>
                   </div>
                   <label>Artes plásticas</label>
                   <div class="checkbox">
-                    <input type="checkbox" name="check21" id="cul21" />
-                    <label for="cul21" class="rc_sty" value="84">Pintura artística</label><br>
+                    <input type="checkbox" value="84" name="check[]" id="cul21" />
+                    <label for="cul21" class="rc_sty" value="84" name="check[]">Pintura artística</label><br>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <label>Artes Visuales</label>
                   <div class="checkbox">
-                    <input type="checkbox" name="check22" id="cul22" />
-                    <label for="cul22" class="rc_sty" value="85">Medios Audiovisuales</label><br>
-                    <input type="checkbox" name="check23" id="cul23" />
-                    <label for="cul23" class="rc_sty" value="86">Cine</label><br>
-                    <input type="checkbox" name="check24" id="cul24" />
-                    <label for="cul24" class="rc_sty" value="9">Fotografía</label><br>
-                    <input type="checkbox" name="check25" id="cul25" />
-                    <label for="cul25" class="rc_sty" value="87">Animación para niños</label><br>
-                    <input type="checkbox" name="check26" id="cul26" />
-                    <label for="cul26" class="rc_sty" value="88">Vídeo comunitario</label> <br>
+                    <input type="checkbox" value="85" name="check[]" id="cul22" />
+                    <label for="cul22" class="rc_sty" value="85" name="check[]">Medios Audiovisuales</label><br>
+                    <input type="checkbox" value="86" name="check[]" id="cul23" />
+                    <label for="cul23" class="rc_sty" value="86" name="check[]">Cine</label><br>
+                    <input type="checkbox" value="9" name="check[]" id="cul24" />
+                    <label for="cul24" class="rc_sty" value="9" name="check[]">Fotografía</label><br>
+                    <input type="checkbox" value="87" name="check[]" id="cul25" />
+                    <label for="cul25" class="rc_sty" value="87" name="check[]">Animación para niños</label><br>
+                    <input type="checkbox" value="88" name="check[]" id="cul26" />
+                    <label for="cul26" class="rc_sty" value="88" name="check[]">Vídeo comunitario</label> <br>
                   </div>
                   <label>Música</label>
                   <div class="checkbox">
-                    <input type="checkbox" name="check27" id="cul27" />
-                    <label for="cul27" class="rc_sty" value="89">Guitarra clásica</label><br>
-                    <input type="checkbox" name="check28" id="cul28" />
-                    <label for="cul28" class="rc_sty" value="90">Música Rap</label><br>
-                    <input type="checkbox" name="check29" id="cul29" />
-                    <label for="cul29" class="rc_sty" value="91">Percusiones</label><br>
-                    <input type="checkbox" name="check30" id="cul30" />
-                    <label for="cul30" class="rc_sty" value="92">Iniciación a la música</label><br>
-                    <input type="checkbox" name="check31" id="cul31" />
-                    <label for="cul31" class="rc_sty" value="93">Son Huasteco</label> <br>
+                    <input type="checkbox" value="89" name="check[]" id="cul27" />
+                    <label for="cul27" class="rc_sty" value="89" name="check[]">Guitarra clásica</label><br>
+                    <input type="checkbox" value="90" name="check[]" id="cul28" />
+                    <label for="cul28" class="rc_sty" value="90" name="check[]">Música Rap</label><br>
+                    <input type="checkbox" value="91" name="check[]" id="cul29" />
+                    <label for="cul29" class="rc_sty" value="91" name="check[]">Percusiones</label><br>
+                    <input type="checkbox" value="92" name="check[]" id="cul30" />
+                    <label for="cul30" class="rc_sty" value="92" name="check[]">Iniciación a la música</label><br>
+                    <input type="checkbox" value="93" name="check[]" id="cul31" />
+                    <label for="cul31" class="rc_sty" value="93" name="check[]">Son Huasteco</label> <br>
                   </div>
                 </div>
               </div>
@@ -477,41 +477,41 @@
                 <div class="col-lg-4">
                   <label>Escuela técnico deportivas de:</label>
                   <div class="checkbox">
-                    <input type="checkbox" name="check32" id="dep1" />
-                    <label for="dep1" class="rc_sty" value="17">Fútbol</label><br>
-                    <input type="checkbox" name="check33" id="dep2" />
-                    <label for="dep2" class="rc_sty" value="18">Basquetbol</label><br>
-                    <input type="checkbox" name="check34" id="dep3" />
-                    <label for="dep3" class="rc_sty" value="19">Voleibol</label><br>
+                    <input type="checkbox" value="17" name="check[]" id="dep1" />
+                    <label for="dep1" class="rc_sty" value="17" name="check[]">Fútbol</label><br>
+                    <input type="checkbox" value="18" name="check[]" id="dep2" />
+                    <label for="dep2" class="rc_sty" value="18" name="check[]">Basquetbol</label><br>
+                    <input type="checkbox" value="19" name="check[]" id="dep3" />
+                    <label for="dep3" class="rc_sty" value="19" name="check[]">Voleibol</label><br>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <label>Activación Física</label>
                   <div class="checkbox">
-                    <input type="checkbox" name="check36" id="dep4" />
-                    <label for="dep4" class="rc_sty" value="20">Acondicionamiento físico</label><br>
-                    <input type="checkbox" name="check37" id="dep5" />
-                    <label for="dep5" class="rc_sty" value="94">Zumba</label><br>
-                    <input type="checkbox" name="check38" id="dep6" />
-                    <label for="dep6" class="rc_sty" value="95">Tae bo</label><br>
-                    <input type="checkbox" name="check39" id="dep7" />
-                    <label for="dep7" class="rc_sty" value="96">Yoga</label><br>
-                    <input type="checkbox" name="check40" id="dep8" />
-                    <label for="dep8" class="rc_sty" value="97">Tai chi</label>
+                    <input type="checkbox" value="20" name="check[]" id="dep4" />
+                    <label for="dep4" class="rc_sty" value="20" name="check[]">Acondicionamiento físico</label><br>
+                    <input type="checkbox" value="94" name="check[]" id="dep5" />
+                    <label for="dep5" class="rc_sty" value="94" name="check[]">Zumba</label><br>
+                    <input type="checkbox" value="95" name="check[]" id="dep6" />
+                    <label for="dep6" class="rc_sty" value="95" name="check[]">Tae bo</label><br>
+                    <input type="checkbox" value="96" name="check[]" id="dep7" />
+                    <label for="dep7" class="rc_sty" value="96" name="check[]">Yoga</label><br>
+                    <input type="checkbox" value="97" name="check[]" id="dep8" />
+                    <label for="dep8" class="rc_sty" value="97" name="check[]">Tai chi</label>
                     <br>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <label>Otras disciplinas</label>
                   <div class="checkbox">
-                    <input type="checkbox" name="check41" id="dep9" />
-                    <label for="dep9" class="rc_sty" value="98">Boxeo</label><br>
-                    <input type="checkbox" name="check42" id="dep10" />
-                    <label for="dep10" class="rc_sty" value="99">Atletismo</label><br>
-                    <input type="checkbox" name="check43" id="dep11" />
-                    <label for="dep11" class="rc_sty" value="101">Karate do</label><br>
-                    <input type="checkbox" name="check44" id="dep12" />
-                    <label for="dep12" class="rc_sty" value="100">Kung fu</label>
+                    <input type="checkbox" value="98" name="check[]" id="dep9" />
+                    <label for="dep9" class="rc_sty" value="98" name="check[]">Boxeo</label><br>
+                    <input type="checkbox" value="99" name="check[]" id="dep10" />
+                    <label for="dep10" class="rc_sty" value="99" name="check[]">Atletismo</label><br>
+                    <input type="checkbox" value="100" name="check[]" id="dep11" />
+                    <label for="dep11" class="rc_sty" value="100" name="check[]">Karate do</label><br>
+                    <input type="checkbox" value="101" name="check[]" id="dep12" />
+                    <label for="dep12" class="rc_sty" value="101" name="check[]">Kung fu</label>
 
                   </div>
                 </div>
@@ -523,22 +523,22 @@
             <label class="h3">Ciberescuela</label><br><BR>
             <select name="opcionEdu">
               <option value="0" disabled selected>Opción</option>
-              <option value="107">Alfabetización</option>
-              <option value="108">Primaria</option>
-              <option value="109">Secundaria</option>
-              <option value="110">BADI</option>
-              <option value="111">Prepa en línea SEP</option>
-              <option value="112">CENEVAL</option>
-              <option value="113">COLBACH</option>
-              <option value="114">Prepa abierta</option>
-              <option value="115">B@UNAM</option>
-              <option value="116">UnADM</option>
-              <option value="117">Licenciatura en linea</option>
-              <option value="118">Licenciaturas CDMX</option>
-              <option value="119">Asesorias primaria</option>
-              <option value="120">Asesorias secundaria</option>
-              <option value="121">Asesorias bachillerato</option>
-              <option value="122">Asesorias licenciatura</option>
+              <option value="106">Alfabetización</option>
+              <option value="107">Primaria</option>
+              <option value="108">Secundaria</option>
+              <option value="109">BADI</option>
+              <option value="110">Prepa en línea SEP</option>
+              <option value="111">CENEVAL</option>
+              <option value="112">COLBACH</option>
+              <option value="113">Prepa abierta</option>
+              <option value="114">B@UNAM</option>
+              <option value="115">UnADM</option>
+              <option value="116">Licenciatura en linea</option>
+              <option value="117">Licenciaturas CDMX</option>
+              <option value="118">Asesorias primaria</option>
+              <option value="119">Asesorias secundaria</option>
+              <option value="120">Asesorias bachillerato</option>
+              <option value="121">Asesorias licenciatura</option>
             </select>
           </div>
         </div>
@@ -548,12 +548,12 @@
             <div class="checkbox">
               <div class="row">
                 <div class="col-lg-4">
-                  <input type="checkbox" name="check45" id="cog1" />
-                  <label for="cog1" class="rc_sty" value="21">Ajedrez</label>
+                  <input type="checkbox" value="21" name="check[]" id="cog1" />
+                  <label for="cog1" class="rc_sty" value="21" name="check[]">Ajedrez</label>
                 </div>
                 <div class="col-lg-4">
-                  <input type="checkbox" name="check46" id="cog2" />
-                  <label for="cog2" class="rc_sty" value="102">Redacción y comprensión de lectura</label>
+                  <input type="checkbox" value="102" name="check[]" id="cog2" />
+                  <label for="cog2" class="rc_sty" value="102" name="check[]">Redacción y comprensión de lectura</label>
                 </div>
               </div>
             </div>
@@ -566,24 +566,24 @@
             <div class="checkbox">
               <div class="row">
                 <div class="col-lg-4">
-                  <input type="checkbox" name="check47" id="dig1" />
-                  <label for="dig1" class="rc_sty" value="24">Club de Ciencias</label><br>
-                  <input type="checkbox" name="check48" id="dig2" />
-                  <label for="dig2" class="rc_sty" value="28">Club de Código</label><br>
+                  <input type="checkbox" value="24" name="check[]" id="dig1" />
+                  <label for="dig1" class="rc_sty" value="24" name="check[]">Club de Ciencias</label><br>
+                  <input type="checkbox" value="28" name="check[]" id="dig2" />
+                  <label for="dig2" class="rc_sty" value="28" name="check[]">Club de Código</label><br>
 
 
                 </div>
                 <div class="col-lg-4">
-                  <input type="checkbox" name="check49" id="dig3" />
-                  <label for="dig3" class="rc_sty" value="27">Edición y diseño</label>
+                  <input type="checkbox" value="27" name="check[]" id="dig3" />
+                  <label for="dig3" class="rc_sty" value="27" name="check[]">Edición y diseño</label>
                   <br>
-                  <input type="checkbox" name="check50" id="dig4" />
-                  <label for="dig4" class="rc_sty" value="103">Talleres de cómputo</label> <br>
+                  <input type="checkbox" value="103" name="check[]" id="dig4" />
+                  <label for="dig4" class="rc_sty" value="103" name="check[]">Talleres de cómputo</label> <br>
 
                 </div>
                   <div class="col-lg-4">
-                  <input type="checkbox" name="check51" id="dig5" />
-                  <label for="dig5" class="rc_sty" value="25">Robótica aplicada</label>
+                  <input type="checkbox" value="25" name="check[]" id="dig5" />
+                  <label for="dig5" class="rc_sty" value="25" name="check[]">Robótica aplicada</label>
 
                 </div>
 
@@ -599,35 +599,35 @@
             <div class="checkbox">
               <div class="row">
                 <div class="col-lg-4">
-                  <input type="checkbox" name="check52" id="emo1" />
-                  <label for="emo1" class="rc_sty" value="29">Amor y sexualidad</label><br>
-                  <input type="checkbox" name="check53" id="emo2" />
-                  <label for="emo2" class="rc_sty" value="30">Prevención de adicciones</label><br>
-                  <input type="checkbox" name="check54" id="emo3" />
-                  <label for="emo3" class="rc_sty" value="31">Habilidades para la vida</label> <br>
-                    <input type="checkbox" name="check55" id="emo4" />
-                  <label for="emo4" class="rc_sty" value="106">Baile, cuerpo y emociones</label>
+                  <input type="checkbox" value="29" name="check[]" id="emo1" />
+                  <label for="emo1" class="rc_sty" value="29" name="check[]">Amor y sexualidad</label><br>
+                  <input type="checkbox" value="30" name="check[]" id="emo2" />
+                  <label for="emo2" class="rc_sty" value="30" name="check[]">Prevención de adicciones</label><br>
+                  <input type="checkbox" value="31" name="check[]" id="emo3" />
+                  <label for="emo3" class="rc_sty" value="31" name="check[]">Habilidades para la vida</label> <br>
+                    <input type="checkbox" value="122" name="check[]" id="emo4" />
+                  <label for="emo4" class="rc_sty" value="122" name="check[]">Baile, cuerpo y emociones</label>
                 </div>
                 <div class="col-lg-4">
-                  <input type="checkbox" name="check56" id="emo5" />
-                  <label for="emo5" class="rc_sty" value="32">Proyecto de vida</label>
+                  <input type="checkbox" value="32" name="check[]" id="emo5" />
+                  <label for="emo5" class="rc_sty" value="32" name="check[]">Proyecto de vida</label>
                   <br>
-                  <input type="checkbox" name="check57" id="emo6" />
-                  <label for="emo6" class="rc_sty" value="33">Autoestima</label> <br>
-                  <input type="checkbox" name="check58" id="emo7" />
-                  <label for="emo7" class="rc_sty" value="34">Tanatología o manejo del duelo</label>
-                <input type="checkbox" name="check59" id="emo8" />
-                  <label for="emo8" class="rc_sty" value="104">Emociones mágicas</label>
+                  <input type="checkbox" value="33" name="check[]" id="emo6" />
+                  <label for="emo6" class="rc_sty" value="33" name="check[]">Autoestima</label> <br>
+                  <input type="checkbox" value="34" name="check[]" id="emo7" />
+                  <label for="emo7" class="rc_sty" value="34" name="check[]">Tanatología o manejo del duelo</label>
+                <input type="checkbox" value="104" name="check[]" id="emo8" />
+                  <label for="emo8" class="rc_sty" value="104" name="check[]">Emociones mágicas</label>
                   <br>
                 </div>
                   <div class="col-lg-4">
-                  <input type="checkbox" name="check60" id="emo9" />
-                  <label for="emo9" class="rc_sty" value="35">Inteligencia emocional</label>
+                  <input type="checkbox" value="35" name="check[]" id="emo9" />
+                  <label for="emo9" class="rc_sty" value="35" name="check[]">Inteligencia emocional</label>
                   <br>
-                  <input type="checkbox" name="check61" id="emo10" />
-                  <label for="emo10" class="rc_sty" value="36">Arte y Emociones</label> <br>
-                  <input type="checkbox" name="check62" id="emo11" />
-                  <label for="emo11" class="rc_sty" value="105">Pintando emociones</label>
+                  <input type="checkbox" value="36" name="check[]" id="emo10" />
+                  <label for="emo10" class="rc_sty" value="36" name="check[]">Arte y Emociones</label> <br>
+                  <input type="checkbox" value="105" name="check[]" id="emo11" />
+                  <label for="emo11" class="rc_sty" value="105" name="check[]">Pintando emociones</label>
                   <br>
                 </div>
 
@@ -644,83 +644,83 @@
             <div class="checkbox">
               <div class="row">
                 <div class="col-lg-4">
-                  <input type="checkbox" name="check63" id="econo1" />
-                  <label for="econo1" class="rc_sty" value="37">Carpintería</label> <br>
+                  <input type="checkbox" value="37" name="check[]" id="econo1" />
+                  <label for="econo1" class="rc_sty" value="37" name="check[]">Carpintería</label> <br>
 
-                  <input type="checkbox" name="check64" id="econo2" />
-                  <label for="econo2" class="rc_sty" value="38">Plomería</label><br>
+                  <input type="checkbox" value="38" name="check[]" id="econo2" />
+                  <label for="econo2" class="rc_sty" value="38" name="check[]">Plomería</label><br>
 
-                  <input type="checkbox" name="check65" id="econo3" />
-                  <label for="econo3" class="rc_sty" value="39">Herrería y Aluminero</label> <br>
+                  <input type="checkbox" value="39" name="check[]" id="econo3" />
+                  <label for="econo3" class="rc_sty" value="39" name="check[]">Herrería y Aluminero</label> <br>
 
-                  <input type="checkbox" name="check66" id="econo4" />
-                  <label for="econo4" class="rc_sty" value="40">Electricidad y dispositivos fotovoltaicos</label> <br>
+                  <input type="checkbox" value="40" name="check[]" id="econo4" />
+                  <label for="econo4" class="rc_sty" value="40" name="check[]">Electricidad y dispositivos fotovoltaicos</label> <br>
 
 
-                  <input type="checkbox" name="check69" id="econo7" />
-                  <label for="econo7" class="rc_sty" value="43">Joyería y accesorios</label> <br>
+                  <input type="checkbox" value="43" name="check[]" id="econo7" />
+                  <label for="econo7" class="rc_sty" value="43" name="check[]">Joyería y accesorios</label> <br>
 
-                  <input type="checkbox" name="check70" id="econo8" />
-                  <label for="econo8" class="rc_sty" value="44">Agricultura urbana</label> <br>
+                  <input type="checkbox" value="44" name="check[]" id="econo8" />
+                  <label for="econo8" class="rc_sty" value="44" name="check[]">Agricultura urbana</label> <br>
 
                 </div>
                 <div class="col-lg-4">
-                  <input type="checkbox" name="check73" id="econo11" />
-                  <label for="econo11" class="rc_sty" value="47">Diseño de imagen y Cosmetología orgánica</label>
+                  <input type="checkbox" value="47" name="check[]" id="econo11" />
+                  <label for="econo11" class="rc_sty" value="47" name="check[]">Diseño de imagen y Cosmetología orgánica</label>
                   <br>
 
-                  <input type="checkbox" name="check74" id="econo12" />
-                  <label for="econo12" class="rc_sty" value="48">Código para mujeres</label>
+                  <input type="checkbox" value="48" name="check[]" id="econo12" />
+                  <label for="econo12" class="rc_sty" value="48" name="check[]">Código para mujeres</label>
                   <br>
 
-                  <input type="checkbox" name="check75" id="econo13" />
-                  <label for="econo13" class="rc_sty" value="49">Electrónica y robótica</label>
+                  <input type="checkbox" value="49" name="check[]" id="econo13" />
+                  <label for="econo13" class="rc_sty" value="49" name="check[]">Electrónica y robótica</label>
                   <br>
 
 
-                  <input type="checkbox" name="check78" id="econo16" />
-                  <label for="econo16" class="rc_sty" value="52">Textiles y diseño de modas</label>
+                  <input type="checkbox" value="52" name="check[]" id="econo16" />
+                  <label for="econo16" class="rc_sty" value="52" name="check[]">Textiles y diseño de modas</label>
                   <br>
 
-                  <input type="checkbox" name="check80" id="econo18" />
-                  <label for="econo18" class="rc_sty" value="54">Fotografia de producto</label>
+                  <input type="checkbox" value="54" name="check[]" id="econo18" />
+                  <label for="econo18" class="rc_sty" value="54" name="check[]">Fotografia de producto</label>
                   <br>
 
-                  <input type="checkbox" name="check81" id="econo19" />
-                  <label for="econo19" class="rc_sty" value="55">Logos e identidad de marca</label>
+                  <input type="checkbox" value="55" name="check[]" id="econo19" />
+                  <label for="econo19" class="rc_sty" value="55" name="check[]">Logos e identidad de marca</label>
                   <br>
 
-                  <input type="checkbox" name="check82" id="econo20" />
-                  <label for="econo20" class="rc_sty" value="56">Calidad en el servicio</label>
+                  <input type="checkbox" value="56" name="check[]" id="econo20" />
+                  <label for="econo20" class="rc_sty" value="56" name="check[]">Calidad en el servicio</label>
                 </div>
 
                 <div class="col-lg-4">
-                  <input type="checkbox" name="check83" id="econo21" />
-                  <label for="econo21" class="rc_sty" value="57">Creación de cooperativas</label>
+                  <input type="checkbox" value="57" name="check[]" id="econo21" />
+                  <label for="econo21" class="rc_sty" value="57" name="check[]">Creación de cooperativas</label>
                   <br>
 
-                  <input type="checkbox" name="check84" id="econo22" />
-                  <label for="econo22" class="rc_sty" value="58">Emprendedurismo</label>
+                  <input type="checkbox" value="58" name="check[]" id="econo22" />
+                  <label for="econo22" class="rc_sty" value="58" name="check[]">Emprendedurismo</label>
                   <br>
 
-                  <input type="checkbox" name="check85" id="econo23" />
-                  <label for="econo23" class="rc_sty" value="59">Creación de micro-negocios</label>
+                  <input type="checkbox" value="59" name="check[]" id="econo23" />
+                  <label for="econo23" class="rc_sty" value="59" name="check[]">Creación de micro-negocios</label>
                   <br>
 
-                  <input type="checkbox" name="check86" id="econo24" />
-                  <label for="econo24" class="rc_sty" value="60">Comercio digital</label>
+                  <input type="checkbox" value="60" name="check[]" id="econo24" />
+                  <label for="econo24" class="rc_sty" value="60" name="check[]">Comercio digital</label>
                   <br>
 
-                  <input type="checkbox" name="check87" id="econo25" />
-                  <label for="econo25" class="rc_sty" value="61">Estrategias de venta</label>
+                  <input type="checkbox"  value="61" name="check[]" id="econo25" />
+                  <label for="econo25" class="rc_sty" value="61" name="check[]">Estrategias de venta</label>
                   <br>
 
-                  <input type="checkbox" name="check88" id="econo26" />
-                  <label for="econo26" class="rc_sty" value="62">Comercio justo</label>
+                  <input type="checkbox" value="62" name="check[]" id="econo26" />
+                  <label for="econo26" class="rc_sty" value="62" name="check[]">Comercio justo</label>
                   <br>
 
-                  <input type="checkbox" name="check91" id="econo29" />
-                  <label for="econo29" class="rc_sty" value="65">Distribución</label>
+                  <input type="checkbox" value="65" name="check[]" id="econo29" />
+                  <label for="econo29" class="rc_sty" value="65" name="check[]">Distribución</label>
                   <br>
                 </div>
 
@@ -746,7 +746,7 @@
                 <option value="2">Azcapotzalco</option>
                 <option value="3">Benito Juárez</option>
                 <option value="4">Coyoacán</option>
-                <option value="5">Cuajimalpa de Morel </option>
+                <option value="5">Cuajimalpa de Morelos </option>
                 <option value="6">Cuauhtémoc</option>
                 <option value="7">Gustavo A. Madero</option>
                 <option value="8">Iztacalco</option>

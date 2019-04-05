@@ -273,14 +273,14 @@
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label for="telMovil" <input type="number">Teléfono celular</label><br>
-            <input onkeypress="return justNumbers(event);" maxlength="12" id="telMovil" type="text" name="telMovil" class="validate" size="40">
+            <input  maxlength="12" onkeypress="return justNumbers(event);" id="telMovil" type="text" name="telMovil" class="validate" size="40">
           </div>
         </div>
 
 <div class="row">
         <div class="col-lg-12 col-md-12 estilo-forma">
           <label for="correo">Correo</label><br>
-          <input type="correo" class="validate" name="email" id="correo" aria-describedby="emailHelp" size="40" required>
+          <input type="email" class="validate" name="email" id="correo" aria-describedby="emailHelp" size="40" required>
           <small id="emailHelp" class="form-text text-muted"></small>
         </div>
       </fieldset>
@@ -764,7 +764,7 @@
             <div class="form-group">
               <label for="name1">PILARES</label>
               <select id="pilarSelect_id" class="form-control" name="pilarSelect_id" required>
-                <option value="">Selecciona</option>
+                <!--<option value="">Selecciona</option>-->
               </select>
             </div> <br><br>
           </div>

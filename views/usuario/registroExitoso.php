@@ -23,7 +23,7 @@ error_reporting(-1);
     <div class="container">
         <div class="jumbotron mt-5">
             <div class="mx-auto text-center">
-                <h1 class="display-4 mx">Bienvenido a tu PILARES "<?=$nombrePilar?>"</h1>
+                <h1 class="display-4 mx">Bienvenido a tu "<?=$nombrePilar?>"</h1>
             </div>
 
             <p class="lead">Hola <span class="text-uppercase"><?=$nombre?></span></p>

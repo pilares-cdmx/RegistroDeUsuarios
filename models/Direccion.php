@@ -9,6 +9,7 @@ class Direccion{
     private $idDireccion;
     private $calleYnumero;
     private $Colonias_idColonia;
+    private $Colonias_CodigosPostales_idCodigoPostal;
     private $Colonias_Alcaldias_idAlcaldiasZonas;
     private $Colonias_Alcaldias_Zonas_idZonas;
     private $db;
@@ -32,6 +33,9 @@ class Direccion{
     public function getIdColonia(){
         return $this->Colonias_idColonia;
     }
+    public function getIdCodigoPostal(){
+        return $this->Colonias_CodigosPostales_idCodigoPostal;
+    }
     public function getIdAlcaldias(){
         return $this->Colonias_Alcaldias_idAlcaldiasZonas;
     }
@@ -51,6 +55,9 @@ class Direccion{
     }
     public function setIdColonia($Colonias_idColonia){
         $this->Colonias_idColonia = $Colonias_idColonia;
+    }
+    public function setIdCodigoPostal($Colonias_CodigosPostales_idCodigoPostal){
+        $this->Colonias_CodigosPostales_idCodigoPostal = $Colonias_CodigosPostales_idCodigoPostal;
     }
     public function setIdAlcaldias($Colonias_Alcaldias_idAlcaldiasZonas){
         $this->Colonias_Alcaldias_idAlcaldiasZonas = $Colonias_Alcaldias_idAlcaldiasZonas;
@@ -72,8 +79,9 @@ class Direccion{
 
         $sql="INSERT INTO Direccion VALUES(NULL,
         '{$this->getCalleYnumero()}',
-        '{$this->getIdAlcaldias()}',
         '{$this->getIdColonia()}',
+        '{$this->getIdCodigoPostal()}',
+        '{$this->getIdAlcaldias()}',
         '{$this->getIdZonas()}'
         );";
         $save = $this->db->query($sql);

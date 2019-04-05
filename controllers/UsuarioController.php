@@ -1,8 +1,13 @@
 <?php
+ini_set('display_startup_errors', 1);
+ini_set('display_errors', 1);
+error_reporting(-1);
+require_once 'models/Actividades.php';
+require_once 'models/Pilares.php';
 require_once 'models/Direccion.php';
 require_once 'models/Usuario.php';
-//require_once 'models/ActividadesPorUsuario';
-//require_once 'models/UsuariosPorPilar';
+require_once 'models/ActividadesPorUsuario.php';
+require_once 'models/UsuariosPorPilar.php';
 class UsuarioController{
     public function index(){
         //echo "Controlador usuarios, Accion index";
@@ -69,6 +74,7 @@ class UsuarioController{
            $direccion->setCalleYnumero($_POST['calleNumero']);
            $direccion->setIdAlcaldias($_POST['alcaldia']);
            $direccion->setIdColonia($_POST['colonia']);
+           $direccion->setIdCodigoPostal($_POST['codigoPostal']);
 
            $idAlcaldia=$direccion->getIdAlcaldias();
            $direccion->setIdZonas($idAlcaldia);
@@ -106,10 +112,58 @@ class UsuarioController{
            $usuario->setPilarNombre($pilarId);
            $usuario->setFolio($pilarId, $curp);
            /**Se almacena la tabla usuario**/
-           $save = $usuario->save();
+           $saveUsuario = $usuario->save();
 
            $idUsuario = $usuario->lastInsertID();
-            if ($save) {
+          // var_dump($idUsuario);
+
+           $usuarioPorPilar = new UsuariosPorPilar();
+
+           $usuarioPorPilar->setPilares_idPilares($pilarId);
+           $usuarioPorPilar->setPilares_Direccion_idDireccion($pilarId);
+           $usuarioPorPilar->setPilares_Direccion_Colonias_idColonia($pilarId);
+           $usuarioPorPilar->setPilares_Direccion_Colonias_CodigosPostales_idCodigoPostal($pilarId);
+           $usuarioPorPilar->setPilares_Direccion_Colonias_Alcaldias_idAlcaldiasZonas($pilarId);
+           $usuarioPorPilar->setPilares_Direccion_Colonias_Alcaldias_Zonas_idZonas($pilarId);
+           $usuarioPorPilar->setIdUsuarios($idUsuario);
+           $usuarioPorPilar->setUsuario_Direccion_idDireccion($idUsuario);
+           $usuarioPorPilar->setUsuario_Direccion_Colonias_idColonia($idUsuario);
+           $usuarioPorPilar->setUsuario_Direccion_Colonias_Alcaldias_idAlcaldiasZonas($idUsuario);
+           $usuarioPorPilar->setUsuario_Direccion_Colonias_Alcaldias_Zonas_idZonas($idUsuario);
+
+           $saveUsuarioPorPilar =$usuarioPorPilar->save();
+
+           $actividadesPorUsuario = new ActividadesPorUsuario();
+
+           if (isset($_POST['opcionEdu'])) {
+              $actividadesPorUsuario->setActividades_idActividades($_POST['opcionEdu']);
+              $actividadesPorUsuario->setIdTiposActividades($_POST['opcionEdu']);
+              $actividadesPorUsuario->setUsuario_idUsuarios($idUsuario);
+              $actividadesPorUsuario->setUsuario_Direccion_idDireccion($idUsuario);
+              $actividadesPorUsuario->setUsuario_idColonia($idUsuario);
+              $actividadesPorUsuario->setUsuario_idAlcaldiasZonas($idUsuario);
+              $actividadesPorUsuario->setUsuario_idZonas($idUsuario);
+
+              $saveOpcionEducativa = $actividadesPorUsuario->save();
+           }
+
+           if(isset($_POST['check'])){
+
+               foreach ($_POST['check'] as $key => $value) {
+                   $actividadesPorUsuario->setActividades_idActividades($value);
+                   var_dump($value);
+                   $actividadesPorUsuario->setIdTiposActividades($value);
+                   $actividadesPorUsuario->setUsuario_idUsuarios($idUsuario);
+                   $actividadesPorUsuario->setUsuario_Direccion_idDireccion($idUsuario);
+                   $actividadesPorUsuario->setUsuario_idColonia($idUsuario);
+                   $actividadesPorUsuario->setUsuario_idAlcaldiasZonas($idUsuario);
+                   $actividadesPorUsuario->setUsuario_idZonas($idUsuario);
+
+                   $saveActividadesPorUsuario = $actividadesPorUsuario->save();
+               }
+           }
+
+            if ($saveUsuario && $saveUsuarioPorPilar) {
                 $_SESSION['nombreUsuarioNuevo'] = $_POST['nombre'];
                 $_SESSION['folioUsuarioNuevo'] = $usuario->getFolio();
                 $_SESSION['pilarUsuarioNuevo'] = $usuario->getPilarSelecionado();
@@ -118,29 +172,6 @@ class UsuarioController{
                 $_SESSION['register']= "No completado";
 
             }
-
-            $usuarioPorPilar = new UsuariosPorPilar();
-            $usuarioPorPilar->setPilares_idPilares($pilarId);
-            $usuarioPorPilar->setPilares_Direccion_idDireccion($pilarId);
-            $usuarioPorPilar->setPilares_Direccion_Colonias_idColonia($pilarId);
-            $usuarioPorPilar->setPilares_Direccion_Colonias_Alcaldias_idAlcaldiasZonas($pilarId);
-            $usuarioPorPilar->setPilares_Direccion_Colonias_Alcaldias_Zonas_idZonas($pilarId);
-            $usuarioPorPilar->setIdUsuarios($idUsuario);
-            $usuarioPorPilar->setUsuario_Direccion_idDireccion($idUsuario);
-            $usuarioPorPilar->setUsuario_Direccion_Colonias_idColonia($idUsuario);
-            $usuarioPorPilar->setUsuario_Direccion_Colonias_Alcaldias_idAlcaldiasZonas($idUsuario);
-            $usuarioPorPilar->setUsuario_Direccion_Colonias_Alcaldias_Zonas_idZonas($idUsuario);
-
-            $saveUsuarioPorPilar = $usuarioPorPilar->save();
-
-            $actividadesPorUsuario = new ActividadesPorUsuario();
-            $actividadesPorUsuario->setActividades_idActividades();
-            $actividadesPorUsuario->setActividades_TiposActividades_idTiposActividades();
-            $actividadesPorUsuario->setUsuario_idUsuarios();
-            $actividadesPorUsuario->setUsuario_Direccion_idDireccion();
-            $actividadesPorUsuario->setUsuario_Direccion_Colonias_idColonia();
-            $actividadesPorUsuario->setUsuario_Direccion_Colonias_Alcaldias_idAlcaldiasZonas();
-            $actividadesPorUsuario->setUsuario_Direccion_Colonias_Alcaldias_Zonas_idZonas();
 
         }else {
             $_SESSION['register']= "No completado";

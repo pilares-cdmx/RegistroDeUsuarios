@@ -435,6 +435,8 @@
                   <div class="checkbox">
                     <input type="checkbox" value="84" name="check[]" id="cul21" />
                     <label for="cul21" class="rc_sty" value="84" name="check[]">Pintura artística</label><br>
+                    <input type="checkbox" value="123" name="check[]" id="cul32" />
+                    <label for="cul32" class="rc_sty" value="123" name="check[]">Dibujo y grabado</label> <br>
                   </div>
                 </div>
                 <div class="col-lg-4">
@@ -740,7 +742,6 @@
             <div class="form-group">
               <label for="name1">Alcaldia</label>
               <select id="alcaldia_id" class="form-control" name="alcaldia_id" onchange="showPilarPorAlcaldia(this.value)"  required>
-                <option value="">Selecciona</option>
                 <option value="0" disabled selected>Selecciona</option>
                 <option value="1">Álvaro Obregón</option>
                 <option value="2">Azcapotzalco</option>
@@ -764,7 +765,7 @@
             <div class="form-group">
               <label for="name1">PILARES</label>
               <select id="pilarSelect_id" class="form-control" name="pilarSelect_id" required>
-                <!--<option value="">Selecciona</option>-->
+                <option value="">Selecciona</option>
               </select>
             </div> <br><br>
           </div>

@@ -126,6 +126,21 @@
       </div>
     </div>
   </div><br>
+  <?php if(isset($_SESSION['error_grupoet'])): ?>
+    <div class="container">
+      <h5><?= $_SESSION['error_grupoet']?></h5>
+    </div>
+  <?php endif; ?>
+  <?php if(isset($_SESSION['error_curpEspacios'])): ?>
+    <div class="container">
+      <h5><?= $_SESSION['error_curpEspacios']?></h5>
+    </div>
+  <?php endif; ?>
+  <?php if(isset($_SESSION['error_curpNoUnique'])): ?>
+    <div class="container">
+      <h5><?= $_SESSION['error_curpNoUnique']?></h5>
+    </div>
+  <?php endif; ?>
   <form action="<?=URL?>Usuario/save" name="formularioRegistro" method="POST">
 
     <div class="container">
@@ -280,7 +295,7 @@
 <div class="row">
         <div class="col-lg-12 col-md-12 estilo-forma">
           <label for="correo">Correo</label><br>
-          <input type="email" class="validate" name="email" id="correo" aria-describedby="emailHelp" size="40" required>
+          <input type="email" class="validate" name="email" id="correo" aria-describedby="emailHelp" size="40" >
           <small id="emailHelp" class="form-text text-muted"></small>
         </div>
       </fieldset>

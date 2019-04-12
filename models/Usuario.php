@@ -152,6 +152,7 @@ class Usuario{
         $this->ocupacionActual = $ocupacionActual;
     }
     public function setGrupoEtnico($grupoEtnico){
+      //var_dump($grupoEtnico);die;
         $this->grupoEtnico = $grupoEtnico;
     }
     public function setTiempoResidencia($tiempoResidencia){
@@ -286,6 +287,17 @@ class Usuario{
 			}
 
 	}
+
+  public function uniqueCURP($curpValidate){
+    $query="SELECT curp FROM Usuario WHERE curp = '$curpValidate'";
+    $tmp = $this->db->query($query);
+    $result = false;
+
+    if ($tmp) {
+        $result = true;
+    }
+    return $result;
+  }
 
 }
 ?>

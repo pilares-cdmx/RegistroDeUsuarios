@@ -27,11 +27,10 @@ class UsuarioController{
     }
     public function login(){
         require_once 'views/formulario/login.php';
+
     }
-    /**
-     * [validar description]
-     * @return [type] [description]
-     */
+
+
     public function validar(){
       $usuarioObj = new Usuario();
       if (isset($_POST['login']))
@@ -87,7 +86,16 @@ class UsuarioController{
            $usuario->setNombre($_POST['nombre']);
            $usuario->setApellidoPaterno($_POST['apellidoPat']);
            $usuario->setApellidoMaterno($_POST['apellidoMat']);
-           $usuario->setCurp($_POST['curp']);
+           if (strpos($_POST['curp'], " ") ) {
+             $_SESSION['error_curpEspacios'] = 'El CURP que ingresaste tiene espacios, la clave no puede tener espacios.';
+             header("Location:".URL.'Usuario/registro');
+           }elseif ($usuario->uniqueCURP($_POST['curp']) == false) {
+              $_SESSION['error_curpNoUnique'] = 'El CURP que ingresaste ya esta registrado';
+              header("Location:".URL.'Usuario/registro');
+           }else{
+             $usuario->setCurp($_POST['curp']);
+           }
+
 
            $curp = $usuario->getCurp();
 
@@ -97,7 +105,15 @@ class UsuarioController{
            $usuario->setGradoEstudios($_POST['grado']);
            $usuario->setEstudias($_POST['estudias']);
            $usuario->setOcupacionActual($_POST['ocupacionAct']);
-           $usuario->setGrupoEtnico($_POST['gruPoet']);
+          // var_dump($_POST['gruPoet']);die;
+           if ($_POST['gruPoet'] && $_POST['gruPoet'] != null && $_POST['gruPoet'] != '' ) {
+             //break; exit;
+             $usuario->setGrupoEtnico($_POST['gruPoet']);
+           }else{
+             $_SESSION['error_grupoet'] = 'El campo de grupo étnico es obligatorio. Por favor selecciona tu opción.';
+             header("Location:".URL.'Usuario/registro');
+           }
+
            $usuario->setTiempoResidencia($_POST['timepoResidencia']);
            $usuario->setCorreo($_POST['email']);
            $usuario->setTelefonoCelular($_POST['telMovil']);

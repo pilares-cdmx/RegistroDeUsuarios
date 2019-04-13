@@ -29,7 +29,10 @@ class UsuarioController{
         require_once 'views/formulario/login.php';
 
     }
-
+    public function cerrarSesion(){
+        session_destroy();
+        header("Location:".URL.'Usuario/index');
+    }
 
     public function validar(){
       $usuarioObj = new Usuario();
@@ -66,6 +69,7 @@ class UsuarioController{
 
       }
 
+
     public function save(){
         if (isset($_POST)) {
 
@@ -81,23 +85,30 @@ class UsuarioController{
            $save = $direccion->save();
 
            $idDireccion = $direccion->lastInsertID();
+           //var_dump($idDireccion);
 
            $usuario = new Usuario();
            $usuario->setNombre($_POST['nombre']);
            $usuario->setApellidoPaterno($_POST['apellidoPat']);
            $usuario->setApellidoMaterno($_POST['apellidoMat']);
-           if (strpos($_POST['curp'], " ") ) {
-             $_SESSION['error_curpEspacios'] = 'El CURP que ingresaste tiene espacios, la clave no puede tener espacios.';
-             header("Location:".URL.'Usuario/registro');
-           }elseif ($usuario->uniqueCURP($_POST['curp']) == false) {
-              $_SESSION['error_curpNoUnique'] = 'El CURP que ingresaste ya esta registrado';
-              header("Location:".URL.'Usuario/registro');
-           }else{
-             $usuario->setCurp($_POST['curp']);
-           }
-
-
+           $usuario->setCurp($_POST['curp']);
            $curp = $usuario->getCurp();
+           $curpUnique = $usuario->uniqueCURP($curp);
+           //var_dump($curpUnique); die;
+           $curpValidate = $usuario->validate_curp($curp);
+           var_dump($curpValidate);
+          // $expReg = "/^([A-Z][AEIOUX][A-Z]{2}\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\d|3[01])[HM](?:AS|B[CS]|C[CLMSH]|D[FG]|G[TR]|HG|JC|M[CNS]|N[ETL]|OC|PL|Q[TR]|S[PLR]|T[CSL]|VZ|YN|ZS)[B-DF-HJ-NP-TV-Z]{3}[A-Z\d])(\d)$/";
+//R3gP1lar3$  $usuario->validate_curp($_POST['curp']
+           if ($curpUnique === false) {
+             //$_SESSION['error_curpFormat'] = 'El CURP que ingresaste no es valido.';
+             $_SESSION['error_curpNoUnique'] = 'El CURP que ingresaste ya esta registrado';
+             header("Location:".URL.'Usuario/registro');
+           }elseif (!$curpValidate) {
+              $_SESSION['error_curpNoValidate'] = 'El CURP que ingresaste no cumple la validación';
+              header("Location:".URL.'Usuario/registro');
+           }
+           //$usuario->setCurp($_POST['curp']);
+           //$curp = $usuario->getCurp();
 
            $usuario->setSexo($curp);
            $usuario->setFechaNacimiento($curp);
@@ -106,7 +117,7 @@ class UsuarioController{
            $usuario->setEstudias($_POST['estudias']);
            $usuario->setOcupacionActual($_POST['ocupacionAct']);
           // var_dump($_POST['gruPoet']);die;
-           if ($_POST['gruPoet'] && $_POST['gruPoet'] != null && $_POST['gruPoet'] != '' ) {
+           if ($_POST['gruPoet'] || $_POST['gruPoet'] != false || $_POST['gruPoet'] != '' ) {
              //break; exit;
              $usuario->setGrupoEtnico($_POST['gruPoet']);
            }else{
@@ -125,13 +136,14 @@ class UsuarioController{
 
            $usuario->setPilarId($_POST['pilarSelect_id']);
            $pilarId=$usuario->getPilarId();
+           //var_dump($pilarId); die;
            $usuario->setPilarNombre($pilarId);
            $usuario->setFolio($pilarId, $curp);
            /**Se almacena la tabla usuario**/
            $saveUsuario = $usuario->save();
 
-           $idUsuario = $usuario->lastInsertID();
-          // var_dump($idUsuario);
+           $idUsuario = $usuario->setId();
+           //var_dump($idUsuario);die;
 
            $usuarioPorPilar = new UsuariosPorPilar();
 
@@ -167,7 +179,7 @@ class UsuarioController{
 
                foreach ($_POST['check'] as $key => $value) {
                    $actividadesPorUsuario->setActividades_idActividades($value);
-                   var_dump($value);
+                   //var_dump($value);
                    $actividadesPorUsuario->setIdTiposActividades($value);
                    $actividadesPorUsuario->setUsuario_idUsuarios($idUsuario);
                    $actividadesPorUsuario->setUsuario_Direccion_idDireccion($idUsuario);

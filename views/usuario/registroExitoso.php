@@ -30,7 +30,8 @@ error_reporting(-1);
             <hr class="my-4">
             <p>Anota tu número de registro <strong><?=$folio?></strong>, es un número personal que te servirá más adelante.</p>
             <div class="text-center">
-                <a class="btn btn-primary btn-lg center" href="<?php echo constant('URL')?>" role="button">Terminar </a>
+
+                <a class="btn btn-primary btn-lg center" href="<?php echo constant('URL')?>Usuario/cerrarSesion" role="button">Terminar </a>
             </div>
 
         </div>

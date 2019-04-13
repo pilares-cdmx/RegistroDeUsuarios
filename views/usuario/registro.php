@@ -126,14 +126,14 @@
       </div>
     </div>
   </div><br>
-  <?php if(isset($_SESSION['error_grupoet'])): ?>
+  <?php if(isset($_SESSION['error_grupoet'])):?>
     <div class="container">
       <h5><?= $_SESSION['error_grupoet']?></h5>
     </div>
   <?php endif; ?>
-  <?php if(isset($_SESSION['error_curpEspacios'])): ?>
+  <?php  if(isset($_SESSION['error_curpNoValidate'])): ?>
     <div class="container">
-      <h5><?= $_SESSION['error_curpEspacios']?></h5>
+      <h5><?= $_SESSION['error_curpNoValidate']?></h5>
     </div>
   <?php endif; ?>
   <?php if(isset($_SESSION['error_curpNoUnique'])): ?>
@@ -176,8 +176,8 @@
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label>Grupo étnico</label><br>
-            <select name="gruPoet">
-              <option value="0" disabled selected>Selecciona</option>
+            <select name="gruPoet" required>
+              <option value="">Selecciona</option>
               <option value="Náhuatl">Náhuatl</option>
               <option value="Mixteco">Mixteco</option>
               <option value="Otomí">Otomí</option>
@@ -295,7 +295,7 @@
 <div class="row">
         <div class="col-lg-12 col-md-12 estilo-forma">
           <label for="correo">Correo</label><br>
-          <input type="email" class="validate" name="email" id="correo" aria-describedby="emailHelp" size="40" >
+          <input type="text" class="validate" name="email" id="correo" aria-describedby="emailHelp" size="40" >
           <small id="emailHelp" class="form-text text-muted"></small>
         </div>
       </fieldset>
@@ -755,7 +755,6 @@
             <div class="form-group">
               <label for="name1">Alcaldia</label>
               <select id="alcaldia_id" class="form-control" name="alcaldia_id" onchange="showPilarPorAlcaldia(this.value)"  required>
-                <option value="">Selecciona</option>
                 <option value="0" disabled selected>Selecciona</option>
                 <option value="1">Álvaro Obregón</option>
                 <option value="2">Azcapotzalco</option>

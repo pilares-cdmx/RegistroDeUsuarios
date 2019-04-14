@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 error_reporting(-1);
 class Usuario{
 
-    private $idUsusarios;
+    private $idUsuarios;
     private $nombre;
     private $apellidoPaterno;
     private $apellidoMaterno;
@@ -43,7 +43,7 @@ class Usuario{
 *   GETTERS
 */
     public function getId(){
-        return $this->idUsusarios;
+        return $this->idUsuarios;
     }
     public function getNombre(){
         return $this->nombre;
@@ -117,8 +117,10 @@ class Usuario{
     /*
     *   SETTERS
     */
-    public function setId($idUsusarios){
-        $this->idUsusarios = $idUsusarios;
+    public function setId(){
+        //$this->idUsuarios = $idUsuarios;
+        $tmp = $this->db->insert_id;
+        return $this->idUsuarios = $tmp;
     }
     public function setNombre($nombre){
         $this->nombre = $this->db->real_escape_string($nombre);
@@ -167,7 +169,7 @@ class Usuario{
     public function setTelefonoCasa($telefonoCasa){
         $this->telefonoCasa = $telefonoCasa;
     }
-    public function setFolio($folio, $curp){
+    public function setFolio($pilarId, $curp){
         //$this->pilarId = $this->getPilarId();
         //$idDireccion = $this->getIdDireccion();
         //$idUsusario = $this->getId();
@@ -176,7 +178,7 @@ class Usuario{
 
         $idDireccion=$this->getIdDireccion();
         $idCurp=substr($curp, 14, 4);
-        $this->folio = $folio.$idDireccion.$idCurp;
+        $this->folio = $pilarId.$idDireccion.$idCurp;
     }
     public function setIdDireccion($idDireccion){
         $this->Direccion_idDireccion = $idDireccion;
@@ -265,7 +267,7 @@ class Usuario{
 
     public function lastInsertID(){
         $tmp = $this->db->insert_id;
-        return $this->idUsusarios = $tmp;
+        return $this->idUsuarios = $tmp;
     }
 
     public function validar($usuario,$pass){
@@ -287,17 +289,40 @@ class Usuario{
 			}
 
 	}
-
+//  OEGJ120723MDFLLNA2
   public function uniqueCURP($curpValidate){
     $query="SELECT curp FROM Usuario WHERE curp = '$curpValidate'";
     $tmp = $this->db->query($query);
-    $result = false;
+    $result = true;
 
-    if ($tmp) {
-        $result = true;
+    if(!$tmp){
+      echo mysqli_error();
+      exit;
     }
-    return $result;
+
+    if ($curpValidate = mysqli_fetch_assoc($tmp)) {
+      return false;
+    }else {
+      return true;
+    }
   }
+  function validate_curp($valor) {
+     if(strlen($valor)==18){
+        $letras     = substr($valor, 0, 4);
+        $numeros    = substr($valor, 4, 6);
+        $sexo       = substr($valor, 10, 1);
+        $mxState    = substr($valor, 11, 2);
+        $letras2    = substr($valor, 13, 3);
+        $homoclave  = substr($valor, 16, 2);
+          if(ctype_alpha($letras) && ctype_alpha($letras2) && ctype_digit($numeros) && ctype_digit($homoclave)){
+            return true;
+          }else{
+            return false;
+          }
+     }else{
+         return false;
+    }
+ }
 
 }
 ?>

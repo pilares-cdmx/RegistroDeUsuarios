@@ -89,15 +89,15 @@ class UsuarioController{
            if (strpos($_POST['curp'], " ") ) {
              $_SESSION['error_curpEspacios'] = 'El CURP que ingresaste tiene espacios, la clave no puede tener espacios.';
              header("Location:".URL.'Usuario/registro');
-           }elseif ($usuario->uniqueCURP($_POST['curp']) == false) {
-              $_SESSION['error_curpNoUnique'] = 'El CURP que ingresaste ya esta registrado';
-              header("Location:".URL.'Usuario/registro');
+             }elseif ($usuario->uniqueCURP($_POST['curp']) == true) {
+                  $_SESSION['error_curpNoUnique'] = 'El CURP que ingresaste ya esta registrado';
+                  header("Location:".URL.'Usuario/registro');
            }else{
              $usuario->setCurp($_POST['curp']);
            }
 
 
-           $curp = $usuario->getCurp();
+          // $curp = $usuario->getCurp();
 
            $usuario->setSexo($curp);
            $usuario->setFechaNacimiento($curp);

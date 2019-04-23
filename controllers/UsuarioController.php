@@ -29,6 +29,11 @@ class UsuarioController{
     public function login(){
         require_once 'views/formulario/login.php';
     }
+    public function cerrarSesion(){
+        session_destroy();
+        header("Location:".URL.'Usuario/index');
+    }
+
     /**
      * [validar description]
      * @return [type] [description]
@@ -213,10 +218,10 @@ class UsuarioController{
 //         require_once 'views/formulario/login.php';
 
 //     }
-//     public function cerrarSesion(){
-//         session_destroy();
-//         header("Location:".URL.'Usuario/index');
-//     }
+    // public function cerrarSesion(){
+    //     session_destroy();
+    //     header("Location:".URL.'Usuario/index');
+    // }
 
 //     public function validar(){
 //       $usuarioObj = new Usuario();

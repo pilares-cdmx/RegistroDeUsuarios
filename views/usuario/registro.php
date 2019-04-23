@@ -214,7 +214,7 @@
             <label for="nombre">Alcaldia </label><br>
             <!--id "alcaldia" corresponde a Alcaldias-->
             <select name="alcaldia"  onchange="showColoniasPorAlcaldia(this.value)" required>
-              <option value="0" disabled selected>Selecciona</option>
+              <option value="" disabled selected>Selecciona</option>
               <option value="1">Álvaro Obregón</option>
               <option value="2">Azcapotzalco</option>
               <option value="3">Benito Juárez</option>
@@ -242,7 +242,7 @@
             <label for="nombre">Colonia </label><br>
               <!--id "estados" corresponde a Colonia   -->
             <select name="colonia" id="colonia" onchange="showCPporColonia(this.value)" required>
-              <option value="0" disabled selected>Selecciona</option>
+              <option value="" disabled selected>Selecciona</option>
 
             </select>
 
@@ -254,7 +254,7 @@
             <label for="nombre">Código postal </label><br>
             <!--id "municipio" corresponde a Codigo postal    -->
             <select name="codigoPostal" id="codigoPostal" required>
-              <option value="0" disabled selected>Selecciona</option>
+              <option value="" disabled selected>Selecciona</option>
 
             </select>
           </div>
@@ -324,7 +324,7 @@
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label>Último grado de estudios</label><br>
             <select name="grado" >
-              <option value="0" disabled selected>Selecciona</option>
+              <option value="" disabled selected>Selecciona</option>
               <option value="1">Preprimaria</option>
               <option value="2">1º de primaria</option>
               <option value="3">2º de primaria</option>
@@ -354,7 +354,7 @@
             <label>Ocupación actual</label><br>
 
             <select name="ocupacionAct" class="selectOcupacion" required>
-              <option value="0" disabled selected>Selecciona</option>
+              <option value="" disabled selected>Selecciona</option>
               <option value="1">Estudiantes</option>
               <option value="2">Profesionistas</option>
               <option value="3">Técnicos</option>

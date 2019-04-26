@@ -671,7 +671,7 @@
                   <label for="econo8" class="rc_sty" value="44" name="check[]">Agricultura urbana</label> <br>
                   
                  <input type="checkbox" value="41" name="check[]" id="econo9" />
-                  <label for="econo9" class="rc_sty" value="44" name="check[]">Gastronomía, panadería y catering</label> <br>   
+                  <label for="econo9" class="rc_sty" value="41" name="check[]">Gastronomía, panadería y catering</label> <br>   
                 </div>
                 <div class="col-lg-4">
                   <input type="checkbox" value="47" name="check[]" id="econo11" />
@@ -732,8 +732,6 @@
                   <label for="econo29" class="rc_sty" value="65" name="check[]">Distribución</label>
                   <br>
                 </div>
-
-
               </div>
             </div>
           </div>
@@ -743,31 +741,31 @@
             
             
                <div class="row">
-          <div class="col-lg-12 estilo-forma">
-            <label>Talleres extra</label><br>
-            <div class="checkbox">
-              <div class="row">
-                <div class="col-lg-4">
-                  <input type="checkbox" name="check52" id="braile" />
-                  <label for="braile" class="rc_sty" value="124">Braile</label><br>
-                
-                </div>
-                <div class="col-lg-4">
-                  <input type="checkbox" name="check56" id="computo" />
-                  <label for="computo" class="rc_sty" value="125">Computación asistida</label>
-                                  </div>
-                  <div class="col-lg-4">
-                  <input type="checkbox" name="check60" id="señas" />
-                  <label for="señas" class="rc_sty" value="126">Introducción a  la lengua de señas Mexicana</label>
-                 
-                </div>
-                  
-                </div>
-            
-                <br>
-              </div>
-            </div>
-          </div>        
+                  <div class="col-lg-12 estilo-forma">
+                    <label>Talleres extra</label><br>
+                    <div class="checkbox">
+                      <div class="row">
+                        <div class="col-lg-4">
+                          <input type="checkbox" name="check52" id="braile" />
+                          <label for="braile" class="rc_sty" value="124">Braile</label><br>
+                        
+                        </div>
+                          <div class="col-lg-4">
+                            <input type="checkbox" name="check56" id="computo" />
+                            <label for="computo" class="rc_sty" value="125">Computación asistida</label>
+                                            </div>
+                            <div class="col-lg-4">
+                            <input type="checkbox" name="check60" id="señas" />
+                            <label for="señas" class="rc_sty" value="126">Introducción a  la lengua de señas Mexicana</label>
+                          
+                          </div>
+                          
+                        </div>
+                    
+                        <br>
+                      </div>
+                  </div>
+              </div>        
             
      </fieldset>
 

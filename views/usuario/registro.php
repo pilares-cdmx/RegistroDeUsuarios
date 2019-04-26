@@ -126,21 +126,6 @@
       </div>
     </div>
   </div><br>
-  <?php if(isset($_SESSION['error_grupoet'])):?>
-    <div class="container">
-      <h5><?= $_SESSION['error_grupoet']?></h5>
-    </div>
-  <?php endif; ?>
-  <?php  if(isset($_SESSION['error_curpNoValidate'])): ?>
-    <div class="container">
-      <h5><?= $_SESSION['error_curpNoValidate']?></h5>
-    </div>
-  <?php endif; ?>
-  <?php if(isset($_SESSION['error_curpNoUnique'])): ?>
-    <div class="container">
-      <h5><?= $_SESSION['error_curpNoUnique']?></h5>
-    </div>
-  <?php endif; ?>
   <form action="<?=URL?>Usuario/save" name="formularioRegistro" method="POST">
 
     <div class="container">
@@ -284,18 +269,18 @@
           </div>
         </div>
 
-
+<!--onkeypress="return justNumbers(event);"-->
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label for="telMovil" <input type="number">Teléfono celular</label><br>
-            <input  maxlength="12" onkeypress="return justNumbers(event);" id="telMovil" type="text" name="telMovil" class="validate" size="40">
+            <input  maxlength="12" id="telMovil" type="text" name="telMovil" class="validate" size="40">
           </div>
         </div>
 
 <div class="row">
         <div class="col-lg-12 col-md-12 estilo-forma">
           <label for="correo">Correo</label><br>
-          <input type="text" class="validate" name="email" id="correo" aria-describedby="emailHelp" size="40" >
+          <input type="text" class="validate" name="email" id="correo" aria-describedby="emailHelp" size="40">
           <small id="emailHelp" class="form-text text-muted"></small>
         </div>
       </fieldset>
@@ -341,6 +326,7 @@
               <option value="14">4to. semestre de bachillerato</option>
               <option value="15">5to. semestre de bachillerato</option>
               <option value="16">6to. semestre de bachillerato</option>
+              <option value="21">Carrera técnica</option>
               <option value="17">Licenciatura trunca</option>
               <option value="18">Licenciatura sin título</option>
               <option value="19">Licenciatura con título</option>
@@ -434,7 +420,9 @@
                     <label for="cul17" class="rc_sty" value="80" name="check[]">Construcción artesanal de instrumentos</label>
                     <input type="checkbox" value="81" name="check[]" id="cul18" />
                     <label for="cul18" class="rc_sty" value="81" name="check[]">Diseño de juguetes de madera y materiales de reuso</label>
-                    <br>
+                    <input type="checkbox" value="128" name="check[]" id="cul33" />
+                    <label for="cul33" class="rc_sty" value="128" name="check[]">Arte y creatividad</label>
+		  <br>
                   </div>
                   <label>Artes sustentables</label>
                   <div class="checkbox">
@@ -450,6 +438,10 @@
                   <div class="checkbox">
                     <input type="checkbox" value="84" name="check[]" id="cul21" />
                     <label for="cul21" class="rc_sty" value="84" name="check[]">Pintura artística</label><br>
+                    
+                   <input type="checkbox" value="123" name="check[]" id="cul32" />
+                    <label for="cul32" class="rc_sty" value="123" name="check[]">Dibujo y grabado</label><br>
+
                   </div>
                 </div>
                 <div class="col-lg-4">
@@ -677,7 +669,9 @@
 
                   <input type="checkbox" value="44" name="check[]" id="econo8" />
                   <label for="econo8" class="rc_sty" value="44" name="check[]">Agricultura urbana</label> <br>
-
+                  
+                 <input type="checkbox" value="41" name="check[]" id="econo9" />
+                  <label for="econo9" class="rc_sty" value="44" name="check[]">Gastronomía, panadería y catering</label> <br>   
                 </div>
                 <div class="col-lg-4">
                   <input type="checkbox" value="47" name="check[]" id="econo11" />
@@ -698,7 +692,7 @@
                   <br>
 
                   <input type="checkbox" value="54" name="check[]" id="econo18" />
-                  <label for="econo18" class="rc_sty" value="54" name="check[]">Fotografia de producto</label>
+                  <label for="econo18" class="rc_sty" value="54" name="check[]">Fotografía de producto</label>
                   <br>
 
                   <input type="checkbox" value="55" name="check[]" id="econo19" />
@@ -744,6 +738,37 @@
             </div>
           </div>
         </div>
+            
+            
+            
+            
+               <div class="row">
+          <div class="col-lg-12 estilo-forma">
+            <label>Talleres extra</label><br>
+            <div class="checkbox">
+              <div class="row">
+                <div class="col-lg-4">
+                  <input type="checkbox" name="check52" id="braile" />
+                  <label for="braile" class="rc_sty" value="124">Braile</label><br>
+                
+                </div>
+                <div class="col-lg-4">
+                  <input type="checkbox" name="check56" id="computo" />
+                  <label for="computo" class="rc_sty" value="125">Computación asistida</label>
+                                  </div>
+                  <div class="col-lg-4">
+                  <input type="checkbox" name="check60" id="señas" />
+                  <label for="señas" class="rc_sty" value="126">Introducción a  la lengua de señas Mexicana</label>
+                 
+                </div>
+                  
+                </div>
+            
+                <br>
+              </div>
+            </div>
+          </div>        
+            
      </fieldset>
 
 
@@ -755,7 +780,7 @@
             <div class="form-group">
               <label for="name1">Alcaldia</label>
               <select id="alcaldia_id" class="form-control" name="alcaldia_id" onchange="showPilarPorAlcaldia(this.value)"  required>
-                <option value="0" disabled selected>Selecciona</option>
+                <option value="" disabled selected>Selecciona</option>
                 <option value="1">Álvaro Obregón</option>
                 <option value="2">Azcapotzalco</option>
                 <option value="3">Benito Juárez</option>
@@ -778,7 +803,7 @@
             <div class="form-group">
               <label for="name1">PILARES</label>
               <select id="pilarSelect_id" class="form-control" name="pilarSelect_id" required>
-                <!--<option value="">Selecciona</option>-->
+                <option value="">Selecciona</option>
               </select>
             </div> <br><br>
           </div>

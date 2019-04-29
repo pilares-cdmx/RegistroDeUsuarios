@@ -214,7 +214,7 @@
             <label for="nombre">Alcaldia </label><br>
             <!--id "alcaldia" corresponde a Alcaldias-->
             <select name="alcaldia"  onchange="showColoniasPorAlcaldia(this.value)" required>
-              <option value="0" disabled selected>Selecciona</option>
+              <option value="" disabled selected>Selecciona</option>
               <option value="1">Álvaro Obregón</option>
               <option value="2">Azcapotzalco</option>
               <option value="3">Benito Juárez</option>

@@ -309,7 +309,7 @@
           <div class="col-lg-12 col-md-12 estilo-forma">
             <label>Último grado de estudios</label><br>
             <select name="grado" >
-              <option value="" disabled selected>Selecciona</option>
+              <option value="0" disabled selected>Selecciona</option>
               <option value="1">Preprimaria</option>
               <option value="2">1º de primaria</option>
               <option value="3">2º de primaria</option>
@@ -781,7 +781,7 @@
                 <option value="" disabled selected>Selecciona</option>
                 <option value="1">Álvaro Obregón</option>
                 <option value="2">Azcapotzalco</option>
-                <option value="3">Benito Juárez</option>
+                <!-- <option value="3">Benito Juárez</option> -->
                 <option value="4">Coyoacán</option>
                 <option value="5">Cuajimalpa de Morelos </option>
                 <option value="6">Cuauhtémoc</option>
@@ -789,11 +789,11 @@
                 <option value="8">Iztacalco</option>
                 <option value="9">Iztapalapa</option>
                 <option value="10">Magdalena Contreras</option>
-                <option value="11">Miguel Hidalgo</option>
+                <!-- <option value="11">Miguel Hidalgo</option> -->
                 <option value="12">Milpa Alta</option>
                 <option value="13">Tláhuac</option>
-                <option value="14">Tlalpan</option>
-                <option value="15">Venustiano Carranza</option>
+                <!-- <option value="14">Tlalpan</option> -->
+                <!-- <option value="15">Venustiano Carranza</option> -->
                 <option value="16">Xochimilco</option>
                  </select>
             </div>

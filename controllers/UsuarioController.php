@@ -34,8 +34,8 @@ class UsuarioController{
         header("Location:".URL.'Usuario/index');
     }
     public function error(){
-      
-        require_once 'views/usuario/error.php';
+      echo "<h1> El Ususario ya esta registrado </h1>"
+        // require_once 'views/usuario/error.php';
     }
 
     /**
@@ -124,9 +124,15 @@ class UsuarioController{
 
            $IdAlcaldiaPilar = $usuario->getIdAlcaldiaPilar();
            $usuario->setFolio($pilarId, $IdAlcaldiaPilar, $curp);
-           /**Se almacena la tabla usuario**/
-           $saveUsuario = $usuario->save();
-
+        /**validacion de usuario no duplicadop */
+            $nombreUsuario = $usuario->getNombre();
+            $apellidoPaternoUsuario = $usuario->getApellidoPaterno();
+            $apellidoMaternoUsuario = $usuario->getApellidoMaterno();
+            if($usuario->registroNoDuplicado($nombreUsuario, $apellidoPaternoUsuario, $apellidoMaternoUsuario)){
+                /**Se almacena la tabla usuario**/
+                $saveUsuario = $usuario->save();
+            }
+              
            $idUsuario = $usuario->lastInsertID();
         //  var_dump($idUsuario);die;
 

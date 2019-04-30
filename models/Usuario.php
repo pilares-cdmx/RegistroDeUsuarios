@@ -348,9 +348,9 @@ class Usuario{
     }
  }
 
- public function registroNoDuplicado($idUsuario){
+ public function registroNoDuplicado($nombre, $apellidoPat, $apellidoMat){
 
-    $query="SELECT * FROM Usuario WHERE idPUsuarios = '$idUsuario'";
+    $query="SELECT * FROM Usuario WHERE nombre LIKE '%$nombre%' AND apellidoPaterno LIKE '%$apellidoPat%' AND apellidoMaterno LIKE '%$apellidoMat%'";
     $tmp = $this->db->query($query);
         if ($row = mysqli_fetch_assoc($tmp)) {
             header("Location:".URL.'Usuario/error');

@@ -23,7 +23,7 @@ error_reporting(-1);
     <div class="container">
         <div class="jumbotron mt-5">
             <div class="mx-auto text-center">
-                <h1 class="display-4 mx">Bienvenido a tu "<?=$nombrePilar?>"</h1>
+                <h1 class="display-4 mx">Bienvenido a tu PILARES "<?=$nombrePilar?>"</h1>
             </div>
 
             <p class="lead">Hola <span class="text-uppercase"><?=$nombre?></span></p>
@@ -32,6 +32,7 @@ error_reporting(-1);
             <div class="text-center">
 
                 <a class="btn btn-primary btn-lg center" href="<?php echo constant('URL')?>Usuario/cerrarSesion" role="button">Terminar </a>
+                <a class="btn btn-success btn-lg" href="<?php echo constant('URL')?>Usuario/avisoPrivacidad" role="button">Agregar nuevo registro</a>
             </div>
 
         </div>

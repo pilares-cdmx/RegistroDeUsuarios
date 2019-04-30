@@ -51,7 +51,7 @@ class ActividadesPorUsuario{
         if ($row = mysqli_fetch_array($tmp)) {
             $this->Actividades_TiposActividades_idTiposActividades = $row['TiposActividades_idTiposActividades'];
         }else {
-            echo "No encontré tu TiposActividades_idTiposActividades";
+            echo "No encontré tu TiposActividades_idTiposActividades #1";
         }
 
     }
@@ -65,7 +65,7 @@ class ActividadesPorUsuario{
         if ($row = mysqli_fetch_array($tmp)) {
             $this->Usuario_Direccion_idDireccion = $row['Direccion_idDireccion'];
         }else {
-            echo "No encontré tu Direccion_idDireccion";
+            echo "No encontré tu Direccion_idDireccion #2";
         }
     }
     public function setUsuario_idColonia($idUsuario){
@@ -75,7 +75,7 @@ class ActividadesPorUsuario{
         if ($row = mysqli_fetch_array($tmp)) {
             $this->Usuario_Direccion_Colonias_idColonia = $row['Direccion_Colonias_idColonia'];
         }else {
-            echo "No encontré tu Direccion_Colonias_idColonia";
+            echo "No encontré tu Direccion_Colonias_idColonia #3";
         }
     }
     public function setUsuario_idAlcaldiasZonas($idUsuario){
@@ -85,7 +85,7 @@ class ActividadesPorUsuario{
         if ($row = mysqli_fetch_array($tmp)) {
             $this->Usuario_Direccion_Colonias_Alcaldias_idAlcaldiasZonas = $row['Direccion_Colonias_Alcaldias_idAlcaldiasZonas'];
         }else {
-            echo "No encontré tu Direccion_Colonias_Alcaldias_idAlcaldiasZonas";
+            echo "No encontré tu Direccion_Colonias_Alcaldias_idAlcaldiasZonas #4";
         }
     }
     public function setUsuario_idZonas($idUsuario){
@@ -95,7 +95,7 @@ class ActividadesPorUsuario{
         if ($row = mysqli_fetch_array($tmp)) {
             $this->Usuario_Direccion_Colonias_Alcaldias_Zonas_idZonas = $row['Direccion_Colonias_Alcaldias_Zonas_idZonas'];
         }else {
-            echo "No encontré tu Direccion_Colonias_Alcaldias_Zonas_idZonas";
+            echo "No encontré tu Direccion_Colonias_Alcaldias_Zonas_idZonas #5";
         }
     }
 

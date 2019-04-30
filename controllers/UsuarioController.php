@@ -128,7 +128,7 @@ class UsuarioController{
            $saveUsuario = $usuario->save();
 
            $idUsuario = $usuario->lastInsertID();
-          // var_dump($idUsuario);
+        //  var_dump($idUsuario);die;
 
            $usuarioPorPilar = new UsuariosPorPilar();
 

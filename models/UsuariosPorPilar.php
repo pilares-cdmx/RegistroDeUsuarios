@@ -66,7 +66,7 @@ class UsuariosPorPilar{
         if ($row = mysqli_fetch_array($tmp)) {
             $this->Pilares_Direccion_idDireccion = $row['Direccion_idDireccion'];
         }else {
-            echo "No encontré tu Direccion_idDireccion";
+            echo "No encontré tu Direccion_idDireccion #1";
         }
     }
     public function setPilares_Direccion_Colonias_idColonia($pilarId){
@@ -76,7 +76,7 @@ class UsuariosPorPilar{
         if ($row = mysqli_fetch_array($tmp)) {
             $this->Pilares_Direccion_Colonias_idColonia = $row['Direccion_Colonias_idColonia'];
         }else {
-            echo "No encontré tu Direccion_Colonias_idColonia";
+            echo "No encontré tu Direccion_Colonias_idColonia #2";
         }
     }
 
@@ -87,7 +87,7 @@ class UsuariosPorPilar{
         if ($row = mysqli_fetch_array($tmp)) {
             $this->Pilares_Direccion_Colonias_CodigosPostales_idCodigoPostal = $row['Direccion_Colonias_CodigosPostales_idCodigoPostal'];
         }else {
-            echo "No encontré tu Direccion_Colonias_CodigosPostales_idCodigoPostal";
+            echo "No encontré tu Direccion_Colonias_CodigosPostales_idCodigoPostal #3";
         }
     }
 
@@ -98,7 +98,7 @@ class UsuariosPorPilar{
         if ($row = mysqli_fetch_array($tmp)) {
             $this->Pilares_Direccion_Colonias_Alcaldias_idAlcaldiasZonas = $row['Direccion_Colonias_Alcaldias_idAlcaldiasZonas'];
         }else {
-            echo "No encontré tu Direccion_Colonias_Alcaldias_idAlcaldiasZonas";
+            echo "No encontré tu Direccion_Colonias_Alcaldias_idAlcaldiasZonas #5";
         }
     }
     public function setPilares_Direccion_Colonias_Alcaldias_Zonas_idZonas($pilarId){
@@ -108,7 +108,7 @@ class UsuariosPorPilar{
         if ($row = mysqli_fetch_array($tmp)) {
             $this->Pilares_Direccion_Colonias_Alcaldias_Zonas_idZonas = $row['Direccion_Colonias_Alcaldias_Zonas_idZonas'];
         }else {
-            echo "No encontré tu Direccion_Colonias_Alcaldias_Zonas_idZonas";
+            echo "No encontré tu Direccion_Colonias_Alcaldias_Zonas_idZonas #6";
         }
     }
     public function setIdUsuarios($idUsuario){
@@ -121,7 +121,7 @@ class UsuariosPorPilar{
         if ($row = mysqli_fetch_array($tmp)) {
             $this->Usuario_Direccion_idDireccion = $row['Direccion_idDireccion'];
         }else {
-            echo "No encontré tu Direccion_idDireccion";
+            echo "No encontré tu Direccion_idDireccion #7";
         }
     }
     public function setUsuario_Direccion_Colonias_idColonia($idUsuario){
@@ -131,7 +131,7 @@ class UsuariosPorPilar{
         if ($row = mysqli_fetch_array($tmp)) {
             $this->Usuario_Direccion_Colonias_idColonia = $row['Direccion_Colonias_idColonia'];
         }else {
-            echo "No encontré tu Direccion_Colonias_idColonia";
+            echo "No encontré tu Direccion_Colonias_idColonia #8";
         }
     }
     public function setUsuario_Direccion_Colonias_Alcaldias_idAlcaldiasZonas($idUsuario){
@@ -141,7 +141,7 @@ class UsuariosPorPilar{
         if ($row = mysqli_fetch_array($tmp)) {
             $this->Usuario_Direccion_Colonias_Alcaldias_idAlcaldiasZonas = $row['Direccion_Colonias_Alcaldias_idAlcaldiasZonas'];
         }else {
-            echo "No encontré tu Direccion_Colonias_Alcaldias_idAlcaldiasZonas";
+            echo "No encontré tu Direccion_Colonias_Alcaldias_idAlcaldiasZonas #9";
         }
     }
     public function setUsuario_Direccion_Colonias_Alcaldias_Zonas_idZonas($idUsuario){
@@ -151,7 +151,7 @@ class UsuariosPorPilar{
         if ($row = mysqli_fetch_array($tmp)) {
             $this->Usuario_Direccion_Colonias_Alcaldias_Zonas_idZonas = $row['Direccion_Colonias_Alcaldias_Zonas_idZonas'];
         }else {
-            echo "No encontré tu Direccion_Colonias_Alcaldias_Zonas_idZonas";
+            echo "No encontré tu Direccion_Colonias_Alcaldias_Zonas_idZonas #10";
         }
     }
 
@@ -178,6 +178,10 @@ class UsuariosPorPilar{
                 $result = true;
         }
         return $result;
+    }
+    public function lastInsertID(){
+        $tmp = $this->db->insert_id;
+        return $this->idDireccion = $tmp;
     }
 
 }

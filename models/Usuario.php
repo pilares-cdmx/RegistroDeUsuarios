@@ -181,7 +181,7 @@ class Usuario{
         //$this->folio = rand(9999, 32786);
         // $idDireccion=$this->getIdDireccion();
         $idCurp=substr($curp, 14, 4);
-        $incremental = 0;
+       $incremental = 0;
         // $this->folio = $pilarId.$IdAlcaldiaPilar.$idCurp;
         $folioTmp = $pilarId.$IdAlcaldiaPilar.$idCurp;
         $query="SELECT * FROM Usuario WHERE folio = '$folioTmp'";
@@ -313,7 +313,7 @@ class Usuario{
 			}
 
 	}
-//  OEGJ120723MDFLLNA2
+
   public function uniqueCURP($curpValidate){
     $query="SELECT curp FROM Usuario WHERE curp = '$curpValidate'";
     $tmp = $this->db->query($query);

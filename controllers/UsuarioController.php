@@ -34,7 +34,7 @@ class UsuarioController{
         header("Location:".URL.'Usuario/index');
     }
     public function error(){
-      echo "<h1> El Ususario ya esta registrado </h1>"
+      echo "<h1> El Ususario ya esta registrado </h1>";
         // require_once 'views/usuario/error.php';
     }
 
@@ -128,10 +128,11 @@ class UsuarioController{
             $nombreUsuario = $usuario->getNombre();
             $apellidoPaternoUsuario = $usuario->getApellidoPaterno();
             $apellidoMaternoUsuario = $usuario->getApellidoMaterno();
-            if($usuario->registroNoDuplicado($nombreUsuario, $apellidoPaternoUsuario, $apellidoMaternoUsuario)){
-                /**Se almacena la tabla usuario**/
-                $saveUsuario = $usuario->save();
-            }
+            // if($usuario->registroNoDuplicado($nombreUsuario, $apellidoPaternoUsuario, $apellidoMaternoUsuario)){
+               
+            // }
+             /**Se almacena la tabla usuario**/
+             $saveUsuario = $usuario->save();
               
            $idUsuario = $usuario->lastInsertID();
         //  var_dump($idUsuario);die;

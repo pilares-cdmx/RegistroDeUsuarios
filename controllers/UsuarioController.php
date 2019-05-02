@@ -34,18 +34,17 @@ class UsuarioController{
         header("Location:".URL.'Usuario/index');
     }
     public function error(){
-      echo "<h1> El Ususario ya esta registrado </h1>";
-        // require_once 'views/usuario/error.php';
+    //   echo "<h1> El CURP ya esta registrado </h1>";
+     require_once 'views/errores/curpError.php';
     }
 
     public function getColoniasPorAlcaldia(){
         // echo "<h1> Estas en colonias por alcaldia</h1>";
-        $usuarioObj = new Usuario();
-      }
-    /**
-     * [validar description]
-     * @return [type] [description]
-     */
+        // $usuarioObj = new Usuario();
+    }
+
+    
+
     public function validar(){
       $usuarioObj = new Usuario();
       if (isset($_POST['login']))
@@ -102,8 +101,10 @@ class UsuarioController{
            $usuario->setApellidoPaterno($_POST['apellidoPat']);
            $usuario->setApellidoMaterno($_POST['apellidoMat']);
            $usuario->setCurp($_POST['curp']);
-
+            
            $curp = $usuario->getCurp();
+           $usuario->uniqueCURP($curp);
+        //   var_dump($usuario->uniqueCURP($curp));die; 
 
            $usuario->setSexo($curp);
            $usuario->setFechaNacimiento($curp);
@@ -123,15 +124,18 @@ class UsuarioController{
 
            $usuario->setPilarId($_POST['pilarSelect_id']);
            $pilarId=$usuario->getPilarId();
+        //    var_dump($pilarId);die;
            $usuario->setPilarNombre($pilarId);
+        //    var_dump($usuario->getPilarSelecionado());die;
            $usuario->setIdAlcaldiaPilar($pilarId);
 
            $IdAlcaldiaPilar = $usuario->getIdAlcaldiaPilar();
            $usuario->setFolio($pilarId, $IdAlcaldiaPilar, $curp);
+        //    var_dump($usuario->getFolio());die;
         /**validacion de usuario no duplicadop */
-            $nombreUsuario = $usuario->getNombre();
-            $apellidoPaternoUsuario = $usuario->getApellidoPaterno();
-            $apellidoMaternoUsuario = $usuario->getApellidoMaterno();
+            // $nombreUsuario = $usuario->getNombre();
+            // $apellidoPaternoUsuario = $usuario->getApellidoPaterno();
+            // $apellidoMaternoUsuario = $usuario->getApellidoMaterno();
             // if($usuario->registroNoDuplicado($nombreUsuario, $apellidoPaternoUsuario, $apellidoMaternoUsuario)){
                
             // }
@@ -139,7 +143,7 @@ class UsuarioController{
              $saveUsuario = $usuario->save();
               
            $idUsuario = $usuario->lastInsertID();
-        //  var_dump($idUsuario);die;
+        //   var_dump($idUsuario);die;
 
            $usuarioPorPilar = new UsuariosPorPilar();
 

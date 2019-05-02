@@ -50,7 +50,7 @@
                   }
               };
 
-              xmlhttp.open("GET", "<?=URL?>Usuario/getColoniasPorAlcaldia?q="+str,true);
+              xmlhttp.open("GET", "<?=URL?>getColoniasPorAlcaldia.php?q="+str,true);
               xmlhttp.send();
           }
       }

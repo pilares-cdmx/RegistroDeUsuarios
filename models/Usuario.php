@@ -314,18 +314,13 @@ class Usuario{
 
 	}
 
-  public function uniqueCURP($curpValidate){
-    $query="SELECT curp FROM Usuario WHERE curp = '$curpValidate'";
+  public function uniqueCURP($curp){
+    $query="SELECT * FROM Usuario WHERE curp = '$curp'";
     $tmp = $this->db->query($query);
     $result = true;
 
-    if(!$tmp){
-      echo mysqli_error();
-      exit;
-    }
-
-    if ($curpValidate = mysqli_fetch_assoc($tmp)) {
-      return false;
+    if ($curp = mysqli_fetch_assoc($tmp)) {
+      return header("Location:".URL.'Usuario/error');
     }else {
       return true;
     }

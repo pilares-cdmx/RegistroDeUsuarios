@@ -277,7 +277,7 @@ class Usuario{
         '{$this->getCorreo()}',
         '{$this->getTelefonoCelular()}',
         '{$this->getTelefonoCasa()}',
-        '{$this->getFechaDeRegistro()}',
+         NULL,
         '{$this->getFolio()}',
         '{$this->getIdDireccion()}',
         '{$this->getIdColonia()}',

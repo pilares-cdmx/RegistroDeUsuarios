@@ -504,7 +504,7 @@
                     <input type="checkbox" value="96" name="check[]" id="dep7" />
                     <label for="dep7" class="rc_sty" value="96" name="check[]">Yoga</label><br>
                     <input type="checkbox" value="97" name="check[]" id="dep8" />
-                    <label for="dep8" class="rc_sty" value="97" name="check[]">Tai chi</label>
+                    <label for="dep8" class="rc_sty" value="97" name="check[]">Tai chi</label><br>
                     <input type="checkbox" value="129" name="check[]" id="dep13" />
                     <label for="dep13" class="rc_sty" value="129" name="check[]">Ritmos Latinos</label>
                     <br>

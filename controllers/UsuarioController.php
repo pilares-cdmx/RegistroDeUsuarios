@@ -38,6 +38,10 @@ class UsuarioController{
         // require_once 'views/usuario/error.php';
     }
 
+    public function getColoniasPorAlcaldia(){
+        // echo "<h1> Estas en colonias por alcaldia</h1>";
+        $usuarioObj = new Usuario();
+      }
     /**
      * [validar description]
      * @return [type] [description]

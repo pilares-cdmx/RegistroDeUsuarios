@@ -18,7 +18,7 @@ mysqli_select_db($con, "pilaresDB");
 
 $fechaNac = array_column($Usuario, 'fechaNacimiento', 'idUsuarios');
 
-$anioActual = date("Y-m-d-H-i");
+$anioActual = date("Y-m-d-H-i-s");
 echo $anioActual;
     foreach($fechaNac as $key => $value){
 

@@ -93,7 +93,7 @@ class Usuario{
     }
     public function getFechaDeRegistro(){
 
-        return $this->fechaDeRegistro = date("Y-M-D");
+        return $this->fechaDeRegistro;
     }
     public function getFolio(){
         return $this->folio;
@@ -173,6 +173,10 @@ class Usuario{
     }
     public function setTelefonoCasa($telefonoCasa){
         $this->telefonoCasa = $telefonoCasa;
+    }
+
+    public function setFechaDeRegistro($fechaDeRegistro){
+        $this->fechaDeRegistro = date("Y-m-d-H-i-s");
     }
     public function setFolio($pilarId, $IdAlcaldiaPilar, $curp){
         //$this->pilarId = $this->getPilarId();
@@ -273,7 +277,7 @@ class Usuario{
         '{$this->getCorreo()}',
         '{$this->getTelefonoCelular()}',
         '{$this->getTelefonoCasa()}',
-          NULL,
+        '{$this->getFechaDeRegistro()}',
         '{$this->getFolio()}',
         '{$this->getIdDireccion()}',
         '{$this->getIdColonia()}',

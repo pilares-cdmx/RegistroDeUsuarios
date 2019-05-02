@@ -10,15 +10,16 @@
 
 // `pilaresDB`.`Usuario`
 
-$con = mysqli_connect('localhost', 'root', '', 'pilaresDB1');
+$con = mysqli_connect('localhost', 'francisco', 'tu_contrasena', 'pilaresDB');
         if (!$con) {
             die('Could not connect: ' . mysqli_error($con));
         }
-mysqli_select_db($con, "pilaresDB1");
+mysqli_select_db($con, "pilaresDB");
 
 $fechaNac = array_column($Usuario, 'fechaNacimiento', 'idUsuarios');
 
-$anioActual = date("Y");
+$anioActual = date("Y-M-D");
+echo $anioActual;
     foreach($fechaNac as $key => $value){
 
         $anioTablaUsuario=substr($value, 0, 4);

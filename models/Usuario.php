@@ -92,7 +92,8 @@ class Usuario{
         return $this->telefonoCasa;
     }
     public function getFechaDeRegistro(){
-        return $this->fechaDeRegistro;
+
+        return $this->fechaDeRegistro = date("Y-M-D");
     }
     public function getFolio(){
         return $this->folio;

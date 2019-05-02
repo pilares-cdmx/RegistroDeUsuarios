@@ -520,8 +520,9 @@
                     <input type="checkbox" value="100" name="check[]" id="dep11" />
                     <label for="dep11" class="rc_sty" value="100" name="check[]">Karate do</label><br>
                     <input type="checkbox" value="101" name="check[]" id="dep12" />
-                    <label for="dep12" class="rc_sty" value="101" name="check[]">Kung fu</label>
-
+                    <label for="dep12" class="rc_sty" value="101" name="check[]">Kung fu</label><br>
+                    <input type="checkbox" value="130" name="check[]" id="dep14" />
+                    <label for="dep14" class="rc_sty" value="130" name="check[]">Taekwondo</label>
                   </div>
                 </div>
               </div>

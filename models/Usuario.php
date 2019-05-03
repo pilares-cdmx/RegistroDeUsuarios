@@ -173,6 +173,10 @@ class Usuario{
     public function setTelefonoCasa($telefonoCasa){
         $this->telefonoCasa = $telefonoCasa;
     }
+    public function setFechaDeRegistro(){
+        $this->fechaDeRegistro = date("Y-m-d");// h:i (campos para hora y minutos)
+    }
+    
     public function setFolio($pilarId, $IdAlcaldiaPilar, $curp){
         //$this->pilarId = $this->getPilarId();
         //$idDireccion = $this->getIdDireccion();
@@ -273,6 +277,7 @@ class Usuario{
         '{$this->getTelefonoCelular()}',
         '{$this->getTelefonoCasa()}',
           NULL,
+        '{$this->getFechaDeRegistro()}', 
         '{$this->getFolio()}',
         '{$this->getIdDireccion()}',
         '{$this->getIdColonia()}',

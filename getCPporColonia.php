@@ -25,8 +25,8 @@ error_reporting(-1);
 
 $q = intval($_GET['q']);
 
-// $con = mysqli_connect('localhost', 'root', '', 'pilaresDB');
-$con = mysqli_connect('localhost', 'francisco', 'tu_contrasena', 'pilaresDB');
+$con = mysqli_connect('localhost', 'root', '', 'pilaresDB');
+// $con = mysqli_connect('localhost', 'francisco', 'tu_contrasena', 'pilaresDB');
 if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }

@@ -103,8 +103,19 @@ class UsuarioController{
            $usuario->setSexo($curp);
            $usuario->setFechaNacimiento($curp);
            $usuario->setEntidadFederativaNacimiento($curp);
-           $usuario->setGradoEstudios($_POST['grado']);
-           $usuario->setEstudias($_POST['estudias']);
+
+           if (isset($_POST['grado'])){
+            $usuario->setGradoEstudios($_POST['grado']);
+           }else{
+            $usuario->setGradoEstudios(0); 
+           }
+           
+           if (isset($_POST['estudias'])){
+             $usuario->setEstudias($_POST['estudias']);
+            }else{
+             $usuario->setEstudias('');
+            }
+        //    $usuario->setEstudias($_POST['estudias']);
            $usuario->setOcupacionActual($_POST['ocupacionAct']);
            $usuario->setGrupoEtnico($_POST['gruPoet']);
            $usuario->setTiempoResidencia($_POST['timepoResidencia']);

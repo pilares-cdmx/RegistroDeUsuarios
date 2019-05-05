@@ -143,7 +143,16 @@ class Usuario{
         $this->sexo = substr($curp, 10, 1);
     }
     public function setFechaNacimiento($curp){
-        $this->fechaNacimiento = substr($curp, 4, 2).substr($curp, 6, 2).substr($curp, 8, 2);
+        // $this->fechaNacimiento = substr($curp, 4, 2).substr($curp, 6, 2).substr($curp, 8, 2);
+        $fechaNacimientoTMP = substr($curp, 4, 2).substr($curp, 6, 2).substr($curp, 8, 2);
+        $año = substr($fechaNacimientoTMP, 0, 2);
+        $sigloXX = '19';
+        if($año < 71){
+            $this->fechaNacimiento = $sigloXX.$fechaNacimientoTMP;
+        }else{
+            $this->fechaNacimiento = $fechaNacimientoTMP;
+
+        }
     }
     public function setEntidadFederativaNacimiento($curp){
         $this->entidadFederativaNacimiento = substr($curp, 11, 2);

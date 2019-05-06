@@ -287,12 +287,8 @@ class Usuario{
         '{$this->getCorreo()}',
         '{$this->getTelefonoCelular()}',
         '{$this->getTelefonoCasa()}',
-<<<<<<< HEAD
-         NULL,
-=======
           NULL,
         '{$this->getFechaDeRegistro()}', 
->>>>>>> produccion-test
         '{$this->getFolio()}',
         '{$this->getIdDireccion()}',
         '{$this->getIdColonia()}',

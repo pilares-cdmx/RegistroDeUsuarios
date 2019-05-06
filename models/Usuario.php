@@ -144,7 +144,17 @@ class Usuario{
         $this->sexo = substr($curp, 10, 1);
     }
     public function setFechaNacimiento($curp){
-        $this->fechaNacimiento = substr($curp, 4, 2).substr($curp, 6, 2).substr($curp, 8, 2);
+        // $this->fechaNacimiento = substr($curp, 4, 2).substr($curp, 6, 2).substr($curp, 8, 2);
+        $fechaNacimientoTMP = substr($curp, 4, 2).substr($curp, 6, 2).substr($curp, 8, 2);
+        $anio = substr($fechaNacimientoTMP, 0, 2);
+        $sigloXX = '19';
+        $anioActual = date("y");
+        if($anio < 71 && $anio > $anioActual){
+            $this->fechaNacimiento = $sigloXX.$fechaNacimientoTMP;
+        }else{
+            $this->fechaNacimiento = $fechaNacimientoTMP;
+
+        }
     }
     public function setEntidadFederativaNacimiento($curp){
         $this->entidadFederativaNacimiento = substr($curp, 11, 2);
@@ -174,10 +184,10 @@ class Usuario{
     public function setTelefonoCasa($telefonoCasa){
         $this->telefonoCasa = $telefonoCasa;
     }
-
-    public function setFechaDeRegistro($fechaDeRegistro){
-        $this->fechaDeRegistro = date("Y-m-d-H-i-s");
+    public function setFechaDeRegistro(){
+        $this->fechaDeRegistro = date("Y-m-d");// h:i (campos para hora y minutos)
     }
+    
     public function setFolio($pilarId, $IdAlcaldiaPilar, $curp){
         //$this->pilarId = $this->getPilarId();
         //$idDireccion = $this->getIdDireccion();
@@ -277,7 +287,12 @@ class Usuario{
         '{$this->getCorreo()}',
         '{$this->getTelefonoCelular()}',
         '{$this->getTelefonoCasa()}',
+<<<<<<< HEAD
          NULL,
+=======
+          NULL,
+        '{$this->getFechaDeRegistro()}', 
+>>>>>>> produccion-test
         '{$this->getFolio()}',
         '{$this->getIdDireccion()}',
         '{$this->getIdColonia()}',

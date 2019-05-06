@@ -10,6 +10,7 @@ require_once 'models/Usuario.php';
 require_once 'models/ActividadesPorUsuario.php';
 require_once 'models/UsuariosPorPilar.php';
 class UsuarioController{
+    
     public function index(){
         //echo "Controlador usuarios, Accion index";
         require_once 'views/formulario/login.php';
@@ -37,13 +38,6 @@ class UsuarioController{
     //   echo "<h1> El CURP ya esta registrado </h1>";
      require_once 'views/errores/curpError.php';
     }
-
-    public function getColoniasPorAlcaldia(){
-        // echo "<h1> Estas en colonias por alcaldia</h1>";
-        // $usuarioObj = new Usuario();
-    }
-
-    
 
     public function validar(){
       $usuarioObj = new Usuario();
@@ -109,14 +103,28 @@ class UsuarioController{
            $usuario->setSexo($curp);
            $usuario->setFechaNacimiento($curp);
            $usuario->setEntidadFederativaNacimiento($curp);
-           $usuario->setGradoEstudios($_POST['grado']);
-           $usuario->setEstudias($_POST['estudias']);
+
+           if (isset($_POST['grado'])){
+            $usuario->setGradoEstudios($_POST['grado']);
+           }else{
+            $usuario->setGradoEstudios(0); 
+           }
+           
+           if (isset($_POST['estudias'])){
+             $usuario->setEstudias($_POST['estudias']);
+            }else{
+             $usuario->setEstudias('');
+            }
+        //    $usuario->setEstudias($_POST['estudias']);
            $usuario->setOcupacionActual($_POST['ocupacionAct']);
            $usuario->setGrupoEtnico($_POST['gruPoet']);
            $usuario->setTiempoResidencia($_POST['timepoResidencia']);
            $usuario->setCorreo($_POST['email']);
            $usuario->setTelefonoCelular($_POST['telMovil']);
            $usuario->setTelefonoCasa($_POST['telCasa']);
+
+           $usuario->setFechaDeRegistro();
+
            $usuario->setIdDireccion($idDireccion);
            $usuario->setIdColonia($idDireccion);
            $usuario->setIdAlcaldias($idDireccion);

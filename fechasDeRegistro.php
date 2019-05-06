@@ -19,6 +19,7 @@ error_reporting(-1);
      FROM Usuario";
 
 $result = mysqli_query($con, $sql);
+//var_dump($result);die;
 if($result){
    
     while ($fechaRegistro = mysqli_fetch_array($result)){

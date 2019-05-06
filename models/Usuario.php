@@ -145,9 +145,10 @@ class Usuario{
     public function setFechaNacimiento($curp){
         // $this->fechaNacimiento = substr($curp, 4, 2).substr($curp, 6, 2).substr($curp, 8, 2);
         $fechaNacimientoTMP = substr($curp, 4, 2).substr($curp, 6, 2).substr($curp, 8, 2);
-        $año = substr($fechaNacimientoTMP, 0, 2);
+        $anio = substr($fechaNacimientoTMP, 0, 2);
         $sigloXX = '19';
-        if($año < 71){
+        $anioActual = date("y");
+        if($anio < 71 && $anio > $anioActual){
             $this->fechaNacimiento = $sigloXX.$fechaNacimientoTMP;
         }else{
             $this->fechaNacimiento = $fechaNacimientoTMP;

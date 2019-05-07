@@ -52,7 +52,7 @@ error_reporting(-1);
                 SET folio = '$idFolioNuevo'
                 WHERE idUsuarios = '$idUsuario'";
                 $resultFolio = mysqli_query($con, $sqlInsertaFolioOficial);
-                echo "ok";
+                echo "ok <br>";
 
         }
     }

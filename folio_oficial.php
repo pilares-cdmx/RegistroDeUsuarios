@@ -49,10 +49,10 @@ error_reporting(-1);
             $sqlInsertaFolioOficial=
                 "UPDATE 
                 Usuario 
-                SET folio_oficial = '$idFolioNuevo'
+                SET folio = '$idFolioNuevo'
                 WHERE idUsuarios = '$idUsuario'";
                 $resultFolio = mysqli_query($con, $sqlInsertaFolioOficial);
-                echo "ok";
+                echo "ok <br>";
 
         }
     }

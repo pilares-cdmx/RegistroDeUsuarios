@@ -75,7 +75,7 @@ error_reporting(-1);
                       WHERE idUsuarios = '$idUsuario'";
                       $resultFolio = mysqli_query($con, $sqlInsertaFolioNoRepetido);
                     //   $incremental = $incremental++;
-                    //   var_dump($incremental);
+                    var_dump($noRepetido);
                       echo "ok <br>"; 
                       
                   

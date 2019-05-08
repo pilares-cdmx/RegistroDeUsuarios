@@ -204,6 +204,7 @@ class Usuario{
             if ($usuario = mysqli_fetch_assoc($tmp)) {
                 $incremental += $incremental++;
                 $this->folio = $folioTmp.$incremental;
+                // $incremental += $incremental++;
             }else {
                 $this->folio =  $folioTmp;
             }

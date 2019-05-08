@@ -5,9 +5,9 @@ error_reporting(-1);
 
     // $q = intval($_GET['q']);
     // header('Content-Type: application/json');
-    // $con = mysqli_connect('localhost', 'francisco', 'tu_contrasena', 'pilaresDB');
+    $con = mysqli_connect('localhost', 'francisco', 'tu_contrasena', 'pilaresDB');
     // $con = mysqli_connect('localhost', 'root', '', 'pilaresDB');
-    $con = mysqli_connect('localhost', 'root', 'S2NT2m2r2d0n2...', 'pilaresDB');
+    // $con = mysqli_connect('localhost', 'root', 'S2NT2m2r2d0n2...', 'pilaresDB');
 
         if (!$con) {
             die('Could not connect: ' . mysqli_error($con));
@@ -52,22 +52,54 @@ error_reporting(-1);
                     FROM Usuario 
                     WHERE folio IN (SELECT folio FROM Usuario GROUP BY folio HAVING count(*) >= 2)";
 
-      $resultFoliosRepetidos = mysqli_query($con, $sqlFoliosRepetidos);
 
-
-
-      while ($row = mysqli_fetch_array($resultFoliosRepetidos)){
-          $incremental = rand(0,9);
+    //  $query = "SELECT folio , idUsuarios FROM Usuario";
+      $resultFolios= mysqli_query($con, $sqlFoliosRepetidos);
+      while ($row = mysqli_fetch_array($resultFolios)){
+          $random = rand(0,9);
           $folio = $row['folio'];
           $idUsuario = $row['idUsuarios'];
-
-          $sqlInsertaFolioNoRepetido=
-                      "UPDATE 
+          $noRepetido = $folio.$random;
+        //   $query2="SELECT * FROM Usuario WHERE folio = '$folio'";
+        //   $tmp= mysqli_query($con, $query2);
+        //   if ($tmp) {
+                    //   $usuario = mysqli_fetch_assoc($tmp);
+                      
+                      $sqlInsertaFolioNoRepetido="UPDATE 
                       Usuario 
-                      SET folio = '$folio'.'$incremental'
+                      SET folio = '$noRepetido'
                       WHERE idUsuarios = '$idUsuario'";
                       $resultFolio = mysqli_query($con, $sqlInsertaFolioNoRepetido);
+                    //   $incremental = $incremental++;
+                    //   var_dump($incremental);
                       echo "ok <br>"; 
-          $incremental = rand(0,9);             
+                      
+                  
+        // }
       }
+    //   $folioTmp = $pilarId.$IdAlcaldiaPilar.$idCurp;
+    //   $query="SELECT * FROM Usuario WHERE folio = '$folioTmp'";
+    //   $tmp = $this->db->query($query);
+    //       if ($usuario = mysqli_fetch_assoc($tmp)) {
+    //           $incremental += $incremental++;
+    //           $this->folio = $folioTmp.$incremental;
+    //           // $incremental += $incremental++;
+    //       }else {
+    //           $this->folio =  $folioTmp;
+    //       }
+
+    //   while ($row = mysqli_fetch_array($resultFoliosRepetidos)){
+    //       $incremental = rand(0,9);
+    //       $folio = $row['folio'];
+    //       $idUsuario = $row['idUsuarios'];
+
+    //       $sqlInsertaFolioNoRepetido=
+    //                   "UPDATE 
+    //                   Usuario 
+    //                   SET folio = '$folio'.'$incremental'
+    //                   WHERE idUsuarios = '$idUsuario'";
+    //                   $resultFolio = mysqli_query($con, $sqlInsertaFolioNoRepetido);
+    //                   echo "ok <br>"; 
+    //       $incremental = rand(0,9);             
+    //   }
 ?>

@@ -5,9 +5,9 @@ error_reporting(-1);
 
     // $q = intval($_GET['q']);
     // header('Content-Type: application/json');
-    $con = mysqli_connect('localhost', 'francisco', 'tu_contrasena', 'pilaresDB');
+    // $con = mysqli_connect('localhost', 'francisco', 'tu_contrasena', 'pilaresDB');
     // $con = mysqli_connect('localhost', 'root', '', 'pilaresDB');
-    // $con = mysqli_connect('localhost', 'root', 'S2NT2m2r2d0n2...', 'pilaresDB');
+    $con = mysqli_connect('localhost', 'root', 'S2NT2m2r2d0n2...', 'pilaresDB');
 
         if (!$con) {
             die('Could not connect: ' . mysqli_error($con));
@@ -15,72 +15,59 @@ error_reporting(-1);
 
     mysqli_select_db($con, "pilaresDB");
     // SELECT U1.idUsuarios, U2.Pilares_idPilares, U2.Pilares_Direccion_Colonias_Alcaldias_idAlcaldiasZonas, CONCAT(U2.Pilares_idPilares, U2.Pilares_Direccion_Colonias_Alcaldias_idAlcaldiasZonas, SUBSTRING(U1.curp, 14, 5)) AS folio_oficial, U1.curp FROM Usuario U1, UsuariosPorPilar U2 WHERE U1.idUsuarios = U2.Usuario_idUsuarios limit 10;
-    $sql=
-    "SELECT 
-        U1.idUsuarios,
-        U1.folio, 
-        U2.Pilares_idPilares, 
-        U2.Pilares_Direccion_Colonias_Alcaldias_idAlcaldiasZonas, 
-        CONCAT(U2.Pilares_idPilares, U2.Pilares_Direccion_Colonias_Alcaldias_idAlcaldiasZonas, 
-        SUBSTRING(U1.curp, 15, 6)) AS folio_oficial, 
-        U1.curp 
-     FROM Usuario U1, UsuariosPorPilar U2 
-     WHERE U1.idUsuarios = U2.Usuario_idUsuarios";
+    // $sql=
+    // "SELECT 
+    //     U1.idUsuarios,
+    //     U1.folio, 
+    //     U2.Pilares_idPilares, 
+    //     U2.Pilares_Direccion_Colonias_Alcaldias_idAlcaldiasZonas, 
+    //     CONCAT(U2.Pilares_idPilares, U2.Pilares_Direccion_Colonias_Alcaldias_idAlcaldiasZonas, 
+    //     SUBSTRING(U1.curp, 15, 6)) AS folio_oficial, 
+    //     U1.curp 
+    //  FROM Usuario U1, UsuariosPorPilar U2 
+    //  WHERE U1.idUsuarios = U2.Usuario_idUsuarios";
 
-    $result = mysqli_query($con, $sql);
-    if($result){
-        // echo "vas por buen camino";
-        // $sqlInsertaNuevoFolio="";
+    // $result = mysqli_query($con, $sql);
+    // if($result){
+         
+    //     while ($nuevoFolio = mysqli_fetch_array($result)){
+    //         // var_dump($nuevoFolio['folio_oficial']);
+    //         $idFolioNuevo = $nuevoFolio['folio_oficial'];
+    //         $folioViejo = $nuevoFolio['folio'];
+    //         $idUsuario = $nuevoFolio['idUsuarios'];
+          
+    //             $sqlInsertaFolioOficial=
+    //             "UPDATE 
+    //             Usuario 
+    //             SET folio = '$idFolioNuevo'
+    //             WHERE idUsuarios = '$idUsuario'";
+    //             $resultFolio = mysqli_query($con, $sqlInsertaFolioOficial);
+    //             echo "ok <br>";      
 
-        // $resultFolio = mysqli_query($con, $sql);
-       
-        // if($resultFolio){
-            // while ($nuevoFolio = mysqli_fetch_array($result)){
-            //     // print json_encode($nuevoFolio['folio_oficial']);
-            //     $folio = $nuevoFolio['folio_oficial'];
-                // $sqlInsertaFolioOficial=
-                // "UPDATE Usuario SET folio_oficial = '$folio'";
-                // $resultFolio = mysqli_query($con, $sqlInsertaFolioOficial);
-            // }
-        // }
-        
-        // $nuevoFolio = mysqli_fetch_array($result);
-        while ($nuevoFolio = mysqli_fetch_array($result)){
-            // var_dump($nuevoFolio['folio_oficial']);
-            $idFolioNuevo = $nuevoFolio['folio_oficial'];
-            $folioViejo = $nuevoFolio['folio'];
-            $idUsuario = $nuevoFolio['idUsuarios'];
-            
-            if($folioViejo == $idFolioNuevo){
-                $incremental = 0;
-                $incremental += $incremental++;
-                $idFolioNuevo = $idFolioNuevo.$incremental;
-                echo 'NO REPETIDO';
-                // var_dump($idFolioNuevoNoRepetido);die;
-                // $sqlInsertaFolioOficial=
-                // "UPDATE 
-                // Usuario 
-                // SET folio = '$idFolioNuevoNoRepetido'
-                // WHERE idUsuarios = '$idUsuario'";
-                // $resultFolio = mysqli_query($con, $sqlInsertaFolioOficial);
-                // echo "ok no repetido <br>";
-            }
-                $sqlInsertaFolioOficial=
-                "UPDATE 
-                Usuario 
-                SET folio = '$idFolioNuevo'
-                WHERE idUsuarios = '$idUsuario'";
-                $resultFolio = mysqli_query($con, $sqlInsertaFolioOficial);
-                echo "ok <br>";
-            
+    //     }
 
-            
-
-        }
-    }
-    // else{
-    //     echo "No se logró realizar la consulta";
     // }
+ 
+    $sqlFoliosRepetidos = "SELECT folio, idUsuarios  
+                    FROM Usuario 
+                    WHERE folio IN (SELECT folio FROM Usuario GROUP BY folio HAVING count(*) >= 2)";
+
+      $resultFoliosRepetidos = mysqli_query($con, $sqlFoliosRepetidos);
 
 
+
+      while ($row = mysqli_fetch_array($resultFoliosRepetidos)){
+          $incremental = rand(0,9);
+          $folio = $row['folio'];
+          $idUsuario = $row['idUsuarios'];
+
+          $sqlInsertaFolioNoRepetido=
+                      "UPDATE 
+                      Usuario 
+                      SET folio = '$folio'.'$incremental'
+                      WHERE idUsuarios = '$idUsuario'";
+                      $resultFolio = mysqli_query($con, $sqlInsertaFolioNoRepetido);
+                      echo "ok <br>"; 
+          $incremental = rand(0,9);             
+      }
 ?>

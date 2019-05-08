@@ -69,7 +69,7 @@ error_reporting(-1);
                       Usuario 
                       SET folio = '$noRepetido'
                       WHERE idUsuarios = '$idUsuario'";
-                      // $resultFolio = mysqli_query($con, $sqlInsertaFolioNoRepetido);
+                      $resultFolio = mysqli_query($con, $sqlInsertaFolioNoRepetido);
                     //   $incremental = $incremental++;
                     var_dump($noRepetido);
                       echo "ok <br>"; 

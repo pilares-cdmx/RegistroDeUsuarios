@@ -5,9 +5,9 @@ error_reporting(-1);
 
     // $q = intval($_GET['q']);
     // header('Content-Type: application/json');
-    $con = mysqli_connect('localhost', 'francisco', 'tu_contrasena', 'pilaresDB');
+    // $con = mysqli_connect('localhost', 'francisco', 'tu_contrasena', 'pilaresDB');
     // $con = mysqli_connect('localhost', 'root', '', 'pilaresDB');
-    // $con = mysqli_connect('localhost', 'root', 'S2NT2m2r2d0n2...', 'pilaresDB');
+    $con = mysqli_connect('localhost', 'root', 'S2NT2m2r2d0n2...', 'pilaresDB');
 
         if (!$con) {
             die('Could not connect: ' . mysqli_error($con));
@@ -69,7 +69,7 @@ error_reporting(-1);
                       Usuario 
                       SET folio = '$noRepetido'
                       WHERE idUsuarios = '$idUsuario'";
-                      $resultFolio = mysqli_query($con, $sqlInsertaFolioNoRepetido);
+                      // $resultFolio = mysqli_query($con, $sqlInsertaFolioNoRepetido);
                     //   $incremental = $incremental++;
                     var_dump($noRepetido);
                       echo "ok <br>"; 

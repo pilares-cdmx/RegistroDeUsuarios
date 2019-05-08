@@ -22,7 +22,7 @@ error_reporting(-1);
         U2.Pilares_idPilares, 
         U2.Pilares_Direccion_Colonias_Alcaldias_idAlcaldiasZonas, 
         CONCAT(U2.Pilares_idPilares, U2.Pilares_Direccion_Colonias_Alcaldias_idAlcaldiasZonas, 
-        SUBSTRING(U1.curp, 14, 5)) AS folio_oficial, 
+        SUBSTRING(U1.curp, 15, 6)) AS folio_oficial, 
         U1.curp 
      FROM Usuario U1, UsuariosPorPilar U2 
      WHERE U1.idUsuarios = U2.Usuario_idUsuarios";

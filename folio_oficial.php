@@ -5,12 +5,16 @@ error_reporting(-1);
 
     // $q = intval($_GET['q']);
     // header('Content-Type: application/json');
-    $con = mysqli_connect('localhost', 'francisco', 'tu_contrasena', 'pilaresDB');
+     $con = mysqli_connect('localhost', 'francisco', 'tu_contrasena', 'pilaresDB');
     // $con = mysqli_connect('localhost', 'root', '', 'pilaresDB');
+
 
     //$con = mysqli_connect('localhost', 'root', 'S2NT2m2r2d0n2...', 'pilaresDB');
 
     // $con = mysqli_connect('localhost', 'root', 'S2NT2m2r2d0n2...', 'pilaresDB');
+
+//    $con = mysqli_connect('localhost', 'root', 'S2NT2m2r2d0n2...', 'pilaresDB');
+
 
 
         if (!$con) {

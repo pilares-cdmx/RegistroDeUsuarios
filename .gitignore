@@ -1,6 +1,5 @@
-/config
+config
 /getColoniasPorAlcaldia.php
 /getCPporColonia.php
 /getPilarPorAlcaldia.php
-
 api

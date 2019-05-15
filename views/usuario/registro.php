@@ -403,6 +403,16 @@
                     <label for="cul11" class="rc_sty" value="75" name="check[]">Teatro de máscaras</label><br>
                     <input type="checkbox" value="76" name="check[]" id="cul12" />
                     <label for="cul12" class="rc_sty" value="76" name="check[]">Expresión corporal y teatro</label> <br>
+                    <input type="checkbox" value="136" name="check[]" id="cul37" />
+                    <label for="cul37" class="rc_sty" value="136" name="check[]">Clown</label> <br>
+                    <input type="checkbox" value="143" name="check[]" id="cul44" />
+                    <label for="cul44" class="rc_sty" value="143" name="check[]">Danza Jazz</label> <br>
+                    <input type="checkbox" value="144" name="check[]" id="cul45" />
+                    <label for="cul45" class="rc_sty" value="144" name="check[]">Iniciación al canto</label> <br>
+                    <input type="checkbox" value="146" name="check[]" id="cul47" />
+                    <label for="cul47" class="rc_sty" value="146" name="check[]">Belly dance</label> <br>
+                    <input type="checkbox" value="149" name="check[]" id="cul50" />
+                    <label for="cul50" class="rc_sty" value="149" name="check[]">Acercamiento al circo</label> <br>
                   </div>
                 </div>
                 <div class="col-lg-4">
@@ -417,30 +427,44 @@
                     <input type="checkbox" value="6" name="check[]" id="cul16" />
                     <label for="cul16" class="rc_sty" value="6" name="check[]">Encuadernación</label><br>
                     <input type="checkbox" value="80" name="check[]" id="cul17" />
-                    <label for="cul17" class="rc_sty" value="80" name="check[]">Construcción artesanal de instrumentos</label>
+                    <label for="cul17" class="rc_sty" value="80" name="check[]">Construcción artesanal de instrumentos</label><br>
                     <input type="checkbox" value="81" name="check[]" id="cul18" />
-                    <label for="cul18" class="rc_sty" value="81" name="check[]">Diseño de juguetes de madera y materiales de reuso</label>
+                    <label for="cul18" class="rc_sty" value="81" name="check[]">Diseño de juguetes de madera y materiales de reuso</label><br>
                     <input type="checkbox" value="128" name="check[]" id="cul33" />
-                    <label for="cul33" class="rc_sty" value="128" name="check[]">Arte y creatividad</label>
-		  <br>
+                    <label for="cul33" class="rc_sty" value="128" name="check[]">Arte y creatividad</label><br>
+                    <input type="checkbox" value="137" name="check[]" id="cul38" />
+                    <label for="cul38" class="rc_sty" value="137" name="check[]">Arte y Ciencia</label> <br>
+                    <input type="checkbox" value="140" name="check[]" id="cul41" />
+                    <label for="cul41" class="rc_sty" value="140" name="check[]">Transformaciones colaborativas</label> <br>
+                    <input type="checkbox" value="141" name="check[]" id="cul42" />
+                    <label for="cul42" class="rc_sty" value="141" name="check[]">Meditación creativa</label> <br>
+                    <input type="checkbox" value="145" name="check[]" id="cul46" />
+                    <label for="cul46" class="rc_sty" value="145" name="check[]">Vitrales</label> <br>
                   </div>
                   <label>Artes sustentables</label>
                   <div class="checkbox">
                     <input type="checkbox" value="82" name="check[]" id="cul19" />
                     <label for="cul19" class="rc_sty" value="82" name="check[]">Reciclaje y medio ambiente</label><br>
+                    <input type="checkbox" value="148" name="check[]" id="cul49" />
+                    <label for="cul49" class="rc_sty" value="148" name="check[]">Medio ambiente</label> <br>
                   </div>
                   <label>Literatura</label>
                   <div class="checkbox">
                     <input type="checkbox" value="83" name="check[]" id="cul20" />
                     <label for="cul20" class="rc_sty" value="83" name="check[]">Escritura creativa</label><br>
+                    <input type="checkbox" value="138" name="check[]" id="cul39" />
+                    <label for="cul39" class="rc_sty" value="138" name="check[]">Libro Club</label> <br>
+                    <input type="checkbox" value="147" name="check[]" id="cul48" />
+                    <label for="cul48" class="rc_sty" value="147" name="check[]">Literatura</label> <br>
                   </div>
                   <label>Artes plásticas</label>
                   <div class="checkbox">
                     <input type="checkbox" value="84" name="check[]" id="cul21" />
-                    <label for="cul21" class="rc_sty" value="84" name="check[]">Pintura artística</label><br>
-                    
-                   <input type="checkbox" value="123" name="check[]" id="cul32" />
+                    <label for="cul21" class="rc_sty" value="84" name="check[]">Pintura artística</label><br>     
+                    <input type="checkbox" value="123" name="check[]" id="cul32" />
                     <label for="cul32" class="rc_sty" value="123" name="check[]">Dibujo y grabado</label><br>
+                    <input type="checkbox" value="132" name="check[]" id="cul35" />
+                    <label for="cul35" class="rc_sty" value="132" name="check[]">Modelado con plastilina</label> <br>
 
                   </div>
                 </div>
@@ -457,6 +481,12 @@
                     <label for="cul25" class="rc_sty" value="87" name="check[]">Animación para niños</label><br>
                     <input type="checkbox" value="88" name="check[]" id="cul26" />
                     <label for="cul26" class="rc_sty" value="88" name="check[]">Vídeo comunitario</label> <br>
+                    <input type="checkbox" value="135" name="check[]" id="cul36" />
+                    <label for="cul36" class="rc_sty" value="135" name="check[]">Fotografía digital</label> <br>
+                    <input type="checkbox" value="142" name="check[]" id="cul43" />
+                    <label for="cul43" class="rc_sty" value="142" name="check[]">Experimentación gráfica</label> <br>
+                    <input type="checkbox" value="139" name="check[]" id="cul40" />
+                    <label for="cul40" class="rc_sty" value="139" name="check[]">Cinema PILARES</label> <br>
                   </div>
                   <label>Música</label>
                   <div class="checkbox">
@@ -470,6 +500,8 @@
                     <label for="cul30" class="rc_sty" value="92" name="check[]">Iniciación a la música</label><br>
                     <input type="checkbox" value="93" name="check[]" id="cul31" />
                     <label for="cul31" class="rc_sty" value="93" name="check[]">Son Huasteco</label> <br>
+                    <input type="checkbox" value="131" name="check[]" id="cul34" />
+                    <label for="cul34" class="rc_sty" value="131" name="check[]">Salsa cubana</label> <br>
                   </div>
                 </div>
               </div>

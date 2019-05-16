@@ -196,14 +196,14 @@ class Usuario{
         //$this->folio = rand(9999, 32786);
         // $idDireccion=$this->getIdDireccion();
         $idCurp=substr($curp, 14, 4);
-       $incremental = 0;
+       $aleatorio = 0;
         // $this->folio = $pilarId.$IdAlcaldiaPilar.$idCurp;
         $folioTmp = $pilarId.$IdAlcaldiaPilar.$idCurp;
         $query="SELECT * FROM Usuario WHERE folio = '$folioTmp'";
         $tmp = $this->db->query($query);
             if ($usuario = mysqli_fetch_assoc($tmp)) {
-                $incremental += $incremental++;
-                $this->folio = $folioTmp.$incremental;
+                $aleatorio = rand(0, 9);
+                $this->folio = $folioTmp.$aleatorio;
                 // $incremental += $incremental++;
             }else {
                 $this->folio =  $folioTmp;

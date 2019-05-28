@@ -425,8 +425,8 @@
                     <label for="cul14" class="rc_sty" value="78" name="check[]">Cartonería</label><br>
                     <input type="checkbox" value="79" name="check[]" id="cul15" />
                     <label for="cul15" class="rc_sty" value="79" name="check[]">Bordado para la vida</label><br>
-                    <input type="checkbox" value="6" name="check[]" id="cul16" />
-                    <label for="cul16" class="rc_sty" value="6" name="check[]">Encuadernación</label><br>
+                    <input type="checkbox" value="150" name="check[]" id="cul16" />
+                    <label for="cul16" class="rc_sty" value="150" name="check[]">Encuadernación</label><br>
                     <input type="checkbox" value="80" name="check[]" id="cul17" />
                     <label for="cul17" class="rc_sty" value="80" name="check[]">Construcción artesanal de instrumentos</label><br>
                     <input type="checkbox" value="81" name="check[]" id="cul18" />

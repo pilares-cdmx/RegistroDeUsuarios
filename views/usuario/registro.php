@@ -310,6 +310,7 @@
             <label>Último grado de estudios</label><br>
             <select name="grado" >
               <option value="0" disabled selected>Selecciona</option>
+              <option value="21">sin estudios previos</option>
               <option value="1">Preprimaria</option>
               <option value="2">1º de primaria</option>
               <option value="3">2º de primaria</option>

@@ -617,8 +617,8 @@
 
                 </div>
                 <div class="col-lg-4">
-                  <input type="checkbox" value="27" name="check[]" id="dig3" />
-                  <label for="dig3" class="rc_sty" value="27" name="check[]">Edición y diseño</label>
+                  <input type="checkbox" value="152" name="check[]" id="dig3" />
+                  <label for="dig3" class="rc_sty" value="152" name="check[]">Edición y diseño</label>
                   <br>
                   <input type="checkbox" value="103" name="check[]" id="dig4" />
                   <label for="dig4" class="rc_sty" value="103" name="check[]">Talleres de cómputo</label> <br>

@@ -683,7 +683,8 @@
 
         <div class="row">
           <div class="col-lg-12 col-md-12 estilo-forma">
-            <label class="h3">Talleres de autonomía económica</label><br>
+            <label class="h3 mb-3">Talleres de autonomía económica</label><br>
+            <label class="ml-3">Aprendizaje de técnicas</label><br>
             <div class="checkbox">
               <div class="row">
                 <div class="col-lg-4">
@@ -696,6 +697,11 @@
                   <input type="checkbox" value="39" name="check[]" id="econo3" />
                   <label for="econo3" class="rc_sty" value="39" name="check[]">Herrería</label> <br>
 
+                  <input type="checkbox" value="153" name="check[]" id="econo30" />
+                  <label for="econo30" class="rc_sty" value="153" name="check[]">Serigrafía</label>
+                  <br>
+                </div>
+                <div class="col-lg-4">
                   <input type="checkbox" value="40" name="check[]" id="econo4" />
                   <label for="econo4" class="rc_sty" value="40" name="check[]">Electricidad</label> <br>
 
@@ -705,11 +711,16 @@
 
                   <input type="checkbox" value="44" name="check[]" id="econo8" />
                   <label for="econo8" class="rc_sty" value="44" name="check[]">Huertos urbanos</label> <br>
-                  
-                 <input type="checkbox" value="41" name="check[]" id="econo9" />
-                  <label for="econo9" class="rc_sty" value="41" name="check[]">Gastronomía, panadería y banquetes</label> <br>   
+
+                  <input type="checkbox" value="41" name="check[]" id="econo9" />
+                  <label for="econo9" class="rc_sty" value="41" name="check[]">Gastronomía, panadería y banquetes</label> <br> 
+
+                  <input type="checkbox" value="154" name="check[]" id="econo31" />
+                  <label for="econo31" class="rc_sty" value="154" name="check[]">Radio, audio y video<</label>
                 </div>
-                <div class="col-lg-4">
+
+                <div class="col-lg-4">  
+                
                   <input type="checkbox" value="47" name="check[]" id="econo11" />
                   <label for="econo11" class="rc_sty" value="47" name="check[]">Diseño de imagen y cosmetología</label>
                   <br>
@@ -722,11 +733,20 @@
                   <label for="econo13" class="rc_sty" value="49" name="check[]">Electrónica</label>
                   <br>
 
-
                   <input type="checkbox" value="52" name="check[]" id="econo16" />
                   <label for="econo16" class="rc_sty" value="52" name="check[]">Diseño de modas y textiles</label>
                   <br>
+                </div>
+              </div>
+          </div> 
+        </div>    
 
+        <div class="row">
+          <div class="col-lg-12 estilo-forma">
+            <label>Formación para la organización</label><br>
+            <div class="checkbox">
+              <div class="row">
+                <div class="col-lg-4">
                   <input type="checkbox" value="54" name="check[]" id="econo18" />
                   <label for="econo18" class="rc_sty" value="54" name="check[]">Fotografía de producto</label>
                   <br>
@@ -734,36 +754,45 @@
                   <input type="checkbox" value="55" name="check[]" id="econo19" />
                   <label for="econo19" class="rc_sty" value="55" name="check[]">Logos e identidad de marca</label>
                   <br>
+                </div>
+                <div class="col-lg-4">
 
                   <input type="checkbox" value="56" name="check[]" id="econo20" />
                   <label for="econo20" class="rc_sty" value="56" name="check[]">Calidad en el servicio</label>
                   <br>
 
-                  <input type="checkbox" value="153" name="check[]" id="econo30" />
-                  <label for="econo30" class="rc_sty" value="153" name="check[]">Serigrafía</label>
-                  <br>
-
-                  <input type="checkbox" value="154" name="check[]" id="econo31" />
-                  <label for="econo31" class="rc_sty" value="154" name="check[]">Radio, audio y video<</label>
-                </div>
-
-                <div class="col-lg-4">
                   <input type="checkbox" value="57" name="check[]" id="econo21" />
                   <label for="econo21" class="rc_sty" value="57" name="check[]">Creación de cooperativas</label>
                   <br>
 
-                  <input type="checkbox" value="58" name="check[]" id="econo22" />
-                  <label for="econo22" class="rc_sty" value="58" name="check[]">Emprendedurismo</label>
-                  <br>
+                </div>
+                  <div class="col-lg-4">
+                    <input type="checkbox" value="58" name="check[]" id="econo22" />
+                    <label for="econo22" class="rc_sty" value="58" name="check[]">Emprendedurismo</label>
+                    <br>
 
-                  <input type="checkbox" value="59" name="check[]" id="econo23" />
-                  <label for="econo23" class="rc_sty" value="59" name="check[]">Creación de micro-negocios</label>
-                  <br>
+                    <input type="checkbox" value="59" name="check[]" id="econo23" />
+                    <label for="econo23" class="rc_sty" value="59" name="check[]">Creación de micro-negocios</label>
+                    <br>
+        
+                  </div>
+                </div>
+                <br>
+              </div>
+            </div>
+          </div> 
 
+          <div class="row">
+          <div class="col-lg-12 estilo-forma">
+            <label>Formación para la organización</label><br>
+            <div class="checkbox">
+              <div class="row">
+                <div class="col-lg-4">
                   <input type="checkbox" value="60" name="check[]" id="econo24" />
                   <label for="econo24" class="rc_sty" value="60" name="check[]">Comercio digital</label>
                   <br>
-
+                </div>
+                <div class="col-lg-4">
                   <input type="checkbox"  value="61" name="check[]" id="econo25" />
                   <label for="econo25" class="rc_sty" value="61" name="check[]">Estrategias de venta</label>
                   <br>
@@ -771,19 +800,20 @@
                   <input type="checkbox" value="62" name="check[]" id="econo26" />
                   <label for="econo26" class="rc_sty" value="62" name="check[]">Comercio justo</label>
                   <br>
+                </div>
+                  <div class="col-lg-4">
 
                   <input type="checkbox" value="65" name="check[]" id="econo29" />
                   <label for="econo29" class="rc_sty" value="65" name="check[]">Distribución</label>
                   <br>
+                 
+                  </div>
                 </div>
+                <br>
               </div>
             </div>
-          </div>
-        </div>
-            
-            
-            
-            
+          </div> 
+
                <div class="row">
                   <div class="col-lg-12 estilo-forma">
                     <label>Talleres extra</label><br>

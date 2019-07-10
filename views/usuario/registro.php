@@ -790,17 +790,20 @@
                     <div class="checkbox">
                       <div class="row">
                         <div class="col-lg-4">
-                          <input type="checkbox" name="check52" id="braile" />
-                          <label for="braile" class="rc_sty" value="124">Braile</label><br>
+                          <input type="checkbox" value="124" name="check[]" id="econo32" />
+                          <label for="econo32" class="rc_sty" value="124" name="check[]">Braile</label>
+
+                          <!-- <input type="checkbox" name="check52" id="braile" />
+                          <label for="braile" class="rc_sty" value="124">Braile</label><br> -->
                         
                         </div>
                           <div class="col-lg-4">
-                            <input type="checkbox" name="check56" id="computo" />
-                            <label for="computo" class="rc_sty" value="125">Computación asistida</label>
-                                            </div>
+                          <input type="checkbox" value="125" name="check[]" id="econo33" />
+                          <label for="econo33" class="rc_sty" value="125" name="check[]">Computación asistida</label>
+                          </div>
                             <div class="col-lg-4">
-                            <input type="checkbox" name="check60" id="señas" />
-                            <label for="señas" class="rc_sty" value="126">Introducción a  la lengua de señas Mexicana</label>
+                            <input type="checkbox" value="126" name="check[]" id="econo34" />
+                          <label for="econo34" class="rc_sty" value="126" name="check[]">Introducción a la lengua de señas Mexicana</label>
                           
                           </div>
                           

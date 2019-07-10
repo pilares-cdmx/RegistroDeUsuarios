@@ -737,6 +737,7 @@
 
                   <input type="checkbox" value="56" name="check[]" id="econo20" />
                   <label for="econo20" class="rc_sty" value="56" name="check[]">Calidad en el servicio</label>
+                  <br>
 
                   <input type="checkbox" value="153" name="check[]" id="econo30" />
                   <label for="econo30" class="rc_sty" value="153" name="check[]">Serigrafía</label>

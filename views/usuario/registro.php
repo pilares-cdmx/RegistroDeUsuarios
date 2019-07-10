@@ -737,6 +737,13 @@
 
                   <input type="checkbox" value="56" name="check[]" id="econo20" />
                   <label for="econo20" class="rc_sty" value="56" name="check[]">Calidad en el servicio</label>
+
+                  <input type="checkbox" value="55" name="check[]" id="econo19" />
+                  <label for="econo19" class="rc_sty" value="55" name="check[]">Serigrafía</label>
+                  <br>
+
+                  <input type="checkbox" value="56" name="check[]" id="econo20" />
+                  <label for="econo20" class="rc_sty" value="56" name="check[]">Calidad en el servicio</label>
                 </div>
 
                 <div class="col-lg-4">
@@ -745,7 +752,7 @@
                   <br>
 
                   <input type="checkbox" value="58" name="check[]" id="econo22" />
-                  <label for="econo22" class="rc_sty" value="58" name="check[]">Emprendedurismo</label>
+                  <label for="econo22" class="rc_sty" value="58" name="check[]">Radio, audio y video</label>
                   <br>
 
                   <input type="checkbox" value="59" name="check[]" id="econo23" />

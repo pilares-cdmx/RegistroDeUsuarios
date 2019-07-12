@@ -716,7 +716,7 @@
                   <label for="econo9" class="rc_sty" value="41" name="check[]">Gastronomía, panadería y banquetes</label> <br> 
 
                   <input type="checkbox" value="154" name="check[]" id="econo31" />
-                  <label for="econo31" class="rc_sty" value="154" name="check[]">Radio, audio y video<</label>
+                  <label for="econo31" class="rc_sty" value="154" name="check[]">Radio, audio y video</label>
                 </div>
 
                 <div class="col-lg-4">  

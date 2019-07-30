@@ -866,7 +866,7 @@
                 <option value="8">Iztacalco</option>
                 <option value="9">Iztapalapa</option>
                 <option value="10">Magdalena Contreras</option>
-                <!-- <option value="11">Miguel Hidalgo</option> -->
+                <option value="11">Miguel Hidalgo</option>
                 <option value="12">Milpa Alta</option>
                 <option value="13">Tláhuac</option>
                 <!-- <option value="14">Tlalpan</option> -->
